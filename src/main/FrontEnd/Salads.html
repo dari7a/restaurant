@@ -1,0 +1,2175 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <script>
+        !function (f, b, e, v, n, t, s) {
+            if (f.fbq) return;
+            n = f.fbq = function () {
+                n.callMethod ?
+                    n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq) f._fbq = n;
+            n.push = n;
+            n.loaded = !0;
+            n.version = '2.0';
+            n.queue = [];
+            t = b.createElement(e);
+            t.async = !0;
+            t.src = v;
+            s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window, document, 'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '608651243007252');
+        fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+                   src="https://www.facebook.com/tr?id=608651243007252&ev=PageView&noscript=1"
+    /></noscript>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <link rel="profile" href="https://gmpg.org/xfn/11">
+    <link rel="pingback" href="https://mykolaiv.celentano.delivery/xmlrpc.php">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css">
+    <title>Salads</title>
+    <script type="text/template" id="tmpl-tc-cart-options-popup">
+        <div class='header'>
+            <h3>{{{ data.title }}}</h3>
+        </div>
+        <div id='{{{ data.id }}}' class='float_editbox'>{{{ data.html }}}</div>
+        <div class='footer'>
+            <div class='inner'>
+                <span class='tm-button button button-secondary button-large details_cancel'>{{{ data.close }}}</span>
+            </div>
+        </div>
+    </script>
+    <script type="text/template" id="tmpl-tc-lightbox">
+        <div class="tc-lightbox-wrap">
+            <span class="tc-lightbox-button tcfa tcfa-search tc-transition tcinit"></span>
+        </div>
+    </script>
+    <script type="text/template" id="tmpl-tc-lightbox-zoom">
+        <span class="tc-lightbox-button-close tcfa tcfa-close"></span>
+        {{{ data.img }}}
+    </script>
+    <script type="text/template" id="tmpl-tc-final-totals">
+        <dl class="tm-extra-product-options-totals tm-custom-price-totals">
+            <# if (data.show_unit_price==true){ #>
+            <dt class="tm-unit-price">{{{ data.unit_price }}}</dt>
+            <dd class="tm-unit-price">
+                <span class="price amount options">{{{ data.formatted_unit_price }}}</span>
+            </dd>
+            <# } #>
+            <# if (data.show_options_total==true){ #>
+            <dt class="tm-options-totals">{{{ data.options_total }}}</dt>
+            <dd class="tm-options-totals">
+                <span class="price amount options">{{{ data.formatted_options_total }}}</span>
+            </dd>
+            <# } #>
+            <# if (data.show_fees_total==true){ #>
+            <dt class="tm-fee-totals">{{{ data.fees_total }}}</dt>
+            <dd class="tm-fee-totals">
+                <span class="price amount fees">{{{ data.formatted_fees_total }}}</span>
+            </dd>
+            <# } #>
+            <# if (data.show_extra_fee==true){ #>
+            <dt class="tm-extra-fee">{{{ data.extra_fee }}}</dt>
+            <dd class="tm-extra-fee">
+                <span class="price amount options extra-fee">{{{ data.formatted_extra_fee }}}</span>
+            </dd>
+            <# } #>
+            <# if (data.show_final_total==true){ #>
+            <dt class="tm-final-totals">{{{ data.final_total }}}</dt>
+            <dd class="tm-final-totals">
+                <span class="price amount final">{{{ data.formatted_final_total }}}</span>
+            </dd>
+            <# } #>
+            <# if (data.show_sign_up_fee==true){ #>
+            <dt class="tm-subscription-fee">{{{ data.sign_up_fee }}}</dt>
+            <dd class="tm-subscription-fee">
+                <span class="price amount subscription-fee">{{{ data.formatted_subscription_fee_total }}}</span>
+            </dd>
+            <# } #>
+        </dl>
+    </script>
+    <script type="text/template" id="tmpl-tc-price">
+        <span class="amount">{{{ data.price.price }}}</span>
+    </script>
+    <script type="text/template" id="tmpl-tc-sale-price">
+        <del>
+            <span class="tc-original-price amount">{{{ data.price.original_price }}}</span>
+        </del>
+        <ins>
+            <span class="amount">{{{ data.price.price }}}</span>
+        </ins>
+    </script>
+    <script type="text/template" id="tmpl-tc-section-pop-link">
+        <div id="tm-section-pop-up"
+             class="tm-extra-product-options flasho tm_wrapper tm-section-pop-up single tm-animated appear">
+            <div class='header'><h3>{{{ data.title }}}</h3></div>
+            <div class="float_editbox" id="temp_for_floatbox_insert"></div>
+            <div class='footer'>
+                <div class='inner'>
+                    <span class='tm-button button button-secondary button-large details_cancel'>{{{ data.close }}}</span>
+                </div>
+            </div>
+        </div>
+    </script>
+    <script type="text/template" id="tmpl-tc-floating-box-nks"><# if (data.values.length) {#>
+    {{{ data.html_before }}}
+    <div class="tc-row tm-fb-labels">
+        <span class="tc-cell tc-col-3 tm-fb-title">{{{ data.option_label }}}</span>
+        <span class="tc-cell tc-col-3 tm-fb-value">{{{ data.option_value }}}</span>
+        <span class="tc-cell tc-col-3 tm-fb-quantity">{{{ data.option__qty }}}</span>
+        <span class="tc-cell tc-col-3 tm-fb-price">{{{ data.option_lpric }}}</span>
+    </div>
+    <# for (var i = 0; i < data.values.length; i++) { #>
+    <# if (data.values[i].label_show=='' || data.values[i].value_show=='') {#>
+    <div class="tc-row">
+        <# if (data.values[i].label_show=='') {#>
+        <span class="tc-cell tc-col-3 tm-fb-title">{{{ data.values[i].title }}}</span>
+        <# } #>
+        <# if (data.values[i].value_show=='') {#>
+        <span class="tc-cell tc-col-3 tm-fb-value">{{{ data.values[i].value }}}</span>
+        <# } #>
+        <span class="tc-cell tc-col-3 tm-fb-quantity">{{{ data.values[i].quantity }}}</span>
+        <span class="tc-cell tc-col-3 tm-fb-price">{{{ data.values[i].price }}}</span>
+    </div>
+    <# } #>
+    <# } #>
+    {{{ data.html_after }}}
+    {{{ data.totals }}}
+    <# }#></script>
+    <script type="text/template" id="tmpl-tc-floating-box"><# if (data.values.length) {#>
+    {{{ data.html_before }}}
+    <dl class="tm-fb">
+        <# for (var i = 0; i < data.values.length; i++) { #>
+        <# if (data.values[i].label_show=='') {#>
+        <dt class="tm-fb-title">{{{ data.values[i].title }}}</dt>
+        <# } #>
+        <# if (data.values[i].value_show=='') {#>
+        <dd class="tm-fb-value">{{{ data.values[i].value }}}</dd>
+        <# } #>
+        <# } #>
+    </dl>
+    {{{ data.html_after }}}
+    {{{ data.totals }}}
+    <# }#></script>
+    <script type="text/template" id="tmpl-tc-chars-remanining">
+        <span class="tc-chars">
+		<span class="tc-chars-remanining">{{{ data.maxlength }}}</span>
+		<span class="tc-remaining"> {{{ data.characters_remaining }}}</span>
+	</span>
+    </script>
+    <script class="tm-hidden" type="text/template" id="tmpl-tc-formatted-price"><span
+            class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol">&#8372;</span>{{{ data.price }}}</span></script>
+    <script type="text/template" id="tmpl-tc-upload-messages">
+        <div class="header">
+            <h3>{{{ data.title }}}</h3>
+        </div>
+        <div class="float_editbox" id="temp_for_floatbox_insert">
+            <div class="tc-upload-messages">
+                <div class="tc-upload-message">{{{ data.message }}}</div>
+                <# for (var i in data.files) {
+                if (data.files.hasOwnProperty(i)) {#>
+                <div class="tc-upload-files">{{{ data.files[i] }}}</div>
+                <# }
+                }#>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="inner">
+                &nbsp;
+            </div>
+        </div>
+    </script>
+    <meta name='robots' content='max-image-preview:large'/>
+    <meta name="robots" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1"/>
+    <link rel="canonical" href="https://mykolaiv.celentano.delivery/product-category/salads/"/>
+    <meta property="og:locale" content="uk_UA"/>
+    <meta property="og:type" content="object"/>
+    <meta property="og:title" content="Салати - Челентано Миколаїв"/>
+    <meta property="og:url" content="https://mykolaiv.celentano.delivery/product-category/salads/"/>
+    <meta property="og:site_name" content="Челентано Миколаїв"/>
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:title" content="Салати - Челентано Миколаїв"/>
+    <script type='application/ld+json' class='yoast-schema-graph yoast-schema-graph--main'>{
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": [
+                    "Person",
+                    "Organization"
+                ],
+                "@id": "https://mykolaiv.celentano.delivery/#/schema/person/93d4583692760b5a4f57f8b7a24634d2",
+                "name": "admin",
+                "logo": {
+                    "@id": "https://mykolaiv.celentano.delivery/#personlogo"
+                },
+                "sameAs": []
+            },
+            {
+                "@type": "WebSite",
+                "@id": "https://mykolaiv.celentano.delivery/#website",
+                "url": "https://mykolaiv.celentano.delivery/",
+                "name": "\u0427\u0435\u043b\u0430\u043d\u0442\u0430\u043d\u043e \u0423\u0436\u0433\u043e\u0440\u043e\u0434",
+                "publisher": {
+                    "@id": "https://mykolaiv.celentano.delivery/#/schema/person/93d4583692760b5a4f57f8b7a24634d2"
+                },
+                "potentialAction": {
+                    "@type": "SearchAction",
+                    "target": "https://mykolaiv.celentano.delivery/?s={search_term_string}",
+                    "query-input": "required name=search_term_string"
+                }
+            },
+            {
+                "@type": "CollectionPage",
+                "@id": "https://mykolaiv.celentano.delivery/product-category/salads/#webpage",
+                "url": "https://mykolaiv.celentano.delivery/product-category/salads/",
+                "inLanguage": "uk",
+                "name": "\u0421\u0430\u043b\u0430\u0442\u0438 - \u0427\u0435\u043b\u0435\u043d\u0442\u0430\u043d\u043e \u041c\u0438\u043a\u043e\u043b\u0430\u0457\u0432",
+                "isPartOf": {
+                    "@id": "https://mykolaiv.celentano.delivery/#website"
+                }
+            }
+        ]
+    }</script>
+    <link rel='dns-prefetch' href='//s.w.org'/>
+    <link rel="alternate" type="application/rss+xml" title="Челентано Миколаїв &raquo; стрічка"
+          href="https://mykolaiv.celentano.delivery/feed/"/>
+    <link rel="alternate" type="application/rss+xml" title="Челентано Миколаїв &raquo; Канал коментарів"
+          href="https://mykolaiv.celentano.delivery/comments/feed/"/>
+    <link rel="alternate" type="application/rss+xml" title="Канал Челентано Миколаїв &raquo; Салати Категорія"
+          href="https://mykolaiv.celentano.delivery/product-category/salads/feed/"/>
+    <script type="text/javascript">
+        window._wpemojiSettings = {
+            "baseUrl": "https:\/\/s.w.org\/images\/core\/emoji\/13.1.0\/72x72\/",
+            "ext": ".png",
+            "svgUrl": "https:\/\/s.w.org\/images\/core\/emoji\/13.1.0\/svg\/",
+            "svgExt": ".svg",
+            "source": {"concatemoji": "https:\/\/mykolaiv.celentano.delivery\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.8"}
+        };
+        !function (e, a, t) {
+            var n, r, o, i = a.createElement("canvas"), p = i.getContext && i.getContext("2d");
+
+            function s(e, t) {
+                var a = String.fromCharCode;
+                p.clearRect(0, 0, i.width, i.height), p.fillText(a.apply(this, e), 0, 0);
+                e = i.toDataURL();
+                return p.clearRect(0, 0, i.width, i.height), p.fillText(a.apply(this, t), 0, 0), e === i.toDataURL()
+            }
+
+            function c(e) {
+                var t = a.createElement("script");
+                t.src = e, t.defer = t.type = "text/javascript", a.getElementsByTagName("head")[0].appendChild(t)
+            }
+
+            for (o = Array("flag", "emoji"), t.supports = {
+                everything: !0,
+                everythingExceptFlag: !0
+            }, r = 0; r < o.length; r++) t.supports[o[r]] = function (e) {
+                if (!p || !p.fillText) return !1;
+                switch (p.textBaseline = "top", p.font = "600 32px Arial", e) {
+                    case"flag":
+                        return s([127987, 65039, 8205, 9895, 65039], [127987, 65039, 8203, 9895, 65039]) ? !1 : !s([55356, 56826, 55356, 56819], [55356, 56826, 8203, 55356, 56819]) && !s([55356, 57332, 56128, 56423, 56128, 56418, 56128, 56421, 56128, 56430, 56128, 56423, 56128, 56447], [55356, 57332, 8203, 56128, 56423, 8203, 56128, 56418, 8203, 56128, 56421, 8203, 56128, 56430, 8203, 56128, 56423, 8203, 56128, 56447]);
+                    case"emoji":
+                        return !s([10084, 65039, 8205, 55357, 56613], [10084, 65039, 8203, 55357, 56613])
+                }
+                return !1
+            }(o[r]), t.supports.everything = t.supports.everything && t.supports[o[r]], "flag" !== o[r] && (t.supports.everythingExceptFlag = t.supports.everythingExceptFlag && t.supports[o[r]]);
+            t.supports.everythingExceptFlag = t.supports.everythingExceptFlag && !t.supports.flag, t.DOMReady = !1, t.readyCallback = function () {
+                t.DOMReady = !0
+            }, t.supports.everything || (n = function () {
+                t.readyCallback()
+            }, a.addEventListener ? (a.addEventListener("DOMContentLoaded", n, !1), e.addEventListener("load", n, !1)) : (e.attachEvent("onload", n), a.attachEvent("onreadystatechange", function () {
+                "complete" === a.readyState && t.readyCallback()
+            })), (n = t.source || {}).concatemoji ? c(n.concatemoji) : n.wpemoji && n.twemoji && (c(n.twemoji), c(n.wpemoji)))
+        }(window, document, window._wpemojiSettings);
+    </script>
+    <style type="text/css">
+        img.wp-smiley,
+        img.emoji {
+            display: inline !important;
+            border: none !important;
+            box-shadow: none !important;
+            height: 1em !important;
+            width: 1em !important;
+            margin: 0 .07em !important;
+            vertical-align: -0.1em !important;
+            background: none !important;
+            padding: 0 !important;
+        }
+    </style>
+    <link rel='stylesheet' id='tc-epo-css-css'
+          href='https://mykolaiv.celentano.delivery/wp-content/plugins/woocommerce-tm-extra-product-options/assets/css/epo.min.css?ver=4.6.7'
+          type='text/css' media='all'/>
+    <link rel='stylesheet' id='wp-block-library-css'
+          href='https://mykolaiv.celentano.delivery/wp-includes/css/dist/block-library/style.min.css?ver=5.8'
+          type='text/css' media='all'/>
+    <link rel='stylesheet' id='wc-block-style-css'
+          href='https://mykolaiv.celentano.delivery/wp-content/plugins/woocommerce/packages/woocommerce-blocks/build/style.css?ver=2.3.0'
+          type='text/css' media='all'/>
+    <link rel='stylesheet' id='contact-form-7-css'
+          href='https://mykolaiv.celentano.delivery/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=5.1.4'
+          type='text/css' media='all'/>
+    <link rel='stylesheet' id='zh_frontend-css'
+          href='https://mykolaiv.celentano.delivery/wp-content/plugins/order-hours-scheduler-for-woocommerce/assets/bundles/styles/frontend.css?ver=4.2.45'
+          type='text/css' media='all'/>
+    <link rel='stylesheet' id='rs-plugin-settings-css'
+          href='https://mykolaiv.celentano.delivery/wp-content/plugins/revslider/public/assets/css/settings.css?ver=5.4.8.3'
+          type='text/css' media='all'/>
+    <style id='rs-plugin-settings-inline-css' type='text/css'>
+        #rs-demo-id {
+        }
+    </style>
+    <style id='woocommerce-inline-inline-css' type='text/css'>
+        .woocommerce form .form-row .required {
+            visibility: visible;
+        }
+    </style>
+    <link rel='stylesheet' id='ideapark-entry-content-css'
+          href='https://mykolaiv.celentano.delivery/wp-content/themes/foodz/assets/css/entry-content.css'
+          type='text/css' media='all'/>
+    <link rel='stylesheet' id='ideapark-core-css'
+          href='https://mykolaiv.celentano.delivery/wp-content/themes/foodz/style.css' type='text/css' media='all'/>
+    <style id='ideapark-core-inline-css' type='text/css'>
+
+        @media (min-width: 1170px) {
+            .c-header__row-1 {
+                color: #051c45;
+            }
+
+            .c-header__row-1:before {
+                opacity: 1;
+                background-color: #ffffff;
+            }
+
+            .c-header__row-2 {
+                color: #ffffff;
+            }
+
+            .c-header__row-2:before {
+                opacity: 1;
+                background-color: #051c45;
+            }
+
+            .c-header__row-3 {
+                color: inherit;
+            }
+
+            .c-header__row-3:before {
+                opacity: 1;
+                background-color: transparent;
+            }
+
+            .c-header__row-sticky {
+                color: #ffffff;
+            }
+
+            .c-header__row-sticky:before {
+                opacity: 1;
+                background-color: #051c45;
+            }
+
+            .c-header__row-sticky {
+                background-color: #FFFFFF;
+            }
+
+
+            .c-header__bg {
+                display: none;
+            }
+
+
+            .c-header__logo-img {
+                max-width: 120px;
+                max-height: 120px;
+            }
+
+            .c-top-menu__submenu {
+                color: #051c45;
+                background-color: #ffffff;
+            }
+
+            .c-mega-menu__submenu {
+                color: #051c45;
+                background-color: #ffffff;
+            }
+
+            .c-mega-menu__item {
+                max-width: 130px;
+                font-size: 19px;
+            }
+
+            .c-mega-menu__item + .c-mega-menu__item {
+                margin-left: 25px;
+            }
+
+            .c-page-header {
+                color: #051c45;
+            }
+
+            .c-page-header--category {
+                color: #ffffff;
+                background-color: #051c45;
+                background-position: right center;
+                background-size: auto;
+                background-repeat: no-repeat;
+            }
+
+            .c-product-grid__thumb-button {
+                color: #051c45;
+                background-color: #FFFFFF;
+            }
+
+            .c-ordering__filter-button:not(.c-ordering__filter-button--chosen):hover,
+            .c-variation__title:hover,
+            .c-post__tags a:hover,
+            a.page-numbers:hover,
+            a.post-page-numbers:hover {
+                background-color: rgba(5, 28, 69, 0.07);
+            }
+
+            .c-header__search-button:hover,
+            .c-header__button-link:hover {
+                color: rgba(255, 255, 255, 0.55);
+            }
+
+            .c-mega-menu__item:hover > a {
+                color: rgba(255, 255, 255, 0.55);
+            }
+
+            .c-header__text a:hover,
+            .c-header__callback--second:hover,
+            .c-header__button-link--account:hover {
+                color: rgba(5, 28, 69, 0.55);
+            }
+
+            .c-variation__radio:checked + .c-variation__title:hover,
+            .c-add-to-cart:hover,
+            .c-quantity__minus:hover,
+            .c-quantity__plus:hover,
+            .widget .button.checkout:hover,
+            .c-header__cart .widget_shopping_cart_content .button.checkout:hover {
+                background-color: rgb(32, 148, 50);
+            }
+
+            .c-ordering__filter-button--chosen:hover,
+            span.page-numbers:not(.dots):hover,
+            span.post-page-numbers:not(.dots):hover,
+            .pswp__button--arrow--left:hover,
+            .pswp__button--arrow--right:hover,
+            .pswp__button--close:hover,
+            .pswp__button--zoom:hover,
+            .c-form__button:hover,
+            .entry-content input[type=submit]:not(.h-cb):hover,
+            .comment-form .submit:hover,
+            .widget .button:hover,
+            .woocommerce-widget-layered-nav-dropdown__submit:hover,
+            .wpcf7-form input[type=submit]:hover,
+            .wpcf7-form button:hover,
+            .woocommerce-Button:not(.woocommerce-Button--previous):not(.woocommerce-Button--next):hover,
+            .woocommerce-address-fields .button:hover,
+            .c-header__cart .widget_shopping_cart_content .button:hover,
+            .c-subscribe .mc4wp-form input[type=submit]:hover,
+            body #sb_instagram #sbi_load .sbi_load_btn:hover,
+            body #sb_instagram .sbi_follow_btn a:hover,
+            .woocommerce-widget-layered-nav-list__item.chosen:hover:before {
+                background-color: rgb(4, 20, 48);
+            }
+
+            .entry-content a:hover,
+            .c-product__share-svg:hover,
+            .product_meta a:hover,
+            .woocommerce-product-attributes-item__value a:hover,
+            .c-post__share-svg:hover,
+            .comment-reply-link:hover,
+            .comment-edit-link:hover {
+                color: #051c45;
+            }
+
+        }
+
+        @media (max-width: 1169px) {
+            .c-header__row-1 {
+                color: #ffffff;
+                background-color: #051c45;
+            }
+
+            .c-header__row-2 {
+                color: #ffffff;
+                background-color: #051c45;
+            }
+
+            .c-header__row-2 .c-header__home:after {
+                content: "Головна";
+            }
+
+            .c-header__row-2 .c-header__wishlist:after {
+                content: "Wishlist";
+            }
+
+            .c-header__row-2 .c-header__cart:after {
+                content: "Кошик";
+            }
+
+            .c-header__menu-wrap,
+            .c-mega-menu__submenu {
+                color: #ffffff;
+                background-color: #051c45;
+            }
+
+            .c-shop-sidebar__wrap {
+                color: #afafaf;
+                background-color: #FFFFFF;
+            }
+
+            .c-page-header {
+                color: #051c45;
+            }
+
+            .c-product-grid__thumb-button:before {
+                background-color: #FFFFFF;
+            }
+
+            .c-product-grid__thumb-button {
+                color: #051c45;
+                background-color: rgba(5, 28, 69, 0.07);
+            }
+        }
+
+        @media (max-width: 495px) {
+            .c-quantity--sticky .c-quantity__value,
+            .c-product__add-to-cart-wrap--sticky:before {
+                color: #051c45;
+                background-color: #FFFFFF;
+            }
+        }
+
+        .c-header__callback-popup,
+        .c-header-search__shadow,
+        .c-header__menu-shadow,
+        .pswp__bg,
+        .c-shop-sidebar__shadow {
+            background-color: rgba(5, 28, 69, 0.7);
+        }
+
+        .c-product-grid__list--loading:before,
+        .c-post-list__sticky:before,
+        input[type=radio] + i,
+        input[type=checkbox] + i {
+            color: #051c45;
+            background-color: #FFFFFF;
+        }
+
+        .c-header-search__submit {
+            background-color: #051c45;
+        }
+
+        .c-header__row-1:after {
+            border-bottom-color: #051c45;
+        }
+
+        .c-footer {
+            color: #ffffff;
+            background-color: #0e2244;
+
+        }
+
+        .c-footer__widgets .widget-title,
+        .c-footer__widgets .c-product-list-widget__title,
+        .c-footer__widgets .widget_calendar caption,
+        .c-footer__widgets .woocommerce-widget-layered-nav-list {
+            color: #ffffff;
+        }
+
+        .c-footer__logo-img {
+            max-width: 150px;
+            max-height: 150px;
+        }
+
+        .c-badge--featured {
+            background-color: #D1333C;
+        }
+
+        .c-badge--new {
+            background-color: #74C557;
+        }
+
+        .c-badge--sale {
+            background-color: #fe8128;
+        }
+
+        .c-wishlist__td--product-price del,
+        .c-cart__shop-td--product-price del,
+        .c-cart__shop-variation,
+        .c-cart__shipping-calculator-button,
+        .c-cart__totals-product-quantity,
+        .c-cart__payment-methods-box,
+        .c-header__cart .widget_shopping_cart_content,
+        .c-header__cart .c-product-list-widget__total .tax_label,
+        .c-header__callback-popup {
+            color: #afafaf;
+        }
+
+        button,
+        input,
+        optgroup,
+        select,
+        textarea,
+        .c-header,
+        .c-sub-categories,
+        .c-header-search__input,
+        .c-product-grid__title,
+        .c-variation__title,
+        .c-variation__select,
+        .c-product-grid__item .price,
+        .c-product .price,
+        .c-home-tabs__title,
+        .c-home-tabs__header-list,
+        .c-home-tabs__header-select,
+        .c-subscribe__header,
+        .c-block__header,
+        body #sb_instagram .sbi_header_text h3,
+        .c-icons__header,
+        .c-brands__header,
+        .c-testimonials__header,
+        .c-testimonials__author,
+        .c-posts__header,
+        .c-post-list__categories,
+        .c-post-list__header,
+        .c-post-list__continue,
+        .entry-content h1,
+        .entry-content h2,
+        .entry-content h3,
+        .entry-content h4,
+        .entry-content h5,
+        .entry-content h6,
+        .entry-content blockquote,
+        .entry-content .wp-block-quote,
+        .c-post-list__sticky,
+        .widget-title,
+        .c-lp-widget__title,
+        .widget_calendar caption,
+        .c-post__categories,
+        .c-post__author,
+        .c-product-list-widget__title,
+        .woocommerce-widget-layered-nav-list,
+        .c-product__title,
+        .c-product__quantity,
+        .c-product__marker,
+        .c-product__tabs-list,
+        .c-product__products-title,
+        .c-product__tabs-custom-select,
+        .c-product__tabs-custom-title,
+        .woocommerce-grouped-product-list,
+        .woocommerce-review__author,
+        .comment-reply-title,
+        .c-post__tags a,
+        .c-post__nav-title,
+        .commentlist .comment-author,
+        .comments-title,
+        .woocommerce-notice,
+        .c-404__header,
+        .c-404__svg,
+        .c-cart-empty__header,
+        .c-cart-empty__svg,
+        .c-wishlist__td,
+        .c-wishlist-empty__header,
+        .c-wishlist-empty__icon,
+        .c-cart__shop-td,
+        .c-cart__header,
+        .c-cart__sub-header,
+        .c-cart__collaterals,
+        .c-header__cart .c-product-list-widget__total,
+        .c-header__callback-header,
+        .c-header__callback-close,
+        .c-account__navigation,
+        .c-account__login-info,
+        .c-account legend,
+        .c-account__address-title,
+        .c-account__address-edit,
+        .c-account h3,
+        .c-order__result-message,
+        .c-order__details-value,
+        .woocommerce-table,
+        .woocommerce-order-details__title,
+        .woocommerce-column__title,
+        .woocommerce-orders-table td,
+        .woocommerce-bacs-bank-details,
+        .woocommerce-button--previous,
+        .woocommerce-button--next,
+        .c-product__wishlist-button,
+        .c-cart__cross-sell h2,
+        .c-countdown,
+        .c-home-promo__title {
+            color: #051c45;
+        }
+
+        .select2-container--default .select2-selection--single .select2-selection__placeholder,
+        .select2-container--default .select2-selection--single .select2-selection__rendered {
+            color: #051c45 !important;
+        }
+
+        .c-variation__radio:checked + .c-variation__title,
+        .c-add-to-cart,
+        .c-quantity__minus,
+        .c-quantity__plus,
+        .widget .button.checkout,
+        .c-header__cart .widget_shopping_cart_content .button.checkout {
+            background-color: #23a437;
+            color: #ffffff;
+        }
+
+        .woocommerce-notices-wrapper--ajax,
+        .blockUI.blockOverlay,
+        .c-header__cart .widget_shopping_cart_content:before {
+            background-color: #FFFFFF !important;
+        }
+
+        .price_slider .ui-slider-handle {
+            border-color: #23a437;
+            background-color: #FFFFFF;
+        }
+
+        .c-ordering__filter-button--chosen,
+        span.page-numbers:not(.dots),
+        span.post-page-numbers:not(.dots),
+        .pswp__button--arrow--left,
+        .pswp__button--arrow--right,
+        .pswp__button--close,
+        .pswp__button--zoom,
+        .c-form__button,
+        .entry-content input[type=submit]:not(.h-cb),
+        .comment-form .submit,
+        .widget .button,
+        .woocommerce-widget-layered-nav-dropdown__submit,
+        .wpcf7-form input[type=submit],
+        .wpcf7-form button,
+        .woocommerce-Button:not(.woocommerce-Button--previous):not(.woocommerce-Button--next),
+        .woocommerce-address-fields .button,
+        .c-header__cart .widget_shopping_cart_content .button,
+        .c-subscribe .mc4wp-form input[type=submit],
+        body #sb_instagram #sbi_load .sbi_load_btn,
+        body #sb_instagram .sbi_follow_btn a,
+        .woocommerce-widget-layered-nav-list__item.chosen:before {
+            background-color: #051c45;
+            color: #FFFFFF;
+        }
+
+        .c-home-tabs__view-more-button,
+        .c-product-grid__item-view-more {
+            color: #FFFFFF;
+        }
+
+        .c-home-tabs__view-more-button:before,
+        .c-product-grid__item-view-more:before,
+        .c-product-grid__item--view-more:after,
+        .entry-content blockquote:before,
+        .entry-content .wp-block-quote:before {
+            background-color: #051c45;
+        }
+
+        .c-mega-menu__label {
+            background-color: #fe8128;
+        }
+
+        .c-mega-menu__label:before {
+            border-top-color: #fe8128;
+        }
+
+        .c-header__cart-count {
+            color: #FFFFFF;
+            background-color: #fe8127;
+        }
+
+        .c-page-header__title,
+        .c-home-banners__title,
+        .c-home-tabs__title,
+        .c-home-tabs__header-list,
+        .c-home-tabs__header-select,
+        .c-product__title,
+        .c-404__header,
+        .c-cart-empty__header,
+        .c-wishlist-empty__header,
+        .c-home-promo__title {
+            font-family: "Exo 2", sans-serif !important;
+            font-weight: 700 !important;
+        }
+
+        .c-home-banners__subheader {
+            font-family: "Exo 2", sans-serif !important;
+            font-weight: 200 !important;
+        }
+
+        .c-header-search__input,
+        .c-mega-menu__item,
+        .c-sub-categories,
+        .c-product-grid__title,
+        .c-product-grid__item .price,
+        .c-product .price:not(.woocommerce-grouped-product-list-item__price),
+        .c-wishlist__td--product-price,
+        .c-cart__shop-td--product-price,
+        .c-footer__phone,
+        .c-home-banners__button,
+        .c-subscribe__header,
+        .c-block__header,
+        body #sb_instagram .sbi_header_text h3,
+        .c-icons__header,
+        .c-brands__header,
+        .c-testimonials__header,
+        .c-testimonials__author,
+        .c-posts__header,
+        .c-post-list__header,
+        .entry-content h1,
+        .entry-content h2,
+        .entry-content h3,
+        .entry-content h4,
+        .entry-content h5,
+        .entry-content h6,
+        .entry-content blockquote,
+        .entry-content .wp-block-quote,
+        .widget-title,
+        .c-lp-widget__title,
+        .widget_calendar caption,
+        .c-product__tabs-list,
+        .c-product__products-title,
+        .c-product__tabs-custom-select,
+        .c-product__tabs-custom-title,
+        .comment-reply-title,
+        .comments-title,
+        .c-cart__totals-price--total strong .amount,
+        .c-product-list-widget__total,
+        .c-account__navigation,
+        .c-order__result-message,
+        .c-cart__cross-sell h2,
+        .c-countdown {
+            font-family: "Exo 2", sans-serif !important;
+            font-weight: 700 !important;
+        }
+
+        .c-mega-menu__submenu,
+        .c-mega-menu__label,
+        .c-product-grid__item .price > del,
+        .c-wishlist__td--product-price del,
+        .c-cart__shop-td--product-price del,
+        .c-product .price:not(.woocommerce-grouped-product-list-item__price) > del,
+        .c-footer__widgets .widget-title,
+        .c-product__sidebar .c-advantage .widget-title {
+            font-family: "Roboto", sans-serif !important;
+        }
+
+        .c-header-search__clear-text,
+        .c-product-grid__item .price > del,
+        .c-product .price:not(.woocommerce-grouped-product-list-item__price) > del,
+        .c-cart__shop-update,
+        .c-cart__collaterals .woocommerce-remove-coupon,
+        .c-cart__collaterals .tax_label,
+        .c-cart__collaterals .includes_tax,
+        .c-cart__shop-table .tax_label,
+        .c-cart__shop-th,
+        .c-cart__totals-th,
+        .woocommerce-table thead th {
+            color: #afafaf;
+        }
+
+        body,
+        .c-page-header__title-or,
+        .c-page-header__tab-login--not-active,
+        .c-page-header__tab-register--not-active {
+            font-family: "Roboto", sans-serif !important;
+            color: #afafaf;
+        }
+
+        .c-mega-menu__item--small {
+            font-family: "Roboto", sans-serif !important;
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .star-rating:before,
+        .star-rating span:before,
+        .comment-form-rating .stars a {
+            background-image: url("data:image/svg+xml;base64,PHN2ZyBmaWxsPSIjRkZEMTQxIiB3aWR0aD0iMTc5MiIgaGVpZ2h0PSIxNzkyIiB2aWV3Qm94PSIwIDAgMTc5MiAxNzkyIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxwYXRoIGQ9Ik0xNzI4IDY0N3EwIDIyLTI2IDQ4bC0zNjMgMzU0IDg2IDUwMHExIDcgMSAyMCAwIDIxLTEwLjUgMzUuNVQxMzg1IDE2MTlxLTE5IDAtNDAtMTJsLTQ0OS0yMzYtNDQ5IDIzNnEtMjIgMTItNDAgMTItMjEgMC0zMS41LTE0LjVUMzY1IDE1NjlxMC02IDItMjBsODYtNTAwTDg5IDY5NXEtMjUtMjctMjUtNDggMC0zNyA1Ni00Nmw1MDItNzNMODQ3IDczcTE5LTQxIDQ5LTQxdDQ5IDQxbDIyNSA0NTUgNTAyIDczcTU2IDkgNTYgNDZ6Ii8+PC9zdmc+") !important;
+        }
+
+        .h-wave:after,
+        .entry-content hr {
+            background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTUiIGhlaWdodD0iNiIgdmlld0JveD0iMCAwIDE1IDYiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTAgNUMyLjg2OTkgNSA0LjE1NTg1IDEgNy41IDFDMTAuODQ0MSAxIDExLjY1NTkgNSAxNSA1IiBzdHJva2U9IiNmZTgxMjgiIHN0cm9rZS13aWR0aD0iMiIvPjwvc3ZnPg==") !important;
+        }
+
+        .woocommerce-widget-layered-nav-list__item.chosen:after,
+        input[type=checkbox]:checked + i:after {
+            background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTEiIGhlaWdodD0iNyIgdmlld0JveD0iMCAwIDExIDciIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0xMC4yMDcyIDEuNzA3MDZMNS4yMDcxOCA2LjcwNzA2QzQuODE2NjYgNy4wOTc1OCA0LjE4MzQ5IDcuMDk3NTggMy43OTI5NyA2LjcwNzA2TDAuNzkyOTY5IDMuNzA3MDZMMi4yMDcxOCAyLjI5Mjg1TDQuNTAwMDggNC41ODU3NEw4Ljc5Mjk3IDAuMjkyODQ3TDEwLjIwNzIgMS43MDcwNloiIGZpbGw9IiNGRkZGRkYiLz48L3N2Zz4=") !important;
+        }
+
+        .c-cart__collaterals:after {
+            background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iOCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBmaWxsPSJyZ2IoMjM4LCAyMzksIDI0MikiIGZpbGwtcnVsZT0ibm9uemVybyIgZD0iTTE4IDBIMGw5IDcuNXoiLz48L3N2Zz4=") !important;
+        }
+
+        .c-product__image .h-after-before-hide {
+            background-color: rgba(255, 255, 255, 0.8);
+        }
+
+        .c-wishlist__th,
+        .c-cart__shop-th,
+        .c-cart__totals-th,
+        .woocommerce-table th,
+        .woocommerce-orders-table th {
+            border-color: rgba(5, 28, 69, 0.3);
+        }
+
+        .c-wishlist__td,
+        .c-cart__shop-td,
+        .c-cart__coupon:after,
+        .c-cart__collaterals-hr:after,
+        .c-cart__totals-space--hr:after,
+        .woocommerce-table td,
+        .woocommerce-table tfoot th,
+        .woocommerce-orders-table td,
+        .c-product__thumbs-item--video,
+        .c-header__callback-wrap {
+            border-color: rgba(5, 28, 69, 0.15) !important;
+        }
+
+        input[type=search]:not(.c-form__input--fill):not(.h-cb),
+        input[type=text]:not(.c-form__input--fill):not(.h-cb),
+        input[type=password]:not(.c-form__input--fill):not(.h-cb),
+        input[type=email]:not(.c-form__input--fill):not(.h-cb),
+        input[type=tel]:not(.c-form__input--fill):not(.h-cb),
+        input[type=number]:not(.c-form__input--fill):not(.h-cb),
+        input[type=url]:not(.c-form__input--fill):not(.h-cb),
+        textarea:not(.c-form__input--fill):not(.h-cb),
+        input[type=radio] + i,
+        input[type=checkbox] + i,
+        select:not(.c-form__input--fill):not(.h-cb),
+        .select2-selection--single,
+        .select2-selection--multiple,
+        .c-countdown__item {
+            background-color: #FFFFFF;
+        }
+
+        input:-webkit-autofill,
+        textarea:-webkit-autofill,
+        select:-webkit-autofill {
+            -webkit-box-shadow: 0 0 0 1000px #FFFFFF inset, 0 0 3px rgba(5, 28, 69, 0.15);
+            -webkit-text-fill-color: #051c45;
+            outline: 2px;
+        }
+
+        input[type=search]:not(.h-cb),
+        input[type=text]:not(.h-cb),
+        input[type=password]:not(.h-cb),
+        input[type=email]:not(.h-cb),
+        input[type=tel]:not(.h-cb),
+        input[type=number]:not(.h-cb),
+        input[type=url]:not(.h-cb),
+        textarea:not(.h-cb),
+        input[type=radio] + i,
+        input[type=checkbox] + i,
+        select:not(.h-cb),
+        .select2-selection--single,
+        .select2-selection--multiple {
+            border-color: rgb(218, 221, 227) !important;
+        }
+
+        .select2-selection--single,
+        .select2-selection--multiple,
+        .c-header__callback-wrap,
+        .select2-dropdown,
+        .c-header-search__wrap {
+            background-color: #FFFFFF !important;
+        }
+
+        input[type=search]:not(.h-cb):focus,
+        input[type=text]:not(.h-cb):focus,
+        input[type=password]:not(.h-cb):focus,
+        input[type=email]:not(.h-cb):focus,
+        input[type=tel]:not(.h-cb):focus,
+        input[type=number]:not(.h-cb):focus,
+        input[type=url]:not(.h-cb):focus,
+        textarea:not(.h-cb):focus,
+        input[type=radio]:focus + i,
+        input[type=checkbox]:focus + i,
+        select:not(.h-cb):focus,
+        .select2-container--open .select2-selection--multiple,
+        .select2-container--open .select2-selection--single,
+        .select2-dropdown {
+            border-color: rgba(5, 28, 69, 0.5) !important;
+        }
+
+        .select2-results__option[aria-selected=true],
+        .select2-results__option[data-selected=true] {
+            background-color: rgba(5, 28, 69, 0.15) !important;
+        }
+
+        .select2-results__option--highlighted[aria-selected],
+        .select2-results__option--highlighted[data-selected] {
+            background-color: #051c45 !important;
+        }
+
+        .select2-container--default .select2-results__option--highlighted[aria-selected],
+        .select2-container--default .select2-results__option--highlighted[data-selected] {
+            background-color: rgba(5, 28, 69, 0.2) !important;
+        }
+
+        .c-cart__collaterals,
+        .c-product__quantity-value,
+        .c-product__wishlist-button,
+        .c-product__video-svg-wrap,
+        .c-product__add-to-cart-wrap--sticky:after,
+        .c-quantity__value,
+        .woocommerce-notice,
+        .c-form__textarea--dark,
+        .comment-form textarea,
+        .c-cart .woocommerce-terms-and-conditions,
+        .c-form__input--fill,
+        .c-form__textarea--fill,
+        .comment-form textarea,
+        .comment-form input[type=text],
+        .comment-form input[type=tel],
+        .comment-form input[type=password],
+        .comment-form input[type=email],
+        .comment-form input[type=url],
+        .wpcf7-form input[type=text],
+        .wpcf7-form input[type=tel],
+        .wpcf7-form input[type=password],
+        .wpcf7-form input[type=number],
+        .wpcf7-form input[type=url],
+        .wpcf7-form input[type=email],
+        .wpcf7-form textarea,
+        .woocommerce-ResetPassword input[type=text],
+        .c-order__details-item,
+        .entry-content pre,
+        .entry-content tr.odd td,
+        .comment-content tr.odd td {
+            background-color: rgb(238, 239, 242) !important;
+        }
+
+        .c-to-top-button {
+            background-color: inherit;
+            color: #FFFFFF;
+        }
+
+    </style>
+    <script type="text/template" id="tmpl-variation-template">
+        <div class="woocommerce-variation-description">{{{ data.variation.variation_description }}}</div>
+        <div class="woocommerce-variation-price">{{{ data.variation.price_html }}}</div>
+        <div class="woocommerce-variation-availability">{{{ data.variation.availability_html }}}</div>
+    </script>
+    <script type='text/javascript'
+            src='https://mykolaiv.celentano.delivery/wp-includes/js/jquery/jquery.min.js?ver=3.6.0'
+            id='jquery-core-js'></script>
+    <script type='text/javascript' id='jquery-migrate-js-before'>
+        var ideapark_svg_content = "";
+        var ajax = new XMLHttpRequest();
+        ajax.open("GET", "https://mykolaiv.celentano.delivery/wp-content/themes/foodz/assets/img/sprite.svg?v=", true);
+        ajax.send();
+        ajax.onload = function (e) {
+            ideapark_svg_content = ajax.responseText;
+            ideapark_download_svg_onload();
+        };
+
+        function ideapark_download_svg_onload() {
+            if (typeof document.body != "undefined" && document.body != null && typeof document.body.childNodes != "undefined" && typeof document.body.childNodes[0] != "undefined") {
+                var div = document.createElement("div");
+                div.className = "svg-sprite-container";
+                div.innerHTML = ideapark_svg_content;
+                document.body.insertBefore(div, document.body.childNodes[0]);
+            } else {
+                setTimeout(ideapark_download_svg_onload, 100);
+            }
+        }
+
+    </script>
+    <script type='text/javascript'
+            src='https://mykolaiv.celentano.delivery/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.3.2'
+            id='jquery-migrate-js'></script>
+    <script type='text/javascript'
+            src='https://mykolaiv.celentano.delivery/wp-content/plugins/revslider/public/assets/js/jquery.themepunch.tools.min.js?ver=5.4.8.3'
+            id='tp-tools-js'></script>
+    <script type='text/javascript'
+            src='https://mykolaiv.celentano.delivery/wp-content/plugins/revslider/public/assets/js/jquery.themepunch.revolution.min.js?ver=5.4.8.3'
+            id='revmin-js'></script>
+    <link rel="https://api.w.org/" href="https://mykolaiv.celentano.delivery/wp-json/"/>
+    <link rel="EditURI" type="application/rsd+xml" title="RSD"
+          href="https://mykolaiv.celentano.delivery/xmlrpc.php?rsd"/>
+    <link rel="wlwmanifest" type="application/wlwmanifest+xml"
+          href="https://mykolaiv.celentano.delivery/wp-includes/wlwmanifest.xml"/>
+    <meta name="generator" content="WordPress 5.8"/>
+    <meta name="generator" content="WooCommerce 3.7.2"/>
+    <link rel="preload" href="" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="">
+    </noscript>
+    <noscript>
+        <style>.woocommerce-product-gallery {
+            opacity: 1 !important;
+        }</style>
+    </noscript>
+    <style type="text/css">.recentcomments a {
+        display: inline !important;
+        padding: 0 !important;
+        margin: 0 !important;
+    }</style>
+    <meta name="generator"
+          content="Powered by Slider Revolution 5.4.8.3 - responsive, Mobile-Friendly Slider Plugin for WordPress with comfortable drag and drop interface."/>
+    <link rel="icon"
+          href="https://mykolaiv.celentano.delivery/wp-content/uploads/2021/05/cropped-tomat-favicon-32x32.png"
+          sizes="32x32"/>
+    <link rel="icon"
+          href="https://mykolaiv.celentano.delivery/wp-content/uploads/2021/05/cropped-tomat-favicon-192x192.png"
+          sizes="192x192"/>
+    <link rel="apple-touch-icon"
+          href="https://mykolaiv.celentano.delivery/wp-content/uploads/2021/05/cropped-tomat-favicon-180x180.png"/>
+    <meta name="msapplication-TileImage"
+          content="https://mykolaiv.celentano.delivery/wp-content/uploads/2021/05/cropped-tomat-favicon-270x270.png"/>
+    <script type="text/javascript">function setREVStartSize(e) {
+        try {
+            e.c = jQuery(e.c);
+            var i = jQuery(window).width(), t = 9999, r = 0, n = 0, l = 0, f = 0, s = 0, h = 0;
+            if (e.responsiveLevels && (jQuery.each(e.responsiveLevels, function (e, f) {
+                f > i && (t = r = f, l = e), i > f && f > r && (r = f, n = e)
+            }), t > r && (l = n)), f = e.gridheight[l] || e.gridheight[0] || e.gridheight, s = e.gridwidth[l] || e.gridwidth[0] || e.gridwidth, h = i / s, h = h > 1 ? 1 : h, f = Math.round(h * f), "fullscreen" == e.sliderLayout) {
+                var u = (e.c.width(), jQuery(window).height());
+                if (void 0 != e.fullScreenOffsetContainer) {
+                    var c = e.fullScreenOffsetContainer.split(",");
+                    if (c) jQuery.each(c, function (e, i) {
+                        u = jQuery(i).length > 0 ? u - jQuery(i).outerHeight(!0) : u
+                    }), e.fullScreenOffset.split("%").length > 1 && void 0 != e.fullScreenOffset && e.fullScreenOffset.length > 0 ? u -= jQuery(window).height() * parseInt(e.fullScreenOffset, 0) / 100 : void 0 != e.fullScreenOffset && e.fullScreenOffset.length > 0 && (u -= parseInt(e.fullScreenOffset, 0))
+                }
+                f = u
+            } else void 0 != e.minHeight && f < e.minHeight && (f = e.minHeight);
+            e.c.closest(".rev_slider_wrapper").css({height: f})
+        } catch (d) {
+            console.log("Failure at Presize of Slider:" + d)
+        }
+    };</script>
+    <style type="text/css" id="wp-custom-css">
+        .c-soc, .c-top-menu, .c-header__wishlist, .c-product-grid__thumb-button-list, .c-header__auth.c-header__auth--bottom, .c-header__row-1 .l-section__container .c-header__buttons-block, .c-cart__shipping-destination {
+            display: none;
+        }
+
+        .c-header__logo {
+            padding: 0;
+        }
+
+        #nav_menu-6 h2 {
+            opacity: 0;
+        }
+
+        #nav_menu-4 h2 {
+            text-align: right;
+        }
+
+        .c-mega-menu__item {
+            font-size: 16px;
+        }
+
+        input[type=radio]:not(.h-cb), input[type=checkbox]:not(.h-cb) {
+            opacity: 1;
+        }
+
+        .sm-f {
+            display: flex;
+            align-items: center;
+            flex-direction: row-reverse;
+        }
+
+        .sm-f a i {
+            font-size: 22px !important;
+        }
+
+        .wp-block-columns.alignwide.has-3-columns {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .woocommerce-mini-cart__buttons {
+            display: flex
+        }
+
+        .cont_wrap {
+            display: flex;
+            align-items: center;
+
+        }
+
+        @media (max-width: 768px) {
+            .cont_wrap {
+                flex-direction: column;
+            }
+
+            #nav_menu-4 h2 {
+                text-align: left;
+            }
+
+        }
+
+        .cont_html {
+            display: flex;
+            flex-direction: column;
+            flex-basis: 50%;
+            margin-right: 10%;
+            align-items: center;
+        }
+
+        .cont_html .c-add-to-cart {
+            color: #fff !important;
+        }
+
+        .img_html {
+            flex-basis: 50%;
+            width: 50%;
+            display: block;
+        }
+
+        .cont_html p, .cont_html a {
+            text-align: center
+        }
+
+        @media (max-width: 768px) {
+            .cont_wrap {
+                flex-direction: column;
+            }
+
+            .cont_html {
+                margin-right: 0;
+            }
+
+            .img_html {
+                width: 100%;
+                margin-top: 20px;
+            }
+        }
+
+
+        .tm-options-totals, .tm-final-totals {
+            display: none;
+        }
+
+        .tc-totals-form {
+            position: absolute;
+            left: -1000px;
+        }
+
+        .tc-extra-product-options .tmcp-field-wrap label, .tm-epo-variation-section .tmhexcolorimage-li-nowh label, .tm-epo-variation-section .tmhexcolorimage-li label {
+            display: flex !important;
+        }
+
+        .tmcp-ul-wrap {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .tm-extra-product-options ul.tmcp-elements li.tmcp-field-wrap {
+            margin: 10px;
+            width: 23.3% !important;
+        }
+
+        input[type=checkbox]:not(.h-cb):checked + i, input[type=checkbox]:not(.h-cb) + i {
+            opacity: 0;
+        }
+
+        .tm-extra-product-options .tm-epo-field.tmcp-checkbox, .tm-extra-product-options .tm-epo-field.tmcp-radio {
+            position: absolute;
+            left: -1000px;
+        }
+
+        .tc-price {
+            position: absolute;
+            right: 13px;
+            bottom: 0px;
+        }
+
+        .tm-extra-product-options ul.tmcp-elements li.tmcp-field-wrap {
+            padding: 1em;
+        }
+
+        .tc-active {
+            box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.05);
+        }
+
+        .tc-active:before {
+            content: "+ додано";
+            background: red;
+            position: absolute;
+            top: 5px;
+            left: 5px;
+            font-size: 14px;
+            font-weight: 600;
+            background-color: #E41613;
+            color: #fff;
+            text-transform: lowercase;
+            align-items: center;
+            justify-content: center;
+            height: 25px;
+            width: 100px;
+            border-radius: 15px;
+            display: inline;
+            text-align: center;
+            vertical-align: middle;
+            line-height: 24px;
+            box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .tm-box {
+            background: #fff;
+            border: none;
+        }
+
+        .tc-extra-product-options .tmcp-field-wrap label, .tm-epo-variation-section .tmhexcolorimage-li-nowh label, .tm-epo-variation-section .tmhexcolorimage-li label {
+            width: 100% !important;
+        }
+
+        .tc-label {
+            font-size: 14px;
+            color: #0E2244;
+            font-weight: 600;
+            line-height: 1.3;
+            margin-right: 40px;
+        }
+
+        .labwrap {
+            display: flex
+        }
+
+        .c-header__row-sticky nav {
+            margin-left: 120px;
+        }
+
+        .c-header__row-sticky .c-header__logo {
+            z-index: 9999;
+            position: absolute;
+            left: 6%;
+        }
+
+        .h-wave:after, .entry-content hr {
+            display: none
+        }
+
+        .c-footer {
+            padding-bottom: 0 !important;
+            padding-top: 15px;
+        }
+
+        .checkbox_image {
+            width: 105px !important;
+        }
+
+        .c-header__menu-auth {
+            display: none;
+        }
+
+        .single-product .c-product__tabs.woocommerce-tabs, .single-product .c-product__products--related, #billing_state_field, #billing_country_field {
+            display: none
+        }
+
+        .payment_methods {
+            margin-bottom: 20px;
+        }
+
+        .c-footer__logo {
+            margin-bottom: 15px;
+        }
+
+        .c-footer__row-2--widgets {
+            margin-top: 0px;
+        }
+
+        .c-footer__widgets {
+            margin-bottom: 0;
+        }
+
+        .woocommerce-billing-fields__field-wrapper span.optional {
+            display: none;
+        }
+
+
+        .tm-extra-product-options ul.tmcp-elements.use_images_container li.tmcp-field-wrap {
+            display: flex;
+            height: 128px;
+            border: 1px solid #0e2244;
+            border-radius: 14px;
+            padding: 0 12px;
+        }
+
+        input[type=checkbox]:not(.h-cb) + i {
+            display: none;
+        }
+
+        .tc-extra-product-options .tmcp-field-wrap label {
+            justify-content: space-between;
+        }
+
+        .tm-extra-product-options .radio_image, .tm-extra-product-options .checkbox_image {
+            margin: 0;
+            object-fit: contain;
+        }
+
+        .tm-extra-product-options input.use_images:checked + img.radio_image, .tm-extra-product-options input.use_images:checked + .tc-lightbox-image-wrap img.radio_image, .tm-extra-product-options input.use_images:checked + .tmhexcolorimage.radio_image, .tm-extra-product-options input.use_images:checked + .tc-lightbox-wrap img.radio_image, .tm-extra-product-options input.use_images:checked + img.checkbox_image, .tm-extra-product-options input.use_images:checked + .tc-lightbox-image-wrap img.checkbox_image, .tm-extra-product-options input.use_images:checked + .tmhexcolorimage.checkbox_image, .tm-extra-product-options input.use_images:checked + .tc-lightbox-wrap img.checkbox_image {
+            border-color: inherit;
+            border-width: 0;
+            -webkit-box-shadow: none !important;
+            -moz-box-shadow: none !important;
+            box-shadow: none !important;
+        }
+
+        @media (max-width: 1169px) {
+            .h-cb {
+                margin-left: 0px !important;
+                justify-content: start;
+                line-height: 3;
+            }
+
+            .c-header__text {
+                margin-top: 0px;
+            }
+        }
+
+        .cont_wrap {
+            display: block;
+        }        </style>
+</head>
+<body data-rsssl=1
+      class="archive tax-product_cat term-salads term-26 theme-foodz woocommerce woocommerce-page woocommerce-no-js zhours-closed-store woocommerce-on">
+<div id="ideapark-ajax-search" class="c-header-search c-header-search--disabled">
+    <div class="c-header-search__shadow"></div>
+    <div class="c-header-search__wrap" id="ideapark-ajax-search-wrap">
+        <div class="l-section l-section--container c-header-search__result" id="ideapark-ajax-search-result">
+        </div>
+        <button type="button" class="h-cb h-cb--svg c-header-search__close" id="ideapark-ajax-search-close">
+            <svg>
+                <use xlink:href="#svg-close"/>
+            </svg>
+        </button>
+    </div>
+</div>
+<header class="l-section" id="main-header">
+    <div class="c-header c-header--mobile js-header-mobile">
+        <div class="c-header__row-1 c-header__row-1--3 c-header__row-1--sticky js-mobile-sticky-menu js-header-row">
+            <button class="h-cb h-cb--svg c-header__menu-button" id="ideapark-mobile-menu-button" type="button">
+                <svg class="c-header__menu-button-svg">
+                    <use xlink:href="#svg-menu"/>
+                </svg>
+            </button>
+            <style>
+                @media (max-width: 768px) {
+                    .c-header__logo-img {
+                        margin-left: 16px;
+                    }
+
+                    .c-header__phone-block {
+                        margin-top: 0;
+                    }
+
+                    .c-header__row-1--sticky {
+                        display: flex;
+                        flex-direction: row-reverse;
+                        justify-content: space-between;
+                    }
+
+                    .c-header__row-1 > .c-header__phone-block .h-cb {
+                        display: none;
+                    }
+
+                    .c-header__buttons-block.c-header__buttons-block--1 {
+                        display: none;
+                    }
+                }
+            </style>
+            <div class="c-header__menu js-mobile-menu">
+                <div class="c-header__menu-shadow"></div>
+                <div class="c-header__menu-wrap">
+                    <div class="c-header__menu-buttons">
+                        <button type="button" class="h-cb h-cb--svg c-header__menu-back" id="ideapark-menu-back">
+                            <svg class="c-header__menu-back-svg">
+                                <use xlink:href="#svg-angle-right"/>
+                            </svg>
+                            Back
+                        </button>
+                        <button type="button" class="h-cb h-cb--svg c-header__menu-close" id="ideapark-menu-close">
+                            <svg class="c-header__menu-close-svg">
+                                <use xlink:href="#svg-close"/>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="c-header__menu-content">
+                        <nav itemscope itemtype="http://schema.org/SiteNavigationElement"
+                             class="c-mega-menu c-mega-menu--preload js-mega-menu">
+                            <ul id="mega-menu-mobile" class="c-mega-menu__list">
+                                <li class="c-mega-menu__item menu-item-14646"><a
+                                        href="https://mykolaiv.celentano.delivery/product-category/pizza/"><span
+                                        class="c-mega-menu__title-wrap c-mega-menu__title-wrap--header-type-3"><svg
+                                        class="c-mega-menu__icon"><use xlink:href="#svg-icon-2"/></svg><span
+                                        class="c-mega-menu__title">Pizza</span></span></a></li>
+                                <li class="c-mega-menu__item menu-item-14645"><a
+                                        href="https://mykolaiv.celentano.delivery/product-category/pasta/"><span
+                                        class="c-mega-menu__title-wrap c-mega-menu__title-wrap--header-type-3"><svg
+                                        class="c-mega-menu__icon"><use xlink:href="#svg-icon-8"/></svg><span
+                                        class="c-mega-menu__title">Salads</span></span></a></li>
+                                <li class="c-mega-menu__item menu-item-14724"><a
+                                        href="https://mykolaiv.celentano.delivery/product-category/salads/"><span
+                                        class="c-mega-menu__title-wrap c-mega-menu__title-wrap--header-type-3"><svg
+                                        class="c-mega-menu__icon"><use xlink:href="#svg-icon-47"/></svg><span
+                                        class="c-mega-menu__title">Salads</span></span></a></li>
+                                <li class="c-mega-menu__item menu-item-15162"><a
+                                        href="https://mykolaiv.celentano.delivery/product-category/garyachi-stravy/"><span
+                                        class="c-mega-menu__title-wrap c-mega-menu__title-wrap--header-type-3"><svg
+                                        class="c-mega-menu__icon"><use xlink:href="#svg-icon-40"/></svg><span
+                                        class="c-mega-menu__title">Гарячі страви</span></span></a></li>
+                                <li class="c-mega-menu__item menu-item-15163"><a
+                                        href="https://mykolaiv.celentano.delivery/product-category/deserty/"><span
+                                        class="c-mega-menu__title-wrap c-mega-menu__title-wrap--header-type-3"><svg
+                                        class="c-mega-menu__icon"><use xlink:href="#svg-icon-30"/></svg><span
+                                        class="c-mega-menu__title">Десерти</span></span></a></li>
+                                <li class="c-mega-menu__item menu-item-14723"><a
+                                        href="https://mykolaiv.celentano.delivery/product-category/drinks/"><span
+                                        class="c-mega-menu__title-wrap c-mega-menu__title-wrap--header-type-3"><svg
+                                        class="c-mega-menu__icon"><use xlink:href="#svg-icon-18"/></svg><span
+                                        class="c-mega-menu__title">Напої</span></span></a></li>
+                                <li class="c-mega-menu__item menu-item-15165"><a
+                                        href="https://mykolaiv.celentano.delivery/sample-page-2/"><span
+                                        class="c-mega-menu__title-wrap c-mega-menu__title-wrap--header-type-3"><img
+                                        class="c-mega-menu__icon"
+                                        src="https://mykolaiv.celentano.delivery/wp-content/uploads/2019/11/icons8-info-40.png"
+                                        alt="Доставка" sizes="(max-width: 40px) 100vw, 40px"/><span
+                                        class="c-mega-menu__title">Доставка</span></span></a></li>
+                            </ul>
+                        </nav>
+                        <div class="c-header__phone-block">
+                            <div class="c-header__phone"
+
+                            <div class="c-header__text">
+                                <div class="sm-f">
+
+                                    <i class="fa fa-facebook-square" aria-hidden="true"></i>
+                                    </a>
+                                    <a href="https://www.instagram.com/celentanoniko/" style="margin-right: 20px"
+                                       target="_blank" class="customize-unpreviewable"> <i class="fa fa-instagram"
+                                                                                           aria-hidden="true"></i>
+                                    </a></div>
+                            </div>
+                            <div class="c-header__menu-bottom">
+                                <div class="c-soc ">
+                                    <a href="#">
+                                        <svg class="c-soc__svg c-soc__svg--facebook">
+                                            <use xlink:href="#svg-facebook"/>
+                                        </svg>
+                                    </a>
+                                    <a href="#">
+                                        <svg class="c-soc__svg c-soc__svg--instagram">
+                                            <use xlink:href="#svg-instagram"/>
+                                        </svg>
+                                    </a>
+                                </div>
+                                <div class="c-header__menu-auth"><a
+                                        class="c-header__button-link c-header__button-link--account"
+                                        href="https://mykolaiv.celentano.delivery/my-account/" rel="nofollow">
+                                    <svg class="c-header__menu-auth-svg">
+                                        <use xlink:href="#svg-user"/>
+                                    </svg>
+                                    <span class="c-header__menu-auth-text">Login</span></a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="c-header c-header--desktop js-header-desktop">
+                <div class="c-header__bg js-header-bg" data-height="1"></div>
+                <div class="c-header__row-1 js-header-row">
+                    <div class="l-section__container c-header__container ">
+                        <div class="c-soc c-soc--header-row-1">
+                            <a href="#">
+                                <svg class="c-soc__svg c-soc__svg--facebook">
+                                    <use xlink:href="#svg-facebook"/>
+                                </svg>
+                            </a>
+                            <a href="#">
+                                <svg class="c-soc__svg c-soc__svg--instagram">
+                                    <use xlink:href="#svg-instagram"/>
+                                </svg>
+                            </a>
+                        </div>
+                        <div class="c-header__phone-block">
+                            <div class="c-header__phone">
+
+                                <div class="c-header__buttons-block">
+                                    <div class="c-header__auth c-header__auth--bottom"><a
+                                            class="c-header__button-link c-header__button-link--account"
+                                            href="https://mykolaiv.celentano.delivery/my-account/" rel="nofollow">
+                                        <svg class="c-header__auth-svg">
+                                            <use xlink:href="#svg-user"/>
+                                        </svg>
+                                        <span class="c-header__auth-text">Login</span></a></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="c-header__row-2 js-header-row">
+                            <div class="l-section__container c-header__container  ">
+                                <div class="c-header__logo ">
+                                    <a href="https://mykolaiv.celentano.delivery/"> <img width="438" height="438"
+                                                                                         src="https://mykolaiv.celentano.delivery/wp-content/uploads/2019/10/Celentano-Pizza-logo-vertical-png-white-01.png"
+                                                                                         alt="Chelentano"
+                                                                                         class="c-header__logo-img  c-header__logo-img--desktop "/>
+                                        <img width="438" height="438"
+                                             src="https://mykolaiv.celentano.delivery/wp-content/uploads/2019/10/Celentano-Pizza-logo-vertical-png-white-01.png"
+                                             alt="Челентано Миколаїв"
+                                             class="c-header__logo-img c-header__logo-img--mobile"/>
+                                    </a></div>
+                                <button class="h-cb h-cb--svg c-header__search-button js-search-button" type="button">
+                                    <svg class="c-header__search-button-svg">
+                                        <use xlink:href="#svg-search"/>
+                                    </svg>
+                                </button>
+                                <div class="c-header__cart js-cart">
+                                    <a class="c-header__button-link" href="https://mykolaiv.celentano.delivery/cart/">
+                                        <svg class="c-header__cart-svg">
+                                            <use xlink:href="#svg-cart"/>
+                                        </svg>
+                                        <span class="js-cart-info"></span> </a>
+                                    <div class="widget_shopping_cart_content"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="c-header__row-sticky c-header__row-sticky--disabled  js-fixed js-desktop-sticky-menu">
+                        <div class="c-header__logo ">
+                            <a href="https://mykolaiv.celentano.delivery/"> <img width="438" height="438"
+                                                                                 src="https://mykolaiv.celentano.delivery/wp-content/uploads/2019/10/Celentano-Pizza-logo-vertical-png-white-01.png"
+                                                                                 alt="Chelentano"
+                                                                                 class="c-header__logo-img  c-header__logo-img--desktop "/>
+                                <img width="438" height="438"
+                                     src="https://mykolaiv.celentano.delivery/wp-content/uploads/2019/10/Celentano-Pizza-logo-vertical-png-white-01.png"
+                                     alt="Chelentano" class="c-header__logo-img c-header__logo-img--mobile"/>
+                            </a></div>
+                        <div class="l-section__container c-header__container">
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="c-header__callback-popup c-header__callback-popup--disabled">
+                    <div class="c-header__callback-wrap">
+                        <div class="c-header__callback-header"></div>
+                        <button type="button" class="h-cb h-cb--svg c-header__callback-close js-callback-close"
+                                id="ideapark-callback-close">
+                            <svg>
+                                <use xlink:href="#svg-close"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+</header>
+<header class="l-section c-page-header c-page-header--category ">
+    <nav class="с-breadcrumb">
+        <ol class="с-breadcrumb__list">
+            <li class="с-breadcrumb__item"><a href="https://mykolaiv.celentano.delivery"></a></li>
+            <li class="с-breadcrumb__item"></li>
+        </ol>
+    </nav>
+    <h1 class="c-page-header__title">Salads</h1>
+</header>
+<div class="woocommerce-notices-wrapper"></div>
+<div class="l-section l-section--container l-section--top-margin">
+    <div class="l-section__content">
+        <div class="">
+            <div class="c-ordering c-ordering--preload">
+                <div class="c-ordering__select c-ordering__select--no-filter ">
+                </div>
+            </div>
+            <div class="c-product-grid">
+                <ul class="c-product-grid__list c-product-grid__list--layout-product-2  columns-3 h-clearfix">
+                    <li class="c-product-grid__item c-product-grid__item--layout-product-2 product type-product post-15994 status-publish first instock product_cat-salads has-post-thumbnail shipping-taxable purchasable product-type-simple">
+                        <div class="c-product-grid__item-wrap c-product-grid__item-wrap--layout-product-2">
+                            <div class="c-product-grid__thumb-wrap c-product-grid__thumb-wrap--layout-product-2">
+                                <div class="c-badge__list c-product-grid__badges c-product-grid__badges--layout-product-2">
+                                </div>
+                                <img src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs%3D"
+                                     data-src="https://mykolaiv.celentano.delivery/wp-content/uploads/2020/03/ruka-438x438.png"
+                                     alt="Shrimp salad"
+                                     class="c-product-grid__thumb c-product-grid__thumb--layout-product-2 lazyload "
+                                     data-sizes="(min-width: 1170px) 238px,(min-width: 375px) 150px, 238px"/></a>
+                            </div>
+                            <div class="c-product-grid__details c-product-grid__details--layout-product-2">
+                                <div class="c-product-grid__title">
+                                    <a class="c-product-grid__title-link">Shrimp salad</a>
+                                    </a>
+                                </div>
+                                <div class="c-product-grid__short-desc">
+                                    <p>Shrimp, cucumber, egg, carrots, potatoes, lettuce, mayonnaise 100g</p>
+                                </div>
+                                <span class="price"><span class="woocommerce-Price-amount amount"><span
+                                        class="woocommerce-Price-currencySymbol">&#36;</span>30</span></span>
+                                <a href="?add-to-cart=15994" data-quantity="1"
+                                   class="c-add-to-cart disabled c-product-grid__add-to-cart button product_type_simple add_to_cart_button ajax_add_to_cart"
+                                   data-product_id="15994" data-product_sku=""
+                                   aria-label="Додайте &ldquo;Cалат з креветкою&rdquo; до кошика" rel="nofollow"
+                                   href="file:///C:/Users/Daria/Documents/PLacing%20an%20order.html">
+                                    <svg class="c-add-to-cart__svg">
+                                        <use xlink:href="#svg-cart"/>
+                                    </svg>
+                                    Order</a><span class="added_to_cart h-hidden"></span>
+                                <a href="file:///C:/Users/Daria/Documents/PLacing%20an%20order.html"/>
+                                <div class="c-product-grid__quantity-wrap">
+                                    <div class="c-quantity js-product-grid-quantity"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="c-product-grid__item c-product-grid__item--layout-product-2 product type-product post-15993 status-publish instock product_cat-salads has-post-thumbnail shipping-taxable purchasable product-type-simple">
+                        <div class="c-product-grid__item-wrap c-product-grid__item-wrap--layout-product-2">
+                            <div class="c-product-grid__thumb-wrap c-product-grid__thumb-wrap--layout-product-2">
+                                <div class="c-badge__list c-product-grid__badges c-product-grid__badges--layout-product-2">
+                                </div>
+                                <img src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs%3D"
+                                     data-src="https://mykolaiv.celentano.delivery/wp-content/uploads/2020/03/ruka-438x438.png"
+                                     alt="Chicken"
+                                     class="c-product-grid__thumb c-product-grid__thumb--layout-product-2 lazyload "
+                                     data-sizes="(min-width: 1170px) 238px,(min-width: 375px) 150px, 238px"/></a>
+                            </div>
+                            <div class="c-product-grid__details c-product-grid__details--layout-product-2">
+                                <div class="c-product-grid__title">
+                                    <a class="c-product-grid__title-link"
+                                       href="https://mykolaiv.celentano.delivery/product/c%d0%b0%d0%bb%d0%b0%d1%82-%d0%b7-%d0%ba%d1%83%d1%80%d0%ba%d0%be%d1%8e/">Salad
+                                        with cheeken</a>
+                                </div>
+                                <div class="c-product-grid__short-desc">
+                                    <p>Chicken fillet, potatoes, carrots, bell peppers, pineapple, apple, mayonnaise,
+                                        onion, greens 100g</p>
+                                    <span class="price"><span class="woocommerce-Price-amount amount"><span
+                                            class="woocommerce-Price-currencySymbol">&#36;</span>27</span></span>
+                                    <a href="?add-to-cart=15993" data-quantity="1"
+                                       class="c-add-to-cart disabled c-product-grid__add-to-cart button product_type_simple add_to_cart_button ajax_add_to_cart"
+                                       data-product_id="15993" data-product_sku=""
+                                       aria-label="Додайте &ldquo;Cалат з куркою&rdquo; до кошика" rel="nofollow">
+                                        <svg class="c-add-to-cart__svg">
+                                            <use xlink:href="#svg-cart"/>
+                                        </svg>
+                                        Order</a><span class="added_to_cart h-hidden"></span>
+                                    <div class="c-product-grid__quantity-wrap">
+                                        <div class="c-quantity js-product-grid-quantity"></div>
+                                    </div>
+                                </div>
+                            </div>
+                    </li>
+                    <li class="c-product-grid__item c-product-grid__item--layout-product-2 product type-product post-15992 status-publish last instock product_cat-salads has-post-thumbnail shipping-taxable purchasable product-type-simple">
+                        <div class="c-product-grid__item-wrap c-product-grid__item-wrap--layout-product-2">
+                    <li class="c-product-grid__item c-product-grid__item--layout-product-2 product type-product post-15991 status-publish first instock product_cat-salads has-post-thumbnail shipping-taxable purchasable product-type-simple">
+                        <div class="c-product-grid__item-wrap c-product-grid__item-wrap--layout-product-2">
+                            <div class="c-product-grid__thumb-wrap c-product-grid__thumb-wrap--layout-product-2">
+                                <div class="c-badge__list c-product-grid__badges c-product-grid__badges--layout-product-2">
+                                </div>
+                                <img src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs%3D"
+                                     data-src="https://mykolaiv.celentano.delivery/wp-content/uploads/2020/03/ruka-438x438.png"
+                                     alt="Italian"
+                                     class="c-product-grid__thumb c-product-grid__thumb--layout-product-2 lazyload"
+                                     data-sizes="(min-width: 1170px) 238px,(min-width: 375px) 150px, 238px"/>                </a>
+                            </div>
+                            <div class="c-product-grid__details c-product-grid__details--layout-product-2">
+                                <div class="c-product-grid__title">
+                                    <a class="c-product-grid__title-link"
+                                       href="https://mykolaiv.celentano.delivery/product/c%d0%b0%d0%bb%d0%b0%d1%82-%d1%83%d0%b3%d0%be%d1%80%d1%81%d1%8c%d0%ba%d0%b8%d0%b9/">Italian
+                                        salad</a>
+                                </div>
+                                <div class="c-product-grid__short-desc">
+                                    <p>Chicken liver, omelette, gherkins, corn, garlik, mustard, mayonnaise 100g</p>
+                                </div>
+                                <span class="price"><span class="woocommerce-Price-amount amount"><span
+                                        class="woocommerce-Price-currencySymbol">&#36;</span>20</span></span>
+                                <a href="?add-to-cart=15991" data-quantity="1"
+                                   class="c-add-to-cart disabled c-product-grid__add-to-cart button product_type_simple add_to_cart_button ajax_add_to_cart"
+                                   data-product_id="15991" data-product_sku=""
+                                   aria-label="Додайте &ldquo;Cалат Угорський&rdquo; до кошика" rel="nofollow">
+                                    <svg class="c-add-to-cart__svg">
+                                        <use xlink:href="#svg-cart"/>
+                                    </svg>
+                                    Order</a><span class="added_to_cart h-hidden"></span>
+                                <div class="c-product-grid__quantity-wrap">
+                                    <div class="c-quantity js-product-grid-quantity"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="c-product-grid__item c-product-grid__item--layout-product-2 product type-product post-15990 status-publish instock product_cat-salads has-post-thumbnail shipping-taxable purchasable product-type-simple">
+                        <div class="c-product-grid__item-wrap c-product-grid__item-wrap--layout-product-2">
+                            <div class="c-product-grid__thumb-wrap c-product-grid__thumb-wrap--layout-product-2">
+                                <div class="c-badge__list c-product-grid__badges c-product-grid__badges--layout-product-2">
+                                </div>
+                                <img src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs%3D"
+                                     data-src="https://mykolaiv.celentano.delivery/wp-content/uploads/2020/03/ruka-438x438.png"
+                                     alt="Veselka"
+                                     class="c-product-grid__thumb c-product-grid__thumb--layout-product-2 lazyload "
+                                     data-sizes="(min-width: 1170px) 238px,(min-width: 375px) 150px, 238px"/></a>
+                            </div>
+                            <div class="c-product-grid__details c-product-grid__details--layout-product-2">
+                                <div class="c-product-grid__title">
+                                    <a class="c-product-grid__title-link"
+                                       href="https://mykolaiv.celentano.delivery/product/c%d0%b0%d0%bb%d0%b0%d1%82-%d0%b2%d0%b5%d1%81%d0%b5%d0%bb%d0%ba%d0%b0/">Veselka
+                                        salad</a>
+                                </div>
+                                <div class="c-product-grid__short-desc">
+                                    <p>Broccoli, bell pepper, olives,onion, garlik, oil, vinegar 100g
+                                    </p>
+                                </div>
+                                <span class="price"><span class="woocommerce-Price-amount amount"><span
+                                        class="woocommerce-Price-currencySymbol">&#36;</span>23</span></span>
+                                <a href="file:///C:/Users/Daria/Documents/Order.html" data-quantity="1"
+                                   class="c-add-to-cart disabled c-product-grid__add-to-cart button product_type_simple add_to_cart_button ajax_add_to_cart"
+                                   data-product_id="15990" data-product_sku=""
+                                   aria-label="Додайте &ldquo;Cалат Веселка&rdquo; до кошика" rel="nofollow">
+                                    <svg class="c-add-to-cart__svg">
+                                        <use xlink:href="file:///C:/Users/Daria/Documents/Order.html"/>
+                                    </svg>
+                                    Order</a><span class="file:///C:/Users/Daria/Documents/Order.html"></span>
+                                <div class="c-product-grid__quantity-wrap">
+                                    <div class="c-quantity js-product-grid-quantity"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="c-product-grid__item c-product-grid__item--layout-product-2 product type-product post-15959 status-publish last instock product_cat-salads has-post-thumbnail shipping-taxable purchasable product-type-simple">
+                        <div class="c-product-grid__item-wrap c-product-grid__item-wrap--layout-product-2">
+                            <div class="c-product-grid__thumb-wrap c-product-grid__thumb-wrap--layout-product-2">
+                                <div class="c-badge__list c-product-grid__badges c-product-grid__badges--layout-product-2">
+                                </div>
+                                <img src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs%3D"
+                                     data-src="https://mykolaiv.celentano.delivery/wp-content/uploads/2020/03/bunito-1-438x438.png"
+                                     alt="Bunito"
+                                     class="c-product-grid__thumb c-product-grid__thumb--layout-product-2 lazyload "
+                                     data-sizes="(min-width: 1170px) 238px,(min-width: 375px) 150px, 238px"/></a>
+                            </div>
+                            <div class="c-product-grid__details c-product-grid__details--layout-product-2">
+                                <div class="c-product-grid__title">
+                                    <a class="c-product-grid__title-link"
+                                       href="https://mykolaiv.celentano.delivery/product/c%d0%b0%d0%bb%d0%b0%d1%82-%d0%b1%d1%83%d0%bd%d1%96%d1%82%d0%be/">Bunito
+                                        salad</a>
+                                </div>
+                                <div class="c-product-grid__short-desc">
+                                    <p>Chicken fillet,carrots, cheese, egg, mayonnaise 100g
+
+                                    </p>
+                                </div>
+                                <span class="price"><span class="woocommerce-Price-amount amount"><span
+                                        class="woocommerce-Price-currencySymbol">&#36;</span>17</span></span>
+                                <a href="?add-to-cart=15959" data-quantity="1"
+                                   class="c-add-to-cart disabled c-product-grid__add-to-cart button product_type_simple add_to_cart_button ajax_add_to_cart"
+                                   data-product_id="15959" data-product_sku=""
+                                   aria-label="Додайте &ldquo;Cалат Буніто&rdquo; до кошика" rel="nofollow">
+                                    <svg class="c-add-to-cart__svg">
+                                        <use xlink:href="#svg-cart"/>
+                                    </svg>
+                                    Order</a><span class="added_to_cart h-hidden"></span>
+                                <div class="c-product-grid__quantity-wrap">
+                                    <div class="c-quantity js-product-grid-quantity"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    </script>
+                    <script>
+                    type = "application/ld+json" > {
+                        "@context": "https:\/\/schema.org\/",
+                        "@type": "BreadcrumbList",
+                        "itemListElement": [{
+                            "@type": "ListItem",
+                            "position": 1,
+                            "item": {
+                                "name": "\u0413\u043e\u043b\u043e\u0432\u043d\u0430",
+                                "@id": "https:\/\/mykolaiv.celentano.delivery"
+                            }
+                        }, {
+                            "@type": "ListItem",
+                            "position": 2,
+                            "item": {
+                                "name": "\u0421\u0430\u043b\u0430\u0442\u0438",
+                                "@id": "https:\/\/mykolaiv.celentano.delivery\/product-category\/salads\/"
+                            }
+                        }]
+                    }
+                    </script>
+                    <script type="text/javascript">
+                        var c = document.body.className;
+                        c = c.replace(/woocommerce-no-js/, 'woocommerce-js');
+                        document.body.className = c;
+                    </script>
+                    <script type="text/javascript">
+                        var wc_product_block_data = JSON.parse(decodeURIComponent('%7B%22min_columns%22%3A1%2C%22max_columns%22%3A6%2C%22default_columns%22%3A3%2C%22min_rows%22%3A1%2C%22max_rows%22%3A6%2C%22default_rows%22%3A1%2C%22thumbnail_size%22%3A438%2C%22placeholderImgSrc%22%3A%22https%3A%5C%2F%5C%2Fmykolaiv.celentano.delivery%5C%2Fwp-content%5C%2Fuploads%5C%2F2019%5C%2F05%5C%2Fwoocommerce-placeholder-438x438.png%22%2C%22min_height%22%3A500%2C%22default_height%22%3A500%2C%22isLargeCatalog%22%3Afalse%2C%22limitTags%22%3Afalse%2C%22hasTags%22%3Afalse%2C%22productCategories%22%3A%5B%7B%22term_id%22%3A15%2C%22name%22%3A%22%5Cu0411%5Cu0435%5Cu0437%20%5Cu043a%5Cu0430%5Cu0442%5Cu0435%5Cu0433%5Cu043e%5Cu0440%5Cu0456%5Cu0457%22%2C%22slug%22%3A%22%25d0%25b1%25d0%25b5%25d0%25b7-%25d0%25ba%25d0%25b0%25d1%2582%25d0%25b5%25d0%25b3%25d0%25be%25d1%2580%25d1%2596%25d1%2597%22%2C%22term_group%22%3A0%2C%22term_taxonomy_id%22%3A15%2C%22taxonomy%22%3A%22product_cat%22%2C%22description%22%3A%22%22%2C%22parent%22%3A0%2C%22count%22%3A0%2C%22filter%22%3A%22raw%22%2C%22link%22%3A%22https%3A%5C%2F%5C%2Fmykolaiv.celentano.delivery%5C%2Fproduct-category%5C%2F%25d0%25b1%25d0%25b5%25d0%25b7-%25d0%25ba%25d0%25b0%25d1%2582%25d0%25b5%25d0%25b3%25d0%25be%25d1%2580%25d1%2596%25d1%2597%5C%2F%22%7D%2C%7B%22term_id%22%3A20%2C%22name%22%3A%22Burgers%22%2C%22slug%22%3A%22burgers%22%2C%22term_group%22%3A0%2C%22term_taxonomy_id%22%3A20%2C%22taxonomy%22%3A%22product_cat%22%2C%22description%22%3A%22%22%2C%22parent%22%3A0%2C%22count%22%3A9%2C%22filter%22%3A%22raw%22%2C%22link%22%3A%22https%3A%5C%2F%5C%2Fmykolaiv.celentano.delivery%5C%2Fproduct-category%5C%2Fburgers%5C%2F%22%7D%2C%7B%22term_id%22%3A21%2C%22name%22%3A%22Desserts%22%2C%22slug%22%3A%22desserts%22%2C%22term_group%22%3A0%2C%22term_taxonomy_id%22%3A21%2C%22taxonomy%22%3A%22product_cat%22%2C%22description%22%3A%22%22%2C%22parent%22%3A0%2C%22count%22%3A0%2C%22filter%22%3A%22raw%22%2C%22link%22%3A%22https%3A%5C%2F%5C%2Fmykolaiv.celentano.delivery%5C%2Fproduct-category%5C%2Fdesserts%5C%2F%22%7D%2C%7B%22term_id%22%3A30%2C%22name%22%3A%22Uncategorized%22%2C%22slug%22%3A%22uncategorized%22%2C%22term_group%22%3A0%2C%22term_taxonomy_id%22%3A30%2C%22taxonomy%22%3A%22product_cat%22%2C%22description%22%3A%22%22%2C%22parent%22%3A0%2C%22count%22%3A0%2C%22filter%22%3A%22raw%22%2C%22link%22%3A%22https%3A%5C%2F%5C%2Fmykolaiv.celentano.delivery%5C%2Fproduct-category%5C%2Funcategorized%5C%2F%22%7D%2C%7B%22term_id%22%3A23%2C%22name%22%3A%22%5Cu0410%5Cu043a%5Cu0446%5Cu0456%5Cu0457%22%2C%22slug%22%3A%22sales%22%2C%22term_group%22%3A0%2C%22term_taxonomy_id%22%3A23%2C%22taxonomy%22%3A%22product_cat%22%2C%22description%22%3A%22%22%2C%22parent%22%3A0%2C%22count%22%3A4%2C%22filter%22%3A%22raw%22%2C%22link%22%3A%22https%3A%5C%2F%5C%2Fmykolaiv.celentano.delivery%5C%2Fproduct-category%5C%2Fsales%5C%2F%22%7D%2C%7B%22term_id%22%3A43%2C%22name%22%3A%22%5Cu0413%5Cu0430%5Cu0440%5Cu044f%5Cu0447%5Cu0456%20%5Cu0441%5Cu0442%5Cu0440%5Cu0430%5Cu0432%5Cu0438%22%2C%22slug%22%3A%22garyachi-stravy%22%2C%22term_group%22%3A0%2C%22term_taxonomy_id%22%3A43%2C%22taxonomy%22%3A%22product_cat%22%2C%22description%22%3A%22%22%2C%22parent%22%3A0%2C%22count%22%3A18%2C%22filter%22%3A%22raw%22%2C%22link%22%3A%22https%3A%5C%2F%5C%2Fmykolaiv.celentano.delivery%5C%2Fproduct-category%5C%2Fgaryachi-stravy%5C%2F%22%7D%2C%7B%22term_id%22%3A44%2C%22name%22%3A%22%5Cu0414%5Cu0435%5Cu0441%5Cu0435%5Cu0440%5Cu0442%5Cu0438%22%2C%22slug%22%3A%22deserty%22%2C%22term_group%22%3A0%2C%22term_taxonomy_id%22%3A44%2C%22taxonomy%22%3A%22product_cat%22%2C%22description%22%3A%22%22%2C%22parent%22%3A0%2C%22count%22%3A6%2C%22filter%22%3A%22raw%22%2C%22link%22%3A%22https%3A%5C%2F%5C%2Fmykolaiv.celentano.delivery%5C%2Fproduct-category%5C%2Fdeserty%5C%2F%22%7D%2C%7B%22term_id%22%3A22%2C%22name%22%3A%22%5Cu041d%5Cu0430%5Cu043f%5Cu043e%5Cu0457%22%2C%22slug%22%3A%22drinks%22%2C%22term_group%22%3A0%2C%22term_taxonomy_id%22%3A22%2C%22taxonomy%22%3A%22product_cat%22%2C%22description%22%3A%22%22%2C%22parent%22%3A0%2C%22count%22%3A5%2C%22filter%22%3A%22raw%22%2C%22link%22%3A%22https%3A%5C%2F%5C%2Fmykolaiv.celentano.delivery%5C%2Fproduct-category%5C%2Fdrinks%5C%2F%22%7D%2C%7B%22term_id%22%3A27%2C%22name%22%3A%22%5Cu041f%5Cu0430%5Cu0441%5Cu0442%5Cu0430%22%2C%22slug%22%3A%22pasta%22%2C%22term_group%22%3A0%2C%22term_taxonomy_id%22%3A27%2C%22taxonomy%22%3A%22product_cat%22%2C%22description%22%3A%22%22%2C%22parent%22%3A0%2C%22count%22%3A6%2C%22filter%22%3A%22raw%22%2C%22link%22%3A%22https%3A%5C%2F%5C%2Fmykolaiv.celentano.delivery%5C%2Fproduct-category%5C%2Fpasta%5C%2F%22%7D%2C%7B%22term_id%22%3A24%2C%22name%22%3A%22%5Cu041f%5Cu0456%5Cu0446%5Cu0430%22%2C%22slug%22%3A%22pizza%22%2C%22term_group%22%3A0%2C%22term_taxonomy_id%22%3A24%2C%22taxonomy%22%3A%22product_cat%22%2C%22description%22%3A%22%22%2C%22parent%22%3A0%2C%22count%22%3A17%2C%22filter%22%3A%22raw%22%2C%22link%22%3A%22https%3A%5C%2F%5C%2Fmykolaiv.celentano.delivery%5C%2Fproduct-category%5C%2Fpizza%5C%2F%22%7D%2C%7B%22term_id%22%3A26%2C%22name%22%3A%22%5Cu0421%5Cu0430%5Cu043b%5Cu0430%5Cu0442%5Cu0438%22%2C%22slug%22%3A%22salads%22%2C%22term_group%22%3A0%2C%22term_taxonomy_id%22%3A26%2C%22taxonomy%22%3A%22product_cat%22%2C%22description%22%3A%22%22%2C%22parent%22%3A0%2C%22count%22%3A8%2C%22filter%22%3A%22raw%22%2C%22link%22%3A%22https%3A%5C%2F%5C%2Fmykolaiv.celentano.delivery%5C%2Fproduct-category%5C%2Fsalads%5C%2F%22%7D%5D%2C%22homeUrl%22%3A%22https%3A%5C%2F%5C%2Fmykolaiv.celentano.delivery%5C%2F%22%7D'));
+                    </script>
+                    <script type='text/javascript'
+                            src='https://mykolaiv.celentano.delivery/wp-includes/js/jquery/ui/core.min.js?ver=1.12.1'
+                            id='jquery-ui-core-js'></script>
+                    <script type='text/javascript'
+                            src='https://mykolaiv.celentano.delivery/wp-includes/js/jquery/ui/mouse.min.js?ver=1.12.1'
+                            id='jquery-ui-mouse-js'></script>
+                    <script type='text/javascript'
+                            src='https://mykolaiv.celentano.delivery/wp-includes/js/jquery/ui/slider.min.js?ver=1.12.1'
+                            id='jquery-ui-slider-js'></script>
+                    <script type='text/javascript'
+                            src='https://mykolaiv.celentano.delivery/wp-includes/js/underscore.min.js?ver=1.8.3'
+                            id='underscore-js'></script>
+                    <script type='text/javascript' id='wp-util-js-extra'>
+                        var _wpUtilSettings = {"ajax": {"url": "\/wp-admin\/admin-ajax.php"}};
+                    </script>
+                    <script type='text/javascript'
+                            src='https://mykolaiv.celentano.delivery/wp-includes/js/wp-util.min.js?ver=5.8'
+                            id='wp-util-js'></script>
+                    <script type='text/javascript' id='tm-epo-js-extra'>
+                        var tm_epo_js = {
+                            "ajax_url": "https:\/\/mykolaiv.celentano.delivery\/wp-admin\/admin-ajax.php",
+                            "extra_fee": "0",
+                            "i18n_extra_fee": "Extra fee",
+                            "i18n_unit_price": "Unit price",
+                            "i18n_options_total": "Options amount",
+                            "i18n_fees_total": "Fees amount",
+                            "i18n_final_total": "Final total",
+                            "i18n_prev_text": "Prev",
+                            "i18n_next_text": "Next",
+                            "i18n_sign_up_fee": "Sign up fee",
+                            "i18n_cancel": "Cancel",
+                            "i18n_close": "Close",
+                            "i18n_addition_options": "Additional options",
+                            "i18n_characters_remaining": "characters remaining",
+                            "i18n_option_label": "Label",
+                            "i18n_option_value": "Value",
+                            "i18n_option_qty": "Qty",
+                            "i18n_option_price": "Price",
+                            "i18n_uploading_files": "Uploading files",
+                            "i18n_uploading_message": "Your files are being uploaded",
+                            "currency_format_num_decimals": "2",
+                            "currency_format_symbol": "\u20b4",
+                            "currency_format_decimal_sep": ".",
+                            "currency_format_thousand_sep": ",",
+                            "currency_format": "%s%v",
+                            "css_styles": "",
+                            "css_styles_style": "round",
+                            "tm_epo_options_placement": "woocommerce_after_single_product",
+                            "tm_epo_totals_box_placement": "woocommerce_before_add_to_cart_button",
+                            "tm_epo_no_lazy_load": "yes",
+                            "tm_epo_show_only_active_quantities": "yes",
+                            "tm_epo_hide_add_cart_button": "no",
+                            "tm_epo_auto_hide_price_if_zero": "no",
+                            "tm_epo_show_price_inside_option": "yes",
+                            "tm_epo_global_enable_validation": "yes",
+                            "tm_epo_global_input_decimal_separator": "",
+                            "tm_epo_global_displayed_decimal_separator": "",
+                            "tm_epo_remove_free_price_label": "no",
+                            "tm_epo_global_product_image_selector": "",
+                            "tm_epo_global_product_image_mode": "self",
+                            "tm_epo_global_move_out_of_stock": "no",
+                            "tm_epo_progressive_display": "yes",
+                            "tm_epo_animation_delay": "500",
+                            "tm_epo_start_animation_delay": "500",
+                            "tm_epo_global_validator_messages": {
+                                "required": "This field is required.",
+                                "email": "Please enter a valid email address.",
+                                "url": "Please enter a valid URL.",
+                                "number": "Please enter a valid number.",
+                                "digits": "Please enter only digits.",
+                                "maxlength": "Please enter no more than {0} characters.",
+                                "minlength": "Please enter at least {0} characters.",
+                                "max": "Please enter a value less than or equal to {0}.",
+                                "min": "Please enter a value greater than or equal to {0}.",
+                                "epolimit": "Please select up to {0} choices.",
+                                "epoexact": "Please select exactly {0} choices.",
+                                "epomin": "Please select at least {0} choices.",
+                                "step": "Please enter a multiple of {0}.",
+                                "lettersonly": "Please enter only letters.",
+                                "lettersspaceonly": "Please enter only letters or spaces.",
+                                "alphanumeric": "Please enter only letters, numbers or underscores.",
+                                "alphanumericunicode": "Please enter only unicode letters and numbers.",
+                                "alphanumericunicodespace": "Please enter only unicode letters, numbers or spaces."
+                            },
+                            "first_day": "1",
+                            "monthNames": ["\u0421\u0456\u0447\u0435\u043d\u044c", "\u041b\u044e\u0442\u0438\u0439", "\u0411\u0435\u0440\u0435\u0437\u0435\u043d\u044c", "\u041a\u0432\u0456\u0442\u0435\u043d\u044c", "\u0422\u0440\u0430\u0432\u0435\u043d\u044c", "\u0427\u0435\u0440\u0432\u0435\u043d\u044c", "\u041b\u0438\u043f\u0435\u043d\u044c", "\u0421\u0435\u0440\u043f\u0435\u043d\u044c", "\u0412\u0435\u0440\u0435\u0441\u0435\u043d\u044c", "\u0416\u043e\u0432\u0442\u0435\u043d\u044c", "\u041b\u0438\u0441\u0442\u043e\u043f\u0430\u0434", "\u0413\u0440\u0443\u0434\u0435\u043d\u044c"],
+                            "monthNamesShort": ["\u0421\u0456\u0447", "\u041b\u044e\u0442", "\u0411\u0435\u0440", "\u041a\u0432\u0456", "\u0422\u0440\u0430", "\u0427\u0435\u0440", "\u041b\u0438\u043f", "\u0421\u0435\u0440", "\u0412\u0435\u0440", "\u0416\u043e\u0432", "\u041b\u0438\u0441", "\u0413\u0440\u0443"],
+                            "dayNames": ["\u041d\u0435\u0434\u0456\u043b\u044f", "\u041f\u043e\u043d\u0435\u0434\u0456\u043b\u043e\u043a", "\u0412\u0456\u0432\u0442\u043e\u0440\u043e\u043a", "\u0421\u0435\u0440\u0435\u0434\u0430", "\u0427\u0435\u0442\u0432\u0435\u0440", "\u041f\u2019\u044f\u0442\u043d\u0438\u0446\u044f", "\u0421\u0443\u0431\u043e\u0442\u0430"],
+                            "dayNamesShort": ["\u041d\u0434", "\u041f\u043d", "\u0412\u0442", "\u0421\u0440", "\u0427\u0442", "\u041f\u0442", "\u0421\u0431"],
+                            "dayNamesMin": ["\u041d\u0434", "\u041f\u043d", "\u0412\u0442", "\u0421\u0440", "\u0427\u0442", "\u041f\u0442", "\u0421\u0431"],
+                            "isRTL": "",
+                            "text_direction": "ltr",
+                            "is_rtl": "",
+                            "closeText": "Done",
+                            "currentText": "Today",
+                            "hourText": "Hour",
+                            "minuteText": "Minute",
+                            "secondText": "Second",
+                            "floating_totals_box": "disable",
+                            "floating_totals_box_visibility": "always",
+                            "floating_totals_box_add_button": "no",
+                            "floating_totals_box_html_before": "",
+                            "floating_totals_box_html_after": "",
+                            "tm_epo_show_unit_price": "yes",
+                            "tm_epo_fees_on_unit_price": "no",
+                            "tm_epo_total_price_as_unit_price": "yes",
+                            "tm_epo_enable_final_total_box_all": "no",
+                            "tm_epo_change_original_price": "yes",
+                            "tm_epo_change_variation_price": "yes",
+                            "tm_epo_enable_in_shop": "no",
+                            "tm_epo_disable_error_scroll": "yes",
+                            "tm_epo_upload_popup": "no",
+                            "current_free_text": "\u0411\u0435\u0437\u043a\u043e\u0448\u0442\u043e\u0432\u043d\u043e!",
+                            "quickview_container": "[]",
+                            "quickview_array": "{\"woothemes_quick_view\":\".woocommerce.quick-view\",\"theme_flatsome_quick_view\":\".product-lightbox\",\"theme_kleo_quick_view\":\"#productModal\",\"yith_quick_view\":\"#yith-quick-view-modal,.yith-quick-view.yith-modal,.yith-quick-view.yith-inline\",\"venedor_quick_view\":\".quickview-wrap\",\"rubbez_quick_view\":\"#quickview-content\",\"jckqv_quick_view\":\"#jckqv\",\"themify_quick_view\":\"#product_single_wrapper\",\"porto_quick_view\":\".quickview-wrap\",\"woocommerce_product_layouts\":\".dhvc-woo-product-quickview\",\"nm_getproduct\":\"#popup\",\"lightboxpro\":\".wpb_wl_quick_view_content\",\"woodmart_quick_view\":\".product-quick-view\",\"thegem_product_quick_view\":\".woo-modal-product\"}",
+                            "wc_booking_person_qty_multiplier": "0",
+                            "wc_booking_block_qty_multiplier": "0"
+                        };
+                    </script>
+                    <script type='text/javascript'
+                            src='https://mykolaiv.celentano.delivery/wp-content/plugins/woocommerce-tm-extra-product-options/assets/js/epo.min.js?ver=4.6.7'
+                            id='tm-epo-js'></script>
+                    <script type='text/javascript' id='contact-form-7-js-extra'>
+                        var wpcf7 = {
+                            "apiSettings": {
+                                "root": "https:\/\/mykolaiv.celentano.delivery\/wp-json\/contact-form-7\/v1",
+                                "namespace": "contact-form-7\/v1"
+                            }
+                        };
+                    </script>
+                    <script type='text/javascript'
+                            src='https://mykolaiv.celentano.delivery/wp-content/plugins/contact-form-7/includes/js/scripts.js?ver=5.1.4'
+                            id='contact-form-7-js'></script>
+                    <script type='text/javascript' id='zh_frontend-js-extra'>
+                        var zhFrontend = {
+                            "ajaxUrl": "https:\/\/mykolaiv.celentano.delivery\/wp-admin\/admin-ajax.php",
+                            "enableNotification": "1",
+                            "isAjaxNotification": "1",
+                            "notificationTriggerType": "site",
+                            "notificationTriggerTime": "0",
+                            "formattedSiteUrl": "celentano.delivery"
+                        };
+                    </script>
+                    <script type='text/javascript'
+                            src='https://mykolaiv.celentano.delivery/wp-content/plugins/order-hours-scheduler-for-woocommerce/assets/bundles/scripts/frontend.js?ver=4.2.45'
+                            id='zh_frontend-js'></script>
+                    <script type='text/javascript'
+                            src='https://mykolaiv.celentano.delivery/wp-content/plugins/woocommerce/assets/js/jquery-blockui/jquery.blockUI.min.js?ver=2.70'
+                            id='jquery-blockui-js'></script>
+                    <script type='text/javascript' id='wc-add-to-cart-js-extra'>
+                        var wc_add_to_cart_params = {
+                            "ajax_url": "\/wp-admin\/admin-ajax.php",
+                            "wc_ajax_url": "\/?wc-ajax=%%endpoint%%",
+                            "i18n_view_cart": "\u041f\u0435\u0440\u0435\u0433\u043b\u044f\u043d\u0443\u0442\u0438 \u043a\u043e\u0448\u0438\u043a",
+                            "cart_url": "https:\/\/mykolaiv.celentano.delivery\/cart\/",
+                            "is_cart": "",
+                            "cart_redirect_after_add": "no"
+                        };
+                    </script>
+                    <script type='text/javascript'
+                            src='https://mykolaiv.celentano.delivery/wp-content/plugins/woocommerce/assets/js/frontend/add-to-cart.min.js?ver=3.7.2'
+                            id='wc-add-to-cart-js'></script>
+                    <script type='text/javascript'
+                            src='https://mykolaiv.celentano.delivery/wp-content/plugins/woocommerce/assets/js/js-cookie/js.cookie.min.js?ver=2.1.4'
+                            id='js-cookie-js'></script>
+                    <script type='text/javascript' id='woocommerce-js-extra'>
+                        var woocommerce_params = {
+                            "ajax_url": "\/wp-admin\/admin-ajax.php",
+                            "wc_ajax_url": "\/?wc-ajax=%%endpoint%%"
+                        };
+                    </script>
+                    <script type='text/javascript'
+                            src='https://mykolaiv.celentano.delivery/wp-content/plugins/woocommerce/assets/js/frontend/woocommerce.min.js?ver=3.7.2'
+                            id='woocommerce-js'></script>
+                    <script type='text/javascript' id='wc-cart-fragments-js-extra'>
+                        var wc_cart_fragments_params = {
+                            "ajax_url": "\/wp-admin\/admin-ajax.php",
+                            "wc_ajax_url": "\/?wc-ajax=%%endpoint%%",
+                            "cart_hash_key": "wc_cart_hash_d28ab0bfeb9f95f50131b2d23a6df359",
+                            "fragment_name": "wc_fragments_d28ab0bfeb9f95f50131b2d23a6df359",
+                            "request_timeout": "5000"
+                        };
+                    </script>
+                    <script type='text/javascript'
+                            src='https://mykolaiv.celentano.delivery/wp-content/plugins/woocommerce/assets/js/frontend/cart-fragments.min.js?ver=3.7.2'
+                            id='wc-cart-fragments-js'></script>
+                    <script type='text/javascript'
+                            src='https://mykolaiv.celentano.delivery/wp-content/themes/foodz/assets/js/lazysizes.min.js?ver=1.0'
+                            id='lazysizes-js'></script>
+                    <script type='text/javascript'
+                            src='https://mykolaiv.celentano.delivery/wp-content/themes/foodz/assets/js/ls.bgset.min.js?ver=1.0'
+                            id='ls-bgset-js'></script>
+                    <script type='text/javascript'
+                            src='https://mykolaiv.celentano.delivery/wp-content/themes/foodz/assets/js/ls.unveilhooks.min.js?ver=1.0'
+                            id='ls-unveilhooks-js'></script>
+                    <script type='text/javascript'
+                            src='https://mykolaiv.celentano.delivery/wp-content/themes/foodz/assets/js/owl.carousel.min.js?ver=2.3.4'
+                            id='owl-carousel-js'></script>
+                    <script type='text/javascript'
+                            src='https://mykolaiv.celentano.delivery/wp-content/themes/foodz/assets/js/jquery.fitvids.min.js?ver=1.1'
+                            id='fitvids-js'></script>
+                    <script type='text/javascript'
+                            src='https://mykolaiv.celentano.delivery/wp-content/themes/foodz/assets/js/jquery.customSelect.min.js?ver=0.5.1'
+                            id='customselect-js'></script>
+                    <script type='text/javascript'
+                            src='https://mykolaiv.celentano.delivery/wp-content/themes/foodz/assets/js/parallax.min.js?ver=1.5.0'
+                            id='parallax-js'></script>
+                    <script type='text/javascript'
+                            src='https://mykolaiv.celentano.delivery/wp-content/themes/foodz/assets/js/bodyScrollLock.min.js?ver=1.0'
+                            id='body-scroll-lock-js'></script>
+                    <script type='text/javascript'
+                            src='https://mykolaiv.celentano.delivery/wp-content/themes/foodz/assets/js/jquery.countdown.min.js?ver=2.2.0'
+                            id='countdown-js'></script>
+                    <script type='text/javascript'
+                            src='https://mykolaiv.celentano.delivery/wp-content/themes/foodz/assets/js/requirejs/require.js?ver=2.3.6'
+                            id='requirejs-js'></script>
+                    <script type='text/javascript'
+                            src='https://mykolaiv.celentano.delivery/wp-content/themes/foodz/assets/js/add-to-cart-variation.js?ver=IDEAPARK_THEME_VERSION'
+                            id='ideapark-add-to-cart-variation-js'></script>
+                    <script type='text/javascript'
+                            src='https://mykolaiv.celentano.delivery/wp-content/themes/foodz/assets/js/site-lib.js?ver=1.1'
+                            id='ideapark-lib-js'></script>
+                    <script type='text/javascript' id='ideapark-core-js-extra'>
+                        var ideapark_wp_vars = {
+                            "themeDir": "\/var\/www\/clients\/client2\/web15\/web\/wp-content\/themes\/foodz",
+                            "themeUri": "https:\/\/mykolaiv.celentano.delivery\/wp-content\/themes\/foodz",
+                            "ajaxUrl": "https:\/\/mykolaiv.celentano.delivery\/wp-admin\/admin-ajax.php",
+                            "searchUrl": "https:\/\/mykolaiv.celentano.delivery\/?s=",
+                            "svgUrl": "",
+                            "isRtl": "",
+                            "searchType": null,
+                            "shopProductModal": "",
+                            "stickyMenuDesktop": "1",
+                            "stickyMenuMobile": "1",
+                            "stickySidebar": "1",
+                            "headerType": "header-type-3",
+                            "productMobileLayout": "layout-product-2",
+                            "viewMore": "View More",
+                            "countdownWeek": "week",
+                            "countdownDay": "day",
+                            "countdownHour": "hr",
+                            "countdownMin": "min",
+                            "countdownSec": "sec",
+                            "imagesloadedUrl": "https:\/\/mykolaiv.celentano.delivery\/wp-includes\/js\/imagesloaded.min.js?v=4.1.4",
+                            "masonryUrl": "https:\/\/mykolaiv.celentano.delivery\/wp-includes\/js\/masonry.min.js?v=4.2.2",
+                            "masonryJQueryUrl": "https:\/\/mykolaiv.celentano.delivery\/wp-includes\/js\/jquery\/jquery.masonry.min.js?v=3.1.2b",
+                            "scriptsHash": "c1ac18b5",
+                            "stylesHash": "",
+                            "wc_add_to_cart_variation_params": {
+                                "wc_ajax_url": "\/?wc-ajax=%%endpoint%%",
+                                "i18n_no_matching_variations_text": "\u041d\u0430 \u0436\u0430\u043b\u044c, \u043d\u0435\u043c\u0430\u0454 \u0442\u043e\u0432\u0430\u0440\u0456\u0432, \u044f\u043a\u0456 \u0431 \u0432\u0456\u0434\u043f\u043e\u0432\u0456\u0434\u0430\u043b\u0438 \u0432\u0430\u0448\u043e\u043c\u0443 \u0432\u0438\u0431\u043e\u0440\u0443. \u0411\u0443\u0434\u044c \u043b\u0430\u0441\u043a\u0430, \u0432\u0438\u0431\u0435\u0440\u0456\u0442\u044c \u0456\u043d\u0448\u0435 \u043f\u043e\u0454\u0434\u043d\u0430\u043d\u043d\u044f.",
+                                "i18n_make_a_selection_text": "\u0411\u0443\u0434\u044c \u043b\u0430\u0441\u043a\u0430 \u043e\u0431\u0435\u0440\u0456\u0442\u044c \u043e\u043f\u0446\u0456\u0457 \u0442\u043e\u0432\u0430\u0440\u0443, \u043f\u0435\u0440\u0448 \u043d\u0456\u0436 \u0434\u043e\u0434\u0430\u0432\u0430\u0442\u0438 \u0446\u0435\u0439 \u0442\u043e\u0432\u0430\u0440 \u0434\u043e \u043a\u043e\u0448\u0438\u043a\u0430.",
+                                "i18n_unavailable_text": "\u041d\u0430 \u0436\u0430\u043b\u044c, \u0446\u0435\u0439 \u0442\u043e\u0432\u0430\u0440 \u043d\u0435\u0434\u043e\u0441\u0442\u0443\u043f\u043d\u0438\u0439. \u0411\u0443\u0434\u044c \u043b\u0430\u0441\u043a\u0430, \u0432\u0438\u0431\u0435\u0440\u0456\u0442\u044c \u0456\u043d\u0448\u0435 \u043f\u043e\u0454\u0434\u043d\u0430\u043d\u043d\u044f."
+                            }
+                        };
+                    </script>
+                    <script type='text/javascript'
+                            src='https://mykolaiv.celentano.delivery/wp-content/themes/foodz/assets/js/site.js?ver=1.1'
+                            id='ideapark-core-js'></script>
+                    <script type='text/javascript'
+                            src='https://mykolaiv.celentano.delivery/wp-includes/js/wp-embed.min.js?ver=5.8'
+                            id='wp-embed-js'></script>
+                    <script>
+                        var zalupa = document.querySelector('.c-page-header--category');
+                        if (zalupa != null) {
+                            zalupa.innerHTML += '<span class="one kolo"></span><span class="two kolo"></span class="three kolo"><span class="four kolo"></span><span class="five kolo"></span><span class="six kolo"></span><span class="seven kolo"></span><span class="eight kolo"></span><span class="nine kolo"></span><span class="ten kolo"></span>';
+                        }
+                        ;
+                        var pidzalupa = document.querySelector('.c-page-header--common');
+                        if (pidzalupa != null) {
+                            pidzalupa.innerHTML += '<span class="one kolo"></span><span class="two kolo"></span class="three kolo"><span class="four kolo"></span><span class="five kolo"></span><span class="six kolo"></span><span class="seven kolo"></span><span class="eight kolo"></span><span class="nine kolo"></span><span class="ten kolo"></span>';
+                        }
+                        ;
+                    </script>
+</body>
+</html>

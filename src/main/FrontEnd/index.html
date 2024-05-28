@@ -1,0 +1,2386 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="scripts/jquery-3.7.1.min.js"></script>
+    <script src="search1.js"></script>
+    <meta charset="UTF-8"/>
+    <script src="node.js"></script>
+    <meta charset="UTF-8"/>
+    <meta name="theme-color" content="#81c7bc"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:locale" content="en_US"/>
+    <meta property="og:site_name" content="cr0ybot&#039;s creations"/>
+    <meta property="og:title" content="Cream Soda"/>
+    <title>Cream Soda &bull; cr0ybot&#039;s creations</title>
+    <link rel='dns-prefetch' href='//cr0ybot.com'/>
+    <link rel="alternate" type="application/rss+xml" title="cr0ybot&#039;s creations &raquo; Feed"
+          href="https://cr0ybot.com/feed/"/>
+    <link rel="alternate" type="application/rss+xml" title="cr0ybot&#039;s creations &raquo; Comments Feed"
+          href="https://cr0ybot.com/comments/feed/"/>
+    <script>
+        window._wpemojiSettings = {
+            "baseUrl": "https:\/\/s.w.org\/images\/core\/emoji\/15.0.3\/72x72\/",
+            "ext": ".png",
+            "svgUrl": "https:\/\/s.w.org\/images\/core\/emoji\/15.0.3\/svg\/",
+            "svgExt": ".svg",
+            "source": {"concatemoji": "https:\/\/coryhughart.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=6.5.2"}
+        };
+        !function (i, n) {
+            var o, s, e;
+
+            function c(e) {
+                try {
+                    var t = {supportTests: e, timestamp: (new Date).valueOf()};
+                    sessionStorage.setItem(o, JSON.stringify(t))
+                } catch (e) {
+                }
+            }
+
+            function p(e, t, n) {
+                e.clearRect(0, 0, e.canvas.width, e.canvas.height), e.fillText(t, 0, 0);
+                var t = new Uint32Array(e.getImageData(0, 0, e.canvas.width, e.canvas.height).data),
+                    r = (e.clearRect(0, 0, e.canvas.width, e.canvas.height), e.fillText(n, 0, 0), new Uint32Array(e.getImageData(0, 0, e.canvas.width, e.canvas.height).data));
+                return t.every(function (e, t) {
+                    return e === r[t]
+                })
+            }
+
+            function u(e, t, n) {
+                switch (t) {
+                    case"flag":
+                        return n(e, "\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f", "\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f") ? !1 : !n(e, "\ud83c\uddfa\ud83c\uddf3", "\ud83c\uddfa\u200b\ud83c\uddf3") && !n(e, "\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f", "\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f");
+                    case"emoji":
+                        return !n(e, "\ud83d\udc26\u200d\u2b1b", "\ud83d\udc26\u200b\u2b1b")
+                }
+                return !1
+            }
+
+            function f(e, t, n) {
+                var r = "undefined" != typeof WorkerGlobalScope && self instanceof WorkerGlobalScope ? new OffscreenCanvas(300, 150) : i.createElement("canvas"),
+                    a = r.getContext("2d", {willReadFrequently: !0}),
+                    o = (a.textBaseline = "top", a.font = "600 32px Arial", {});
+                return e.forEach(function (e) {
+                    o[e] = t(a, e, n)
+                }), o
+            }
+
+            function t(e) {
+                var t = i.createElement("script");
+                t.src = e, t.defer = !0, i.head.appendChild(t)
+            }
+
+            "undefined" != typeof Promise && (o = "wpEmojiSettingsSupports", s = ["flag", "emoji"], n.supports = {
+                everything: !0,
+                everythingExceptFlag: !0
+            }, e = new Promise(function (e) {
+                i.addEventListener("DOMContentLoaded", e, {once: !0})
+            }), new Promise(function (t) {
+                var n = function () {
+                    try {
+                        var e = JSON.parse(sessionStorage.getItem(o));
+                        if ("object" == typeof e && "number" == typeof e.timestamp && (new Date).valueOf() < e.timestamp + 604800 && "object" == typeof e.supportTests) return e.supportTests
+                    } catch (e) {
+                    }
+                    return null
+                }();
+                if (!n) {
+                    if ("undefined" != typeof Worker && "undefined" != typeof OffscreenCanvas && "undefined" != typeof URL && URL.createObjectURL && "undefined" != typeof Blob) try {
+                        var e = "postMessage(" + f.toString() + "(" + [JSON.stringify(s), u.toString(), p.toString()].join(",") + "));",
+                            r = new Blob([e], {type: "text/javascript"}),
+                            a = new Worker(URL.createObjectURL(r), {name: "wpTestEmojiSupports"});
+                        return void (a.onmessage = function (e) {
+                            c(n = e.data), a.terminate(), t(n)
+                        })
+                    } catch (e) {
+                    }
+                    c(n = f(s, u, p))
+                }
+                t(n)
+            }).then(function (e) {
+                for (var t in e) n.supports[t] = e[t], n.supports.everything = n.supports.everything && n.supports[t], "flag" !== t && (n.supports.everythingExceptFlag = n.supports.everythingExceptFlag && n.supports[t]);
+                n.supports.everythingExceptFlag = n.supports.everythingExceptFlag && !n.supports.flag, n.DOMReady = !1, n.readyCallback = function () {
+                    n.DOMReady = !0
+                }
+            }).then(function () {
+                return e
+            }).then(function () {
+                var e;
+                n.supports.everything || (n.readyCallback(), (e = n.source || {}).concatemoji ? t(e.concatemoji) : e.wpemoji && e.twemoji && (t(e.twemoji), t(e.wpemoji)))
+            }))
+        }((window, document), window._wpemojiSettings);
+    </script>
+    <style id='wp-block-site-logo-inline-css'>
+        .wp-block-site-logo {
+            box-sizing: border-box;
+            line-height: 0
+        }
+
+        .wp-block-site-logo a {
+            display: inline-block;
+            line-height: 0
+        }
+
+        .wp-block-site-logo.is-default-size img {
+            height: auto;
+            width: 120px
+        }
+
+        .wp-block-site-logo img {
+            height: auto;
+            max-width: 100%
+        }
+
+        .wp-block-site-logo a, .wp-block-site-logo img {
+            border-radius: inherit
+        }
+
+        .wp-block-site-logo.aligncenter {
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center
+        }
+
+        .wp-block-site-logo.is-style-rounded {
+            border-radius: 9999px
+        }
+    </style>
+    <style id='wp-block-heading-inline-css'>
+        h1.has-background, h2.has-background, h3.has-background, h4.has-background, h5.has-background, h6.has-background {
+            padding: 1.25em 2.375em
+        }
+
+        h1.has-text-align-left[style*=writing-mode]:where([style*=vertical-lr]), h1.has-text-align-right[style*=writing-mode]:where([style*=vertical-rl]), h2.has-text-align-left[style*=writing-mode]:where([style*=vertical-lr]), h2.has-text-align-right[style*=writing-mode]:where([style*=vertical-rl]), h3.has-text-align-left[style*=writing-mode]:where([style*=vertical-lr]), h3.has-text-align-right[style*=writing-mode]:where([style*=vertical-rl]), h4.has-text-align-left[style*=writing-mode]:where([style*=vertical-lr]), h4.has-text-align-right[style*=writing-mode]:where([style*=vertical-rl]), h5.has-text-align-left[style*=writing-mode]:where([style*=vertical-lr]), h5.has-text-align-right[style*=writing-mode]:where([style*=vertical-rl]), h6.has-text-align-left[style*=writing-mode]:where([style*=vertical-lr]), h6.has-text-align-right[style*=writing-mode]:where([style*=vertical-rl]) {
+            rotate: 180deg
+        }
+    </style>
+    <style id='wp-block-navigation-link-inline-css'>
+        .wp-block-navigation .wp-block-navigation-item__label {
+            overflow-wrap: break-word
+        }
+
+        .wp-block-navigation .wp-block-navigation-item__description {
+            display: none
+        }
+
+        .link-ui-tools {
+            border-top: 1px solid #f0f0f0;
+            padding: 8px
+        }
+
+        .link-ui-block-inserter {
+            padding-top: 8px
+        }
+
+        .link-ui-block-inserter__back {
+            margin-left: 8px;
+            text-transform: uppercase
+        }
+
+        .components-popover-pointer-events-trap {
+            background-color: initial;
+            cursor: pointer;
+            inset: 0;
+            position: fixed;
+            z-index: 1000000
+        }
+    </style>
+    <link rel='stylesheet' id='wp-block-navigation-css'
+          href='https://coryhughart.com/wp-includes/blocks/navigation/style.min.css?ver=6.5.2' media='all'/>
+    <link rel='stylesheet' id='boldlygo-theme-css'
+          href='https://coryhughart.com/wp-content/themes/boldlygoblocks/dist/css/theme.css?ver=07696c8a8a700b4144a457958bdd1dc6'
+          media='all'/>
+    <style id='boldlygo-block-core-navigation-inline-css'>
+        .wp-block-navigation .wp-block-navigation-item {
+            text-align: var(--navigation-layout-align, left)
+        }
+
+        .wp-block-navigation .wp-block-navigation-item__description {
+            display: block;
+            color: var(--wp--preset--color--muted);
+            font-family: var(--wp--preset--font-family--title);
+            font-size: var(--wp--preset--font-size--sm);
+            text-transform: uppercase
+        }
+    </style>
+    <style id='wp-block-search-inline-css'>
+        .wp-block-search__button {
+            margin-left: 10px;
+            word-break: normal
+        }
+
+        .wp-block-search__button.has-icon {
+            line-height: 0
+        }
+
+        .wp-block-search__button svg {
+            height: 1.25em;
+            min-height: 24px;
+            min-width: 24px;
+            width: 1.25em;
+            fill: currentColor;
+            vertical-align: text-bottom
+        }
+
+        :where(.wp-block-search__button) {
+            border: 1px solid #ccc;
+            padding: 6px 10px
+        }
+
+        .wp-block-search__inside-wrapper {
+            display: flex;
+            flex: auto;
+            flex-wrap: nowrap;
+            max-width: 100%
+        }
+
+        .wp-block-search__label {
+            width: 100%
+        }
+
+        .wp-block-search__input {
+            -webkit-appearance: initial;
+            appearance: none;
+            border: 1px solid #949494;
+            flex-grow: 1;
+            margin-left: 0;
+            margin-right: 0;
+            min-width: 3rem;
+            padding: 8px;
+            text-decoration: unset !important
+        }
+
+        .wp-block-search.wp-block-search__button-only .wp-block-search__button {
+            flex-shrink: 0;
+            margin-left: 0;
+            max-width: 100%
+        }
+
+        .wp-block-search.wp-block-search__button-only .wp-block-search__button[aria-expanded=true] {
+            max-width: calc(100% - 100px)
+        }
+
+        .wp-block-search.wp-block-search__button-only .wp-block-search__inside-wrapper {
+            min-width: 0 !important;
+            transition-property: width
+        }
+
+        .wp-block-search.wp-block-search__button-only .wp-block-search__input {
+            flex-basis: 100%;
+            transition-duration: .3s
+        }
+
+        .wp-block-search.wp-block-search__button-only.wp-block-search__searchfield-hidden, .wp-block-search.wp-block-search__button-only.wp-block-search__searchfield-hidden .wp-block-search__inside-wrapper {
+            overflow: hidden
+        }
+
+        .wp-block-search.wp-block-search__button-only.wp-block-search__searchfield-hidden .wp-block-search__input {
+            border-left-width: 0 !important;
+            border-right-width: 0 !important;
+            flex-basis: 0;
+            flex-grow: 0;
+            margin: 0;
+            min-width: 0 !important;
+            padding-left: 0 !important;
+            padding-right: 0 !important;
+            width: 0 !important
+        }
+
+        :where(.wp-block-search__button-inside .wp-block-search__inside-wrapper) {
+            border: 1px solid #949494;
+            box-sizing: border-box;
+            padding: 4px
+        }
+
+        :where(.wp-block-search__button-inside .wp-block-search__inside-wrapper) .wp-block-search__input {
+            border: none;
+            border-radius: 0;
+            padding: 0 4px
+        }
+
+        :where(.wp-block-search__button-inside .wp-block-search__inside-wrapper) .wp-block-search__input:focus {
+            outline: none
+        }
+
+        :where(.wp-block-search__button-inside .wp-block-search__inside-wrapper) :where(.wp-block-search__button) {
+            padding: 4px 8px
+        }
+
+        .wp-block-search.aligncenter .wp-block-search__inside-wrapper {
+            margin: auto
+        }
+
+        .wp-block[data-align=right] .wp-block-search.wp-block-search__button-only .wp-block-search__inside-wrapper {
+            float: right
+        }
+    </style>
+    <style id='boldlygo-block-core-search-inline-css'>
+        .wp-block-search__label:focus, .wp-block-search__label:focus-within, .wp-block-search__label:hover {
+            animation-play-state: paused
+        }
+
+        @media prefers-reduced-motion {
+            .wp-block-search__label {
+                animation: none
+            }
+        }
+
+        @keyframes float {
+            from {
+                transform: translate(0, 0)
+            }
+            to {
+                transform: translate(0, 1rem)
+            }
+        }
+
+        @keyframes float-sm {
+            from {
+                transform: translate(0, 0)
+            }
+            to {
+                transform: translate(0, .33rem)
+            }
+        }
+
+        .wp-block-search__label {
+            display: block;
+            font-family: var(--wp--preset--font-family--title);
+            font-size: var(--wp--preset--font-size--sm);
+            text-transform: uppercase;
+            animation: float-sm var(--float-sm-duration, 1.5s) ease-in-out var(--float-delay, 0s) infinite alternate
+        }
+
+        .wp-block-search__inside-wrapper {
+            flex-wrap: wrap;
+            gap: var(--wp--style--block-gap, 1rem)
+        }
+
+        .wp-block-search__input {
+            flex: 3 1 18rem;
+            padding: calc(.667em + 2px);
+            background-color: var(--wp--preset--color--tertiary);
+            color: var(--wp--preset--color--foreground);
+            border: none;
+            border-radius: var(--wp--custom--border-radius--md, 1rem);
+            font-size: 1em;
+            font-family: var(--wp--preset--font-family--cursive)
+        }
+
+        .wp-block-search__button {
+            margin-left: 0;
+            flex: 1 1 0
+        }
+    </style>
+    <style id='boldlygo-pausemenu-style-inline-css'>
+
+        .wp-block-boldlygo-pausemenu body:has(.wp-block-boldlygo-pausemenu__menu[aria-expanded=true]) {
+            overflow: hidden;
+        }
+
+        .wp-block-boldlygo-pausemenu__button, .wp-block-boldlygo-pausemenu__close {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            font-family: inherit;
+            width: 64px;
+            height: 64px;
+            border-radius: 32px;
+            border: none;
+            background-color: var(--wp--preset--color--muted);
+            color: inherit;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: background-color var(--wp--custom--transitions--default) ease-in-out;
+        }
+
+        .wp-block-boldlygo-pausemenu__button:hover, .wp-block-boldlygo-pausemenu__close:hover {
+            background-color: var(--wp--preset--color--background);
+        }
+
+        .wp-block-boldlygo-pausemenu__button::before, .wp-block-boldlygo-pausemenu__button::after, .wp-block-boldlygo-pausemenu__close::before, .wp-block-boldlygo-pausemenu__close::after {
+            display: none;
+        }
+
+        .wp-block-boldlygo-pausemenu__button svg, .wp-block-boldlygo-pausemenu__close svg {
+            width: 32px;
+            height: 32px;
+        }
+
+        .wp-block-boldlygo-pausemenu__close {
+            pointer-events: all;
+            position: absolute;
+            z-index: 1;
+            top: calc(var(global--admin--bar height, 0px) + var(--wp--preset--spacing--40));
+            right: var(--wp--preset--spacing--40);
+        }
+
+        .wp-block-boldlygo-pausemenu__menu {
+            pointer-events: none;
+            display: none;
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            z-index: 9999;
+            padding: 2rem;
+            flex-direction: column;
+            align-items: center;
+            background-color: var(--wp--custom--theme-colors--foreground-30);
+            -webkit-backdrop-filter: sepia(75%) blur(5px);
+            backdrop-filter: sepia(75%) blur(5px);
+            overflow: auto;
+        }
+
+        .wp-block-boldlygo-pausemenu__menu[aria-expanded=true] {
+            display: flex;
+        }
+
+        .wp-block-boldlygo-pausemenu__menu-content {
+            pointer-events: all;
+            position: relative;
+            z-index: 1;
+            max-width: 90vw;
+            margin: auto 0;
+            padding: 2rem !important;
+            background-color: var(--wp--preset--color--background);
+        }
+
+        body.menu-open {
+            overflow: hidden;
+        }
+
+        body.menu-open *,
+        body.menu-open *::before,
+        body.menu-open *::after {
+            animation-play-state: paused !important;
+        }
+
+    </style>
+    <style id='wp-block-group-inline-css'>
+        .wp-block-group {
+            box-sizing: border-box
+        }
+    </style>
+    <style id='boldlygo-block-core-group-inline-css'>
+        .wp-block-group.last-item-bottom > :last-child {
+            margin-top: auto
+        }
+    </style>
+    <style id='wp-block-post-title-inline-css'>
+        .wp-block-post-title {
+            box-sizing: border-box;
+            word-break: break-word
+        }
+
+        .wp-block-post-title a {
+            display: inline-block
+        }
+    </style>
+    <style id='wp-block-paragraph-inline-css'>
+        .is-small-text {
+            font-size: .875em
+        }
+
+        .is-regular-text {
+            font-size: 1em
+        }
+
+        .is-large-text {
+            font-size: 2.25em
+        }
+
+        .is-larger-text {
+            font-size: 3em
+        }
+
+        .has-drop-cap:not(:focus):first-letter {
+            float: left;
+            font-size: 8.4em;
+            font-style: normal;
+            font-weight: 100;
+            line-height: .68;
+            margin: .05em .1em 0 0;
+            text-transform: uppercase
+        }
+
+        body.rtl .has-drop-cap:not(:focus):first-letter {
+            float: none;
+            margin-left: .1em
+        }
+
+        p.has-drop-cap.has-background {
+            overflow: hidden
+        }
+
+        p.has-background {
+            padding: 1.25em 2.375em
+        }
+
+        :where(p.has-text-color:not(.has-link-color)) a {
+            color: inherit
+        }
+
+        p.has-text-align-left[style*="writing-mode:vertical-lr"], p.has-text-align-right[style*="writing-mode:vertical-rl"] {
+            rotate: 180deg
+        }
+    </style>
+    <link rel='stylesheet' id='wp-block-image-css'
+          href='https://coryhughart.com/wp-includes/blocks/image/style.min.css?ver=6.5.2' media='all'/>
+    <link rel='stylesheet' id='wp-block-social-links-css'
+          href='https://coryhughart.com/wp-includes/blocks/social-links/style.min.css?ver=6.5.2' media='all'/>
+    <style id='wp-block-button-inline-css'>
+        .wp-block-button__link {
+            box-sizing: border-box;
+            cursor: pointer;
+            display: inline-block;
+            text-align: center;
+            word-break: break-word
+        }
+
+        .wp-block-button__link.aligncenter {
+            text-align: center
+        }
+
+        .wp-block-button__link.alignright {
+            text-align: right
+        }
+
+        :where(.wp-block-button__link) {
+            border-radius: 9999px;
+            box-shadow: none;
+            padding: calc(.667em + 2px) calc(1.333em + 2px);
+            text-decoration: none
+        }
+
+        .wp-block-button[style*=text-decoration] .wp-block-button__link {
+            text-decoration: inherit
+        }
+
+        .wp-block-buttons > .wp-block-button.has-custom-width {
+            max-width: none
+        }
+
+        .wp-block-buttons > .wp-block-button.has-custom-width .wp-block-button__link {
+            width: 100%
+        }
+
+        .wp-block-buttons > .wp-block-button.has-custom-font-size .wp-block-button__link {
+            font-size: inherit
+        }
+
+        .wp-block-buttons > .wp-block-button.wp-block-button__width-25 {
+            width: calc(25% - var(--wp--style--block-gap, .5em) * .75)
+        }
+
+        .wp-block-buttons > .wp-block-button.wp-block-button__width-50 {
+            width: calc(50% - var(--wp--style--block-gap, .5em) * .5)
+        }
+
+        .wp-block-buttons > .wp-block-button.wp-block-button__width-75 {
+            width: calc(75% - var(--wp--style--block-gap, .5em) * .25)
+        }
+
+        .wp-block-buttons > .wp-block-button.wp-block-button__width-100 {
+            flex-basis: 100%;
+            width: 100%
+        }
+
+        .wp-block-buttons.is-vertical > .wp-block-button.wp-block-button__width-25 {
+            width: 25%
+        }
+
+        .wp-block-buttons.is-vertical > .wp-block-button.wp-block-button__width-50 {
+            width: 50%
+        }
+
+        .wp-block-buttons.is-vertical > .wp-block-button.wp-block-button__width-75 {
+            width: 75%
+        }
+
+        .wp-block-button.is-style-squared, .wp-block-button__link.wp-block-button.is-style-squared {
+            border-radius: 0
+        }
+
+        .wp-block-button.no-border-radius, .wp-block-button__link.no-border-radius {
+            border-radius: 0 !important
+        }
+
+        .wp-block-button .wp-block-button__link:where(.is-style-outline), .wp-block-button:where(.is-style-outline) > .wp-block-button__link {
+            border: 2px solid;
+            padding: .667em 1.333em
+        }
+
+        .wp-block-button .wp-block-button__link:where(.is-style-outline):not(.has-text-color), .wp-block-button:where(.is-style-outline) > .wp-block-button__link:not(.has-text-color) {
+            color: currentColor
+        }
+
+        .wp-block-button .wp-block-button__link:where(.is-style-outline):not(.has-background), .wp-block-button:where(.is-style-outline) > .wp-block-button__link:not(.has-background) {
+            background-color: initial;
+            background-image: none
+        }
+
+        .wp-block-button .wp-block-button__link:where(.has-border-color) {
+            border-width: initial
+        }
+
+        .wp-block-button .wp-block-button__link:where([style*=border-top-color]) {
+            border-top-width: medium
+        }
+
+        .wp-block-button .wp-block-button__link:where([style*=border-right-color]) {
+            border-right-width: medium
+        }
+
+        .wp-block-button .wp-block-button__link:where([style*=border-bottom-color]) {
+            border-bottom-width: medium
+        }
+
+        .wp-block-button .wp-block-button__link:where([style*=border-left-color]) {
+            border-left-width: medium
+        }
+
+        .wp-block-button .wp-block-button__link:where([style*=border-style]) {
+            border-width: initial
+        }
+
+        .wp-block-button .wp-block-button__link:where([style*=border-top-style]) {
+            border-top-width: medium
+        }
+
+        .wp-block-button .wp-block-button__link:where([style*=border-right-style]) {
+            border-right-width: medium
+        }
+
+        .wp-block-button .wp-block-button__link:where([style*=border-bottom-style]) {
+            border-bottom-width: medium
+        }
+
+        .wp-block-button .wp-block-button__link:where([style*=border-left-style]) {
+            border-left-width: medium
+        }
+    </style>
+    <style id='wp-block-buttons-inline-css'>
+        .wp-block-buttons.is-vertical {
+            flex-direction: column
+        }
+
+        .wp-block-buttons.is-vertical > .wp-block-button:last-child {
+            margin-bottom: 0
+        }
+
+        .wp-block-buttons > .wp-block-button {
+            display: inline-block;
+            margin: 0
+        }
+
+        .wp-block-buttons.is-content-justification-left {
+            justify-content: flex-start
+        }
+
+        .wp-block-buttons.is-content-justification-left.is-vertical {
+            align-items: flex-start
+        }
+
+        .wp-block-buttons.is-content-justification-center {
+            justify-content: center
+        }
+
+        .wp-block-buttons.is-content-justification-center.is-vertical {
+            align-items: center
+        }
+
+        .wp-block-buttons.is-content-justification-right {
+            justify-content: flex-end
+        }
+
+        .wp-block-buttons.is-content-justification-right.is-vertical {
+            align-items: flex-end
+        }
+
+        .wp-block-buttons.is-content-justification-space-between {
+            justify-content: space-between
+        }
+
+        .wp-block-buttons.aligncenter {
+            text-align: center
+        }
+
+        .wp-block-buttons:not(.is-content-justification-space-between,.is-content-justification-right,.is-content-justification-left,.is-content-justification-center) .wp-block-button.aligncenter {
+            margin-left: auto;
+            margin-right: auto;
+            width: 100%
+        }
+
+        .wp-block-buttons[style*=text-decoration] .wp-block-button, .wp-block-buttons[style*=text-decoration] .wp-block-button__link {
+            text-decoration: inherit
+        }
+
+        .wp-block-buttons.has-custom-font-size .wp-block-button__link {
+            font-size: inherit
+        }
+
+        .wp-block-button.aligncenter {
+            text-align: center
+        }
+    </style>
+    <style id='wp-block-separator-inline-css'>
+        @charset "UTF-8";
+        .wp-block-separator {
+            border: none;
+            border-top: 2px solid
+        }
+
+        .wp-block-separator.is-style-dots {
+            background: none !important;
+            border: none;
+            height: auto;
+            line-height: 1;
+            text-align: center
+        }
+
+        .wp-block-separator.is-style-dots:before {
+            color: currentColor;
+            content: "···";
+            font-family: serif;
+            font-size: 1.5em;
+            letter-spacing: 2em;
+            padding-left: 2em
+        }
+    </style>
+    <style id='boldlygo-block-core-separator-inline-css'>
+        @charset "UTF-8";
+        .wp-block-separator {
+            border: none
+        }
+
+        .wp-block-separator.is-style-dots {
+            position: relative;
+            overflow: visible;
+            overflow-x: clip;
+            line-height: 1
+        }
+
+        .wp-block-separator.is-style-dots::before {
+            content: "●";
+            display: block;
+            max-width: none;
+            height: auto;
+            padding: 0;
+            font-family: inherit;
+            font-size: 4rem;
+            letter-spacing: normal;
+            text-align: center;
+            background-color: transparent;
+            animation: -1s ease-in-out 2s infinite alternate dots-float
+        }
+
+        .wp-block-separator.is-style-dots::after {
+            content: "••";
+            display: block;
+            font-family: serif;
+            font-size: 4rem;
+            letter-spacing: 2em;
+            padding-left: 2em;
+            position: absolute;
+            top: 0;
+            left: 50%;
+            margin-left: -14rem;
+            width: 28rem;
+            max-width: none;
+            height: auto;
+            text-align: center;
+            background-color: transparent;
+            animation: 2s ease-in-out infinite alternate dots-float
+        }
+
+        @media prefers-reduced-motion {
+            .wp-block-separator.is-style-dots::after, .wp-block-separator.is-style-dots::before {
+                animation: none
+            }
+        }
+
+        @keyframes dots-float {
+            from {
+                transform: translateY(0)
+            }
+            to {
+                transform: translateY(.25em)
+            }
+        }
+    </style>
+    <link rel='stylesheet' id='boldlygo-primary-image-style-css'
+          href='https://coryhughart.com/wp-content/themes/boldlygoblocks/dist/blocks/primary-image/style.css?ver=6.5.2'
+          media='all'/>
+    <style id='wp-block-post-date-inline-css'>
+        .wp-block-post-date {
+            box-sizing: border-box
+        }
+    </style>
+    <style id='wp-block-post-terms-inline-css'>
+        .wp-block-post-terms {
+            box-sizing: border-box
+        }
+
+        .wp-block-post-terms .wp-block-post-terms__separator {
+            white-space: pre-wrap
+        }
+    </style>
+    <style id='wp-block-post-excerpt-inline-css'>
+        :where(.wp-block-post-excerpt) {
+            margin-bottom: var(--wp--style--block-gap);
+            margin-top: var(--wp--style--block-gap)
+        }
+
+        .wp-block-post-excerpt__excerpt {
+            margin-bottom: 0;
+            margin-top: 0
+        }
+
+        .wp-block-post-excerpt__more-text {
+            margin-bottom: 0;
+            margin-top: var(--wp--style--block-gap)
+        }
+
+        .wp-block-post-excerpt__more-link {
+            display: inline-block
+        }
+    </style>
+    <style id='wp-block-post-template-inline-css'>
+        .wp-block-post-template {
+            list-style: none;
+            margin-bottom: 0;
+            margin-top: 0;
+            max-width: 100%;
+            padding: 0
+        }
+
+        .wp-block-post-template.wp-block-post-template {
+            background: none
+        }
+
+        .wp-block-post-template.is-flex-container {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: 1.25em
+        }
+
+        .wp-block-post-template.is-flex-container > li {
+            margin: 0;
+            width: 100%
+        }
+
+        @media (min-width: 600px) {
+            .wp-block-post-template.is-flex-container.is-flex-container.columns-2 > li {
+                width: calc(50% - .625em)
+            }
+
+            .wp-block-post-template.is-flex-container.is-flex-container.columns-3 > li {
+                width: calc(33.33333% - .83333em)
+            }
+
+            .wp-block-post-template.is-flex-container.is-flex-container.columns-4 > li {
+                width: calc(25% - .9375em)
+            }
+
+            .wp-block-post-template.is-flex-container.is-flex-container.columns-5 > li {
+                width: calc(20% - 1em)
+            }
+
+            .wp-block-post-template.is-flex-container.is-flex-container.columns-6 > li {
+                width: calc(16.66667% - 1.04167em)
+            }
+        }
+
+        @media (max-width: 600px) {
+            .wp-block-post-template-is-layout-grid.wp-block-post-template-is-layout-grid.wp-block-post-template-is-layout-grid.wp-block-post-template-is-layout-grid {
+                grid-template-columns: 1fr
+            }
+        }
+
+        .wp-block-post-template-is-layout-constrained > li > .alignright, .wp-block-post-template-is-layout-flow > li > .alignright {
+            float: right;
+            margin-inline-end: 0;
+            margin-inline-start: 2em
+        }
+
+        .wp-block-post-template-is-layout-constrained > li > .alignleft, .wp-block-post-template-is-layout-flow > li > .alignleft {
+            float: left;
+            margin-inline-end: 2em;
+            margin-inline-start: 0
+        }
+
+        .wp-block-post-template-is-layout-constrained > li > .aligncenter, .wp-block-post-template-is-layout-flow > li > .aligncenter {
+            margin-inline-end: auto;
+            margin-inline-start: auto
+        }
+    </style>
+    <style id='boldlygo-block-core-post-template-inline-css'>
+        .wp-block-post-template.is-layout-grid > .wp-block-post {
+            display: flex
+        }
+    </style>
+    <style id='boldlygo-block-core-query-inline-css'>
+        .wp-block-query.order-alternate .wp-block-post:nth-child(2n) .wp-block-columns {
+            flex-direction: row-reverse
+        }
+    </style>
+    <style id='wp-emoji-styles-inline-css'>
+
+        img.wp-smiley, img.emoji {
+            display: inline !important;
+            border: none !important;
+            box-shadow: none !important;
+            height: 1em !important;
+            width: 1em !important;
+            margin: 0 0.07em !important;
+            vertical-align: -0.1em !important;
+            background: none !important;
+            padding: 0 !important;
+        }
+    </style>
+    <link rel='stylesheet' id='wp-block-library-css'
+          href='https://coryhughart.com/wp-includes/css/dist/block-library/common.min.css?ver=6.5.2' media='all'/>
+    <style id='global-styles-inline-css'>
+        body {
+            --wp--preset--color--black: #000000;
+            --wp--preset--color--cyan-bluish-gray: #abb8c3;
+            --wp--preset--color--white: #ffffff;
+            --wp--preset--color--pale-pink: #f78da7;
+            --wp--preset--color--vivid-red: #cf2e2e;
+            --wp--preset--color--luminous-vivid-orange: #ff6900;
+            --wp--preset--color--luminous-vivid-amber: #fcb900;
+            --wp--preset--color--light-green-cyan: #7bdcb5;
+            --wp--preset--color--vivid-green-cyan: #00d084;
+            --wp--preset--color--pale-cyan-blue: #8ed1fc;
+            --wp--preset--color--vivid-cyan-blue: #0693e3;
+            --wp--preset--color--vivid-purple: #9b51e0;
+            --wp--preset--color--foreground: var(--wp--custom--theme-colors--foreground);
+            --wp--preset--color--background: var(--wp--custom--theme-colors--background);
+            --wp--preset--color--primary: var(--wp--custom--theme-colors--primary);
+            --wp--preset--color--secondary: var(--wp--custom--theme-colors--secondary);
+            --wp--preset--color--tertiary: var(--wp--custom--theme-colors--tertiary);
+            --wp--preset--color--accent: var(--wp--custom--theme-colors--accent);
+            --wp--preset--color--error: var(--wp--custom--theme-colors--error);
+            --wp--preset--color--warning: var(--wp--custom--theme-colors--warning);
+            --wp--preset--color--success: var(--wp--custom--theme-colors--success);
+            --wp--preset--color--muted: var(--wp--custom--theme-colors--muted);
+            --wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg, rgba(6, 147, 227, 1) 0%, rgb(155, 81, 224) 100%);
+            --wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg, rgb(122, 220, 180) 0%, rgb(0, 208, 130) 100%);
+            --wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg, rgba(252, 185, 0, 1) 0%, rgba(255, 105, 0, 1) 100%);
+            --wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg, rgba(255, 105, 0, 1) 0%, rgb(207, 46, 46) 100%);
+            --wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg, rgb(238, 238, 238) 0%, rgb(169, 184, 195) 100%);
+            --wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg, rgb(74, 234, 220) 0%, rgb(151, 120, 209) 20%, rgb(207, 42, 186) 40%, rgb(238, 44, 130) 60%, rgb(251, 105, 98) 80%, rgb(254, 248, 76) 100%);
+            --wp--preset--gradient--blush-light-purple: linear-gradient(135deg, rgb(255, 206, 236) 0%, rgb(152, 150, 240) 100%);
+            --wp--preset--gradient--blush-bordeaux: linear-gradient(135deg, rgb(254, 205, 165) 0%, rgb(254, 45, 45) 50%, rgb(107, 0, 62) 100%);
+            --wp--preset--gradient--luminous-dusk: linear-gradient(135deg, rgb(255, 203, 112) 0%, rgb(199, 81, 192) 50%, rgb(65, 88, 208) 100%);
+            --wp--preset--gradient--pale-ocean: linear-gradient(135deg, rgb(255, 245, 203) 0%, rgb(182, 227, 212) 50%, rgb(51, 167, 181) 100%);
+            --wp--preset--gradient--electric-grass: linear-gradient(135deg, rgb(202, 248, 128) 0%, rgb(113, 206, 126) 100%);
+            --wp--preset--gradient--midnight: linear-gradient(135deg, rgb(2, 3, 129) 0%, rgb(40, 116, 252) 100%);
+            --wp--preset--font-size--small: 13px;
+            --wp--preset--font-size--medium: clamp(14px, 0.875rem+ ((1vw -3.2px) *0.852), 20 px);
+            --wp--preset--font-size--large: clamp(22.041px, 1.378rem+ ((1vw -3.2px) *1.983), 36 px);
+            --wp--preset--font-size--x-large: clamp(25.014px, 1.563rem+ ((1vw -3.2px) *2.413), 42 px);
+            --wp--preset--font-size--xs: clamp(0.875rem, 0.875rem+ ((1vw -0.2rem) *0.284), 1 rem);
+            --wp--preset--font-size--sm: clamp(1rem, 1rem+ ((1vw -0.2rem) *0.568), 1.25 rem);
+            --wp--preset--font-size--md: clamp(1.25rem, 1.25rem+ ((1vw -0.2rem) *0.568), 1.5 rem);
+            --wp--preset--font-size--lg: clamp(1.5rem, 1.5rem+ ((1vw -0.2rem) *0.568), 1.75 rem);
+            --wp--preset--font-size--xl: clamp(1.75rem, 1.75rem+ ((1vw -0.2rem) *0.568), 2 rem);
+            --wp--preset--font-size--xxl: clamp(2rem, 2rem+ ((1vw -0.2rem) *4.545), 4 rem);
+            --wp--preset--font-size--xxxl: clamp(3rem, 3rem+ ((1vw -0.2rem) *6.818), 6 rem);
+            --wp--preset--font-family--title: 'Josefin Sans', sans-serif;
+            --wp--preset--font-family--sans-serif: Recursive, sans-serif;
+            --wp--preset--font-family--cursive: 'Recursive Cursive', cursive;
+            --wp--preset--font-family--monospace: 'Recursive Monospace', monospace;
+            --wp--preset--spacing--20: clamp(0.5rem, 1vw, 1rem);
+            --wp--preset--spacing--30: clamp(1rem, 2vw, 1.25rem);
+            --wp--preset--spacing--40: clamp(1.25rem, 3vw, 1.5rem);
+            --wp--preset--spacing--50: clamp(1.5rem, 4vw, 1.75rem);
+            --wp--preset--spacing--60: clamp(1.75rem, 4vw, 2rem);
+            --wp--preset--spacing--70: clamp(2rem, 6vw, 4rem);
+            --wp--preset--spacing--80: clamp(3rem, 8vw, 6rem);
+            --wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);
+            --wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);
+            --wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);
+            --wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1);
+            --wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);
+            --wp--custom--border-radius--lg: 1rem;
+            --wp--custom--border-radius--md: 0.5rem;
+            --wp--custom--border-radius--sm: 0.25rem;
+            --wp--custom--border-radius--xl: 2rem;
+            --wp--custom--border-radius--xxl: 4rem;
+            --wp--custom--border-radius--xxxl: 8rem;
+            --wp--custom--colors--blue: #5A79FF;
+            --wp--custom--colors--blue-dark: #3D54C7;
+            --wp--custom--colors--cyan: #81C7BC;
+            --wp--custom--colors--cyan-dark: #406660;
+            --wp--custom--colors--dark: #222733;
+            --wp--custom--colors--green: #9ED182;
+            --wp--custom--colors--green-dark: #4F6F3F;
+            --wp--custom--colors--light: #DBE8D4;
+            --wp--custom--colors--lilac: #C595C7;
+            --wp--custom--colors--lilac-dark: #664266;
+            --wp--custom--colors--midtone: #525e65;
+            --wp--custom--colors--orange: #CCA73F;
+            --wp--custom--colors--orange-dark: #665C2E;
+            --wp--custom--colors--red: #F25C5C;
+            --wp--custom--colors--red-dark: #662E2E;
+            --wp--custom--colors--space: #2E3445;
+            --wp--custom--colors-rgb--blue: 90, 121, 255;
+            --wp--custom--colors-rgb--blue-dark: 61, 84, 199;
+            --wp--custom--colors-rgb--cyan: 129, 199, 188;
+            --wp--custom--colors-rgb--cyan-dark: 64, 102, 96;
+            --wp--custom--colors-rgb--dark: 34, 39, 51;
+            --wp--custom--colors-rgb--green: 158, 209, 130;
+            --wp--custom--colors-rgb--green-dark: 79, 111, 63;
+            --wp--custom--colors-rgb--light: 219, 232, 212;
+            --wp--custom--colors-rgb--lilac: 197, 149, 199;
+            --wp--custom--colors-rgb--lilac-dark: 102, 66, 102;
+            --wp--custom--colors-rgb--midtone: 82, 94, 101;
+            --wp--custom--colors-rgb--orange: 204, 167, 63;
+            --wp--custom--colors-rgb--orange-dark: 102, 92, 46;
+            --wp--custom--colors-rgb--red: 242, 92, 92;
+            --wp--custom--colors-rgb--red-dark: 102, 46, 46;
+            --wp--custom--colors-rgb--space: 46, 52, 69;
+            --wp--custom--tab-size: 4;
+            --wp--custom--theme-colors--accent: var(--wp--custom--colors--lilac);
+            --wp--custom--theme-colors--background: var(--wp--custom--colors--dark);
+            --wp--custom--theme-colors--background-10: rgba(var(--wp--custom--colors-rgb--dark), 0.1);
+            --wp--custom--theme-colors--background-20: rgba(var(--wp--custom--colors-rgb--dark), 0.2);
+            --wp--custom--theme-colors--background-30: rgba(var(--wp--custom--colors-rgb--dark), 0.3);
+            --wp--custom--theme-colors--background-40: rgba(var(--wp--custom--colors-rgb--dark), 0.4);
+            --wp--custom--theme-colors--background-50: rgba(var(--wp--custom--colors-rgb--dark), 0.5);
+            --wp--custom--theme-colors--background-60: rgba(var(--wp--custom--colors-rgb--dark), 0.6);
+            --wp--custom--theme-colors--background-70: rgba(var(--wp--custom--colors-rgb--dark), 0.7);
+            --wp--custom--theme-colors--background-80: rgba(var(--wp--custom--colors-rgb--dark), 0.8);
+            --wp--custom--theme-colors--background-90: rgba(var(--wp--custom--colors-rgb--dark), 0.9);
+            --wp--custom--theme-colors--error: var(--wp--custom--colors--red);
+            --wp--custom--theme-colors--foreground: var(--wp--custom--colors--light);
+            --wp--custom--theme-colors--foreground-10: rgba(var(--wp--custom--colors-rgb--light), 0.1);
+            --wp--custom--theme-colors--foreground-20: rgba(var(--wp--custom--colors-rgb--light), 0.2);
+            --wp--custom--theme-colors--foreground-30: rgba(var(--wp--custom--colors-rgb--light), 0.3);
+            --wp--custom--theme-colors--foreground-40: rgba(var(--wp--custom--colors-rgb--light), 0.4);
+            --wp--custom--theme-colors--foreground-50: rgba(var(--wp--custom--colors-rgb--light), 0.5);
+            --wp--custom--theme-colors--foreground-60: rgba(var(--wp--custom--colors-rgb--light), 0.6);
+            --wp--custom--theme-colors--foreground-70: rgba(var(--wp--custom--colors-rgb--light), 0.7);
+            --wp--custom--theme-colors--foreground-80: rgba(var(--wp--custom--colors-rgb--light), 0.8);
+            --wp--custom--theme-colors--foreground-90: rgba(var(--wp--custom--colors-rgb--light), 0.9);
+            --wp--custom--theme-colors--link: var(--wp--custom--colors--blue);
+            --wp--custom--theme-colors--muted: var(--wp--custom--colors--midtone);
+            --wp--custom--theme-colors--primary: var(--wp--custom--colors--cyan);
+            --wp--custom--theme-colors--secondary: var(--wp--custom--colors--blue);
+            --wp--custom--theme-colors--success: var(--wp--custom--colors--green);
+            --wp--custom--theme-colors--tertiary: var(--wp--custom--colors--space);
+            --wp--custom--theme-colors--warning: var(--wp--custom--colors--orange);
+            --wp--custom--transitions--default: 0.2s;
+            --wp--custom--transitions--fast: 0.1s;
+            --wp--custom--transitions--slow: 0.6s;
+            --wp--custom--transitions--slowest: 1s;
+        }
+
+        body {
+            margin: 0;
+            --wp--style--global--content-size: 40rem;
+            --wp--style--global--wide-size: 64rem;
+        }
+
+        .wp-site-blocks {
+            padding-top: var(--wp--style--root--padding-top);
+            padding-bottom: var(--wp--style--root--padding-bottom);
+        }
+
+        .has-global-padding {
+            padding-right: var(--wp--style--root--padding-right);
+            padding-left: var(--wp--style--root--padding-left);
+        }
+
+        .has-global-padding :where(.has-global-padding:not(.wp-block-block)) {
+            padding-right: 0;
+            padding-left: 0;
+        }
+
+        .has-global-padding > .alignfull {
+            margin-right: calc(var(--wp--style--root--padding-right) * -1);
+            margin-left: calc(var(--wp--style--root--padding-left) * -1);
+        }
+
+        .has-global-padding :where(.has-global-padding:not(.wp-block-block)) > .alignfull {
+            margin-right: 0;
+            margin-left: 0;
+        }
+
+        .has-global-padding > .alignfull:where(:not(.has-global-padding):not(.is-layout-flex):not(.is-layout-grid)) > :where([class*="wp-block-"]:not(.alignfull):not([class*="__"]),p,h1,h2,h3,h4,h5,h6,ul,ol) {
+            padding-right: var(--wp--style--root--padding-right);
+            padding-left: var(--wp--style--root--padding-left);
+        }
+
+        .has-global-padding :where(.has-global-padding) > .alignfull:where(:not(.has-global-padding)) > :where([class*="wp-block-"]:not(.alignfull):not([class*="__"]),p,h1,h2,h3,h4,h5,h6,ul,ol) {
+            padding-right: 0;
+            padding-left: 0;
+        }
+
+        .wp-site-blocks > .alignleft {
+            float: left;
+            margin-right: 2em;
+        }
+
+        .wp-site-blocks > .alignright {
+            float: right;
+            margin-left: 2em;
+        }
+
+        .wp-site-blocks > .aligncenter {
+            justify-content: center;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        :where(.wp-site-blocks) > * {
+            margin-block-start: var(--wp--preset--spacing--40);
+            margin-block-end: 0;
+        }
+
+        :where(.wp-site-blocks) > :first-child:first-child {
+            margin-block-start: 0;
+        }
+
+        :where(.wp-site-blocks) > :last-child:last-child {
+            margin-block-end: 0;
+        }
+
+        body {
+            --wp--style--block-gap: var(--wp--preset--spacing--40);
+        }
+
+        :where(body .is-layout-flow) > :first-child:first-child {
+            margin-block-start: 0;
+        }
+
+        :where(body .is-layout-flow) > :last-child:last-child {
+            margin-block-end: 0;
+        }
+
+        :where(body .is-layout-flow) > * {
+            margin-block-start: var(--wp--preset--spacing--40);
+            margin-block-end: 0;
+        }
+
+        :where(body .is-layout-constrained) > :first-child:first-child {
+            margin-block-start: 0;
+        }
+
+        :where(body .is-layout-constrained) > :last-child:last-child {
+            margin-block-end: 0;
+        }
+
+        :where(body .is-layout-constrained) > * {
+            margin-block-start: var(--wp--preset--spacing--40);
+            margin-block-end: 0;
+        }
+
+        :where(body .is-layout-flex) {
+            gap: var(--wp--preset--spacing--40);
+        }
+
+        :where(body .is-layout-grid) {
+            gap: var(--wp--preset--spacing--40);
+        }
+
+        body .is-layout-flow > .alignleft {
+            float: left;
+            margin-inline-start: 0;
+            margin-inline-end: 2em;
+        }
+
+        body .is-layout-flow > .alignright {
+            float: right;
+            margin-inline-start: 2em;
+            margin-inline-end: 0;
+        }
+
+        body .is-layout-flow > .aligncenter {
+            margin-left: auto !important;
+            margin-right: auto !important;
+        }
+
+        body .is-layout-constrained > .alignleft {
+            float: left;
+            margin-inline-start: 0;
+            margin-inline-end: 2em;
+        }
+
+        body .is-layout-constrained > .alignright {
+            float: right;
+            margin-inline-start: 2em;
+            margin-inline-end: 0;
+        }
+
+        body .is-layout-constrained > .aligncenter {
+            margin-left: auto !important;
+            margin-right: auto !important;
+        }
+
+        body .is-layout-constrained > :where(:not(.alignleft):not(.alignright):not(.alignfull)) {
+            max-width: var(--wp--style--global--content-size);
+            margin-left: auto !important;
+            margin-right: auto !important;
+        }
+
+        body .is-layout-constrained > .alignwide {
+            max-width: var(--wp--style--global--wide-size);
+        }
+
+        body .is-layout-flex {
+            display: flex;
+        }
+
+        body .is-layout-flex {
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        body .is-layout-flex > * {
+            margin: 0;
+        }
+
+        body .is-layout-grid {
+            display: grid;
+        }
+
+        body .is-layout-grid > * {
+            margin: 0;
+        }
+
+        body {
+            background-color: var(--wp--custom--theme-colors--background);
+            color: var(--wp--custom--theme-colors--foreground);
+            font-family: var(--wp--preset--font-family--sans-serif);
+            line-height: 1.5;
+            --wp--style--root--padding-top: 0px;
+            --wp--style--root--padding-right: var(--wp--preset--spacing--40);
+            --wp--style--root--padding-bottom: 0px;
+            --wp--style--root--padding-left: var(--wp--preset--spacing--40);
+        }
+
+        a:where(:not(.wp-element-button)) {
+            color: var(--wp--custom--theme-colors--link);
+            text-decoration: underline;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: var(--wp--preset--font-family--sans-serif);
+            font-style: normal;
+            font-weight: 600;
+        }
+
+        h1 {
+            font-family: var(--wp--preset--font-family--title);
+            font-size: var(--wp--preset--font-size--xxxl);
+            font-weight: 100;
+            letter-spacing: 0.125em;
+            line-height: 1.1;
+            text-transform: uppercase;
+        }
+
+        h2 {
+            font-size: var(--wp--preset--font-size--xxl);
+        }
+
+        h3 {
+            font-size: var(--wp--preset--font-size--xl);
+        }
+
+        h4 {
+            font-size: var(--wp--preset--font-size--l);
+        }
+
+        h5 {
+            font-size: var(--wp--preset--font-size--m);
+        }
+
+        h6 {
+            font-size: var(--wp--preset--font-size--s);
+        }
+
+        .wp-element-button, .wp-block-button__link {
+            background-color: var(--wp--preset--color--primary);
+            border-radius: var(--wp--custom--border-radius--xxxl);
+            border-width: 0;
+            color: var(--wp--preset--color--background);
+            font-family: inherit;
+            font-size: inherit;
+            line-height: inherit;
+            padding: calc(0.667em + 2px) calc(1.333em + 2px);
+            text-decoration: none;
+        }
+
+        .wp-element-caption, .wp-block-audio figcaption, .wp-block-embed figcaption, .wp-block-gallery figcaption, .wp-block-image figcaption, .wp-block-table figcaption, .wp-block-video figcaption {
+            font-size: var(--wp--preset--font-size--sm);
+        }
+
+        .has-black-color {
+            color: var(--wp--preset--color--black) !important;
+        }
+
+        .has-cyan-bluish-gray-color {
+            color: var(--wp--preset--color--cyan-bluish-gray) !important;
+        }
+
+        .has-white-color {
+            color: var(--wp--preset--color--white) !important;
+        }
+
+        .has-pale-pink-color {
+            color: var(--wp--preset--color--pale-pink) !important;
+        }
+
+        .has-vivid-red-color {
+            color: var(--wp--preset--color--vivid-red) !important;
+        }
+
+        .has-luminous-vivid-orange-color {
+            color: var(--wp--preset--color--luminous-vivid-orange) !important;
+        }
+
+        .has-luminous-vivid-amber-color {
+            color: var(--wp--preset--color--luminous-vivid-amber) !important;
+        }
+
+        .has-light-green-cyan-color {
+            color: var(--wp--preset--color--light-green-cyan) !important;
+        }
+
+        .has-vivid-green-cyan-color {
+            color: var(--wp--preset--color--vivid-green-cyan) !important;
+        }
+
+        .has-pale-cyan-blue-color {
+            color: var(--wp--preset--color--pale-cyan-blue) !important;
+        }
+
+        .has-vivid-cyan-blue-color {
+            color: var(--wp--preset--color--vivid-cyan-blue) !important;
+        }
+
+        .has-vivid-purple-color {
+            color: var(--wp--preset--color--vivid-purple) !important;
+        }
+
+        .has-foreground-color {
+            color: var(--wp--preset--color--foreground) !important;
+        }
+
+        .has-background-color {
+            color: var(--wp--preset--color--background) !important;
+        }
+
+        .has-primary-color {
+            color: var(--wp--preset--color--primary) !important;
+        }
+
+        .has-secondary-color {
+            color: var(--wp--preset--color--secondary) !important;
+        }
+
+        .has-tertiary-color {
+            color: var(--wp--preset--color--tertiary) !important;
+        }
+
+        .has-accent-color {
+            color: var(--wp--preset--color--accent) !important;
+        }
+
+        .has-error-color {
+            color: var(--wp--preset--color--error) !important;
+        }
+
+        .has-warning-color {
+            color: var(--wp--preset--color--warning) !important;
+        }
+
+        .has-success-color {
+            color: var(--wp--preset--color--success) !important;
+        }
+
+        .has-muted-color {
+            color: var(--wp--preset--color--muted) !important;
+        }
+
+        .has-black-background-color {
+            background-color: var(--wp--preset--color--black) !important;
+        }
+
+        .has-cyan-bluish-gray-background-color {
+            background-color: var(--wp--preset--color--cyan-bluish-gray) !important;
+        }
+
+        .has-white-background-color {
+            background-color: var(--wp--preset--color--white) !important;
+        }
+
+        .has-pale-pink-background-color {
+            background-color: var(--wp--preset--color--pale-pink) !important;
+        }
+
+        .has-vivid-red-background-color {
+            background-color: var(--wp--preset--color--vivid-red) !important;
+        }
+
+        .has-luminous-vivid-orange-background-color {
+            background-color: var(--wp--preset--color--luminous-vivid-orange) !important;
+        }
+
+        .has-luminous-vivid-amber-background-color {
+            background-color: var(--wp--preset--color--luminous-vivid-amber) !important;
+        }
+
+        .has-light-green-cyan-background-color {
+            background-color: var(--wp--preset--color--light-green-cyan) !important;
+        }
+
+        .has-vivid-green-cyan-background-color {
+            background-color: var(--wp--preset--color--vivid-green-cyan) !important;
+        }
+
+        .has-pale-cyan-blue-background-color {
+            background-color: var(--wp--preset--color--pale-cyan-blue) !important;
+        }
+
+        .has-vivid-cyan-blue-background-color {
+            background-color: var(--wp--preset--color--vivid-cyan-blue) !important;
+        }
+
+        .has-vivid-purple-background-color {
+            background-color: var(--wp--preset--color--vivid-purple) !important;
+        }
+
+        .has-foreground-background-color {
+            background-color: var(--wp--preset--color--foreground) !important;
+        }
+
+        .has-background-background-color {
+            background-color: var(--wp--preset--color--background) !important;
+        }
+
+        .has-primary-background-color {
+            background-color: var(--wp--preset--color--primary) !important;
+        }
+
+        .has-secondary-background-color {
+            background-color: var(--wp--preset--color--secondary) !important;
+        }
+
+        .has-tertiary-background-color {
+            background-color: var(--wp--preset--color--tertiary) !important;
+        }
+
+        .has-accent-background-color {
+            background-color: var(--wp--preset--color--accent) !important;
+        }
+
+        .has-error-background-color {
+            background-color: var(--wp--preset--color--error) !important;
+        }
+
+        .has-warning-background-color {
+            background-color: var(--wp--preset--color--warning) !important;
+        }
+
+        .has-success-background-color {
+            background-color: var(--wp--preset--color--success) !important;
+        }
+
+        .has-muted-background-color {
+            background-color: var(--wp--preset--color--muted) !important;
+        }
+
+        .has-black-border-color {
+            border-color: var(--wp--preset--color--black) !important;
+        }
+
+        .has-cyan-bluish-gray-border-color {
+            border-color: var(--wp--preset--color--cyan-bluish-gray) !important;
+        }
+
+        .has-white-border-color {
+            border-color: var(--wp--preset--color--white) !important;
+        }
+
+        .has-pale-pink-border-color {
+            border-color: var(--wp--preset--color--pale-pink) !important;
+        }
+
+        .has-vivid-red-border-color {
+            border-color: var(--wp--preset--color--vivid-red) !important;
+        }
+
+        .has-luminous-vivid-orange-border-color {
+            border-color: var(--wp--preset--color--luminous-vivid-orange) !important;
+        }
+
+        .has-luminous-vivid-amber-border-color {
+            border-color: var(--wp--preset--color--luminous-vivid-amber) !important;
+        }
+
+        .has-light-green-cyan-border-color {
+            border-color: var(--wp--preset--color--light-green-cyan) !important;
+        }
+
+        .has-vivid-green-cyan-border-color {
+            border-color: var(--wp--preset--color--vivid-green-cyan) !important;
+        }
+
+        .has-pale-cyan-blue-border-color {
+            border-color: var(--wp--preset--color--pale-cyan-blue) !important;
+        }
+
+        .has-vivid-cyan-blue-border-color {
+            border-color: var(--wp--preset--color--vivid-cyan-blue) !important;
+        }
+
+        .has-vivid-purple-border-color {
+            border-color: var(--wp--preset--color--vivid-purple) !important;
+        }
+
+        .has-foreground-border-color {
+            border-color: var(--wp--preset--color--foreground) !important;
+        }
+
+        .has-background-border-color {
+            border-color: var(--wp--preset--color--background) !important;
+        }
+
+        .has-primary-border-color {
+            border-color: var(--wp--preset--color--primary) !important;
+        }
+
+        .has-secondary-border-color {
+            border-color: var(--wp--preset--color--secondary) !important;
+        }
+
+        .has-tertiary-border-color {
+            border-color: var(--wp--preset--color--tertiary) !important;
+        }
+
+        .has-accent-border-color {
+            border-color: var(--wp--preset--color--accent) !important;
+        }
+
+        .has-error-border-color {
+            border-color: var(--wp--preset--color--error) !important;
+        }
+
+        .has-warning-border-color {
+            border-color: var(--wp--preset--color--warning) !important;
+        }
+
+        .has-success-border-color {
+            border-color: var(--wp--preset--color--success) !important;
+        }
+
+        .has-muted-border-color {
+            border-color: var(--wp--preset--color--muted) !important;
+        }
+
+        .has-vivid-cyan-blue-to-vivid-purple-gradient-background {
+            background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;
+        }
+
+        .has-light-green-cyan-to-vivid-green-cyan-gradient-background {
+            background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;
+        }
+
+        .has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background {
+            background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;
+        }
+
+        .has-luminous-vivid-orange-to-vivid-red-gradient-background {
+            background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;
+        }
+
+        .has-very-light-gray-to-cyan-bluish-gray-gradient-background {
+            background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;
+        }
+
+        .has-cool-to-warm-spectrum-gradient-background {
+            background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;
+        }
+
+        .has-blush-light-purple-gradient-background {
+            background: var(--wp--preset--gradient--blush-light-purple) !important;
+        }
+
+        .has-blush-bordeaux-gradient-background {
+            background: var(--wp--preset--gradient--blush-bordeaux) !important;
+        }
+
+        .has-luminous-dusk-gradient-background {
+            background: var(--wp--preset--gradient--luminous-dusk) !important;
+        }
+
+        .has-pale-ocean-gradient-background {
+            background: var(--wp--preset--gradient--pale-ocean) !important;
+        }
+
+        .has-electric-grass-gradient-background {
+            background: var(--wp--preset--gradient--electric-grass) !important;
+        }
+
+        .has-midnight-gradient-background {
+            background: var(--wp--preset--gradient--midnight) !important;
+        }
+
+        .has-small-font-size {
+            font-size: var(--wp--preset--font-size--small) !important;
+        }
+
+        .has-medium-font-size {
+            font-size: var(--wp--preset--font-size--medium) !important;
+        }
+
+        .has-large-font-size {
+            font-size: var(--wp--preset--font-size--large) !important;
+        }
+
+        .has-x-large-font-size {
+            font-size: var(--wp--preset--font-size--x-large) !important;
+        }
+
+        .has-xs-font-size {
+            font-size: var(--wp--preset--font-size--xs) !important;
+        }
+
+        .has-sm-font-size {
+            font-size: var(--wp--preset--font-size--sm) !important;
+        }
+
+        .has-md-font-size {
+            font-size: var(--wp--preset--font-size--md) !important;
+        }
+
+        .has-lg-font-size {
+            font-size: var(--wp--preset--font-size--lg) !important;
+        }
+
+        .has-xl-font-size {
+            font-size: var(--wp--preset--font-size--xl) !important;
+        }
+
+        .has-xxl-font-size {
+            font-size: var(--wp--preset--font-size--xxl) !important;
+        }
+
+        .has-xxxl-font-size {
+            font-size: var(--wp--preset--font-size--xxxl) !important;
+        }
+
+        .has-title-font-family {
+            font-family: var(--wp--preset--font-family--title) !important;
+        }
+
+        .has-sans-serif-font-family {
+            font-family: var(--wp--preset--font-family--sans-serif) !important;
+        }
+
+        .has-cursive-font-family {
+            font-family: var(--wp--preset--font-family--cursive) !important;
+        }
+
+        .has-monospace-font-family {
+            font-family: var(--wp--preset--font-family--monospace) !important;
+        }
+
+        .wp-block-navigation a:where(:not(.wp-element-button)) {
+            color: inherit;
+        }
+
+        .wp-block-buttons {
+            margin-top: var(--wp--preset--spacing--70);
+            margin-bottom: var(--wp--preset--spacing--70);
+        }
+
+        .wp-block-post-date {
+            font-family: var(--wp--preset--font-family--title);
+            font-size: var(--wp--preset--font-size--xs);
+            font-weight: 900;
+            text-transform: uppercase;
+        }
+
+        .wp-block-post-terms {
+            font-size: var(--wp--preset--font-size--xs);
+        }
+    </style>
+    <style id='core-block-supports-inline-css'>
+        .wp-container-core-navigation-is-layout-1.wp-container-core-navigation-is-layout-1 {
+            flex-wrap: nowrap;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .wp-container-core-group-is-layout-1.wp-container-core-group-is-layout-1 {
+            justify-content: space-between;
+        }
+
+        .wp-container-core-social-links-is-layout-1.wp-container-core-social-links-is-layout-1 {
+            justify-content: center;
+        }
+
+        .wp-container-core-buttons-is-layout-1.wp-container-core-buttons-is-layout-1 {
+            justify-content: center;
+        }
+
+        .wp-container-core-group-is-layout-5.wp-container-core-group-is-layout-5 {
+            flex-wrap: nowrap;
+            justify-content: space-between;
+        }
+
+        .wp-container-core-group-is-layout-6.wp-container-core-group-is-layout-6 {
+            gap: var(--wp--preset--spacing--30);
+            flex-direction: column;
+            align-items: stretch;
+        }
+
+        .wp-container-core-buttons-is-layout-2.wp-container-core-buttons-is-layout-2 {
+            justify-content: center;
+        }
+
+        .wp-container-core-social-links-is-layout-2.wp-container-core-social-links-is-layout-2 {
+            justify-content: center;
+        }
+
+        .wp-container-core-group-is-layout-8.wp-container-core-group-is-layout-8 {
+            flex-direction: column;
+            align-items: center;
+        }
+    </style>
+    <style id='wp-block-template-skip-link-inline-css'>
+
+        .skip-link.screen-reader-text {
+            border: 0;
+            clip: rect(1px, 1px, 1px, 1px);
+            clip-path: inset(50%);
+            height: 1px;
+            margin: -1px;
+            overflow: hidden;
+            padding: 0;
+            position: absolute !important;
+            width: 1px;
+            word-wrap: normal !important;
+        }
+
+        .skip-link.screen-reader-text:focus {
+            background-color: #eee;
+            clip: auto !important;
+            clip-path: none;
+            color: #444;
+            display: block;
+            font-size: 1em;
+            height: auto;
+            left: 5px;
+            line-height: normal;
+            padding: 15px 23px 14px;
+            text-decoration: none;
+            top: 5px;
+            width: auto;
+            z-index: 100000;
+
+        #searchInput {
+            width: 100%;
+            padding: 8px;
+            font-size: 16px;
+        }
+
+        #searchResults {
+            margin-top: 16px;
+        }
+
+        #searchResults div {
+            padding: 8px;
+            border-bottom: 1px solid #ccc;
+        }
+
+        #searchResults h3 {
+            margin: 0;
+            font-size: 18px;
+        }
+
+    </style>
+    <link rel='stylesheet' id='indieweb-css'
+          href='https://coryhughart.com/wp-content/plugins/indieweb/static/css/indieweb.css?ver=4.0.4' media='all'/>
+    <link rel='stylesheet' id='syndication-style-css'
+          href='https://coryhughart.com/wp-content/plugins/syndication-links/css/syn.min.css?ver=4.4.15' media='all'/>
+    <script src="https://coryhughart.com/wp-content/themes/boldlygoblocks/dist/blocks/pausemenu/view.js?ver=227cc7e5c74488f2b46e"
+            id="boldlygo-pausemenu-view-script-js" defer data-wp-strategy="defer"></script>
+    <link rel="https://api.w.org/" href="https://cr0ybot.com/wp-json/"/>
+    <link rel="alternate" type="application/json" href="https://cr0ybot.com/wp-json/wp/v2/pages/56"/>
+    <link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://cr0ybot.com/xmlrpc.php?rsd"/>
+    <link rel="alternate" type="application/json+oembed"
+          href="https://cr0ybot.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fcoryhughart.com%2F"/>
+    <link rel="alternate" type="text/xml+oembed"
+          href="https://cr0ybot.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fcoryhughart.com%2F&#038;format=xml"/>
+    <style id='wp-fonts-local'>
+        @font-face {
+            font-family: "Josefin Sans";
+            font-style: auto;
+            font-weight: 100 900;
+            font-display: swap;
+            src: url('https://cr0ybot.com/wp-content/themes/boldlygoblocks/assets/fonts/josefinsans-subset.woff2') format('woff2'), url('https://cr0ybot.com/wp-content/themes/boldlygoblocks/assets/fonts/josefinsans-subset.woff') format('woff');
+        }
+
+        @font-face {
+            font-family: Recursive;
+            font-style: auto;
+            font-weight: 300 900;
+            font-display: swap;
+            src: url('https://cr0ybot.com/wp-content/themes/boldlygoblocks/assets/fonts/recursive-subset.woff2') format('woff2'), url('https://cr0ybot.com/wp-content/themes/boldlygoblocks/assets/fonts/recursive-subset.woff') format('woff');
+            font-variation-settings: 'MONO' 0, 'CRSV' 0, 'CASL' 0, 'slnt' 0;
+        }
+
+        @font-face {
+            font-family: Recursive;
+            font-style: italic;
+            font-weight: 300 900;
+            font-display: swap;
+            src: url('https://cr0ybot.com/wp-content/themes/boldlygoblocks/assets/fonts/recursive-subset.woff2') format('woff2'), url('https://cr0ybot.com/wp-content/themes/boldlygoblocks/assets/fonts/recursive-subset.woff') format('woff');
+            font-variation-settings: 'MONO' 0, 'CRSV' 0, 'CASL' 0, 'slnt' -14;
+        }
+
+        @font-face {
+            font-family: "Recursive Cursive";
+            font-style: auto;
+            font-weight: 300 900;
+            font-display: swap;
+            src: url('https://cr0ybot.com/wp-content/themes/boldlygoblocks/assets/fonts/recursive-subset.woff2') format('woff2'), url('https://cr0ybot.com/wp-content/themes/boldlygoblocks/assets/fonts/recursive-subset.woff') format('woff');
+            font-variation-settings: 'MONO' 0, 'CRSV' 1, 'CASL' 1, 'slnt' 0;
+        }
+
+        @font-face {
+            font-family: "Recursive Cursive";
+            font-style: italic;
+            font-weight: 300 900;
+            font-display: swap;
+            src: url('https://cr0ybot.com/wp-content/themes/boldlygoblocks/assets/fonts/recursive-subset.woff2') format('woff2'), url('https://cr0ybot.com/wp-content/themes/boldlygoblocks/assets/fonts/recursive-subset.woff') format('woff');
+            font-variation-settings: 'MONO' 0, 'CRSV' 1, 'CASL' 1, 'slnt' -14;
+        }
+
+        @font-face {
+            font-family: "Recursive Monospace";
+            font-style: auto;
+            font-weight: 300 900;
+            font-display: swap;
+            src: url('https://cr0ybot.com/wp-content/themes/boldlygoblocks/assets/fonts/recursive-subset.woff2') format('woff2'), url('https://cr0ybot.com/wp-content/themes/boldlygoblocks/assets/fonts/recursive-subset.woff') format('woff');
+            font-variation-settings: 'MONO' 1, 'CRSV' 0, 'CASL' 0, 'slnt' 0;
+        }
+
+        @font-face {
+            font-family: "Recursive Monospace";
+            font-style: italic;
+            font-weight: 300 900;
+            font-display: swap;
+            src: url('https://cr0ybot.com/wp-content/themes/boldlygoblocks/assets/fonts/recursive-subset.woff2') format('woff2'), url('https://cr0ybot.com/wp-content/themes/boldlygoblocks/assets/fonts/recursive-subset.woff') format('woff');
+            font-variation-settings: 'MONO' 1, 'CRSV' 0, 'CASL' 0, 'slnt' -14;
+        }
+    </style>
+</head>
+
+<body class="page-template-default page page-id-56 wp-custom-logo wp-embed-responsive">
+<div class="starwheel">
+    <svg id="starwheel" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+         x="0px" y="0px" width="1200px"
+         height="1200px" viewBox="0 0 1200 1200" enable-background="new 0 0 1200 1200" xml:space="preserve">
+	 <style>
+		#lines line {
+            stroke: #DBE8D4;
+            stroke-miterlimit: 10;
+        }
+
+        #stars circle {
+            fill: #DBE8D4;
+        }
+	 </style>
+        <defs>
+		<radialGradient id="atmosphere-gradient" cx="600" cy="600" r="450"
+                        gradientUnits="userSpaceOnUse">
+			<stop offset="0.5" style="stop-color:#485E81;stop-opacity:0.5"/>
+            <stop offset="1" style="stop-color:#485E81;stop-opacity:0"/>
+		</radialGradient>
+	</defs>
+        <g id="atmosphere">
+	<circle fill="url(#atmosphere-gradient)" cx="600" cy="600" r="450"/>
+</g>
+        <g id="planetoid">
+	<circle fill="#2E3445" cx="600" cy="600" r="400"/>
+</g>
+        <g id="lines" opacity="0.1">
+	<line fill="none" x1="540.667" y1="189" x2="517.833" y2="129.833"/>
+            <line fill="none" x1="517.833" y1="129.833" x2="505.167" y2="133.832"/>
+            <line fill="none" x1="505.167" y1="133.832" x2="435.5" y2="184.167"/>
+            <line fill="none" x1="517.833" y1="129.833" x2="554.833" y2="70.833"/>
+            <line fill="none" x1="980.913" y1="141.747" x2="932.5" y2="200.16"/>
+            <line fill="none" x1="932.5" y1="200.16" x2="860.667" y2="189.66"/>
+            <line fill="none" x1="860.667" y1="189.66" x2="833.167" y2="104.5"/>
+            <line fill="none" x1="833.167" y1="104.5" x2="807.5" y2="71.167"/>
+            <line fill="none" x1="807.5" y1="71.167" x2="804.333" y2="41.667"/>
+            <line fill="none" x1="860.667" y1="189.66" x2="750.5" y2="163.833"/>
+            <line fill="none" x1="750.5" y1="163.833" x2="743.5" y2="143.5"/>
+            <line fill="none" x1="743.5" y1="143.5" x2="833.167" y2="104.5"/>
+            <line fill="none" x1="1152.333" y1="405.326" x2="1077.5" y2="393.16"/>
+            <line fill="none" x1="1077.5" y1="393.16" x2="1023.667" y2="349.66"/>
+            <line fill="none" x1="1077.5" y1="393.16" x2="1035.333" y2="325.666"/>
+            <line fill="none" x1="1070.833" y1="461.493" x2="1077.5" y2="393.16"/>
+            <line fill="none" x1="1070.833" y1="461.493" x2="1030.833" y2="443.493"/>
+            <line fill="none" x1="1030.833" y1="443.493" x2="1058.5" y2="471.16"/>
+            <line fill="none" x1="1058.5" y1="471.16" x2="1070.833" y2="461.493"/>
+            <line fill="none" x1="1008.667" y1="644.66" x2="1067.5" y2="516.826"/>
+            <line fill="none" x1="1067.5" y1="516.826" x2="1164.833" y2="652.827"/>
+            <line fill="none" x1="1164.833" y1="652.827" x2="1008.667" y2="644.66"/>
+            <line fill="none" x1="1116.667" y1="830.326" x2="1072.167" y2="804.827"/>
+            <line fill="none" x1="1072.167" y1="804.827" x2="1075.833" y2="762.499"/>
+            <line fill="none" x1="1075.833" y1="762.499" x2="1059.333" y2="735.66"/>
+            <line fill="none" x1="982" y1="834.993" x2="1072.167" y2="804.827"/>
+            <line fill="none" x1="982" y1="834.993" x2="961.667" y2="789.993"/>
+            <line fill="none" x1="982" y1="834.993" x2="975.5" y2="847.827"/>
+            <line fill="none" x1="1011.333" y1="968.666" x2="953.333" y2="1053.66"/>
+            <line fill="none" x1="953.333" y1="1053.66" x2="907.167" y2="1038.493"/>
+            <line fill="none" x1="907.167" y1="1038.493" x2="976.5" y2="939.499"/>
+            <line fill="none" x1="976.5" y1="939.499" x2="1011.333" y2="968.666"/>
+            <line fill="none" x1="907.167" y1="1038.493" x2="886.833" y2="970.16"/>
+            <line fill="none" x1="886.833" y1="970.16" x2="910.667" y2="900.66"/>
+            <line fill="none" x1="782.417" y1="1043.243" x2="755.333" y2="1012.327"/>
+            <line fill="none" x1="755.333" y1="1012.327" x2="746" y2="1013.326"/>
+            <line fill="none" x1="746" y1="1013.326" x2="741.167" y2="1034.16"/>
+            <line fill="none" x1="741.167" y1="1034.16" x2="782.417" y2="1043.243"/>
+            <line fill="none" x1="782.417" y1="1043.243" x2="774.667" y2="1119.66"/>
+            <line fill="none" x1="774.667" y1="1119.66" x2="794.5" y2="1121.827"/>
+            <line fill="none" x1="794.5" y1="1121.827" x2="810.833" y2="1131.16"/>
+            <line fill="none" x1="478.167" y1="1159.826" x2="407" y2="1088.326"/>
+            <line fill="none" x1="407" y1="1088.326" x2="421.166" y2="1062.167"/>
+            <line fill="none" x1="421.166" y1="1062.167" x2="521.5" y2="1044.827"/>
+            <line fill="none" x1="521.5" y1="1044.827" x2="498.333" y2="1143.333"/>
+            <line fill="none" x1="498.333" y1="1143.333" x2="478.167" y2="1159.826"/>
+            <line fill="none" x1="274.167" y1="1054.827" x2="252.833" y2="1012.493"/>
+            <line fill="none" x1="252.833" y1="1012.493" x2="170.667" y2="1006.326"/>
+            <line fill="none" x1="170.667" y1="1006.326" x2="270.167" y2="954.5"/>
+            <line fill="none" x1="270.167" y1="954.5" x2="286.5" y2="953.167"/>
+            <line fill="none" x1="286.5" y1="953.167" x2="252.833" y2="1012.493"/>
+            <line fill="none" x1="97.5" y1="916.493" x2="85.667" y2="864.327"/>
+            <line fill="none" x1="85.667" y1="864.327" x2="182.333" y2="877.327"/>
+            <line fill="none" x1="182.333" y1="877.327" x2="154.833" y2="837.827"/>
+            <line fill="none" x1="162.167" y1="722.495" x2="60" y2="670.995"/>
+            <line fill="none" x1="60" y1="670.995" x2="28" y2="651.995"/>
+            <line fill="none" x1="60" y1="670.995" x2="80.167" y2="638.495"/>
+            <line fill="none" x1="80.167" y1="638.495" x2="134.166" y2="617.826"/>
+            <line fill="none" x1="134.166" y1="617.826" x2="173.333" y2="620.326"/>
+            <line fill="none" x1="13.5" y1="522.495" x2="118.167" y2="518.162"/>
+            <line fill="none" x1="118.167" y1="518.162" x2="175.5" y2="487.495"/>
+            <line fill="none" x1="175.5" y1="487.495" x2="166.667" y2="474.995"/>
+            <line fill="none" x1="166.667" y1="474.995" x2="155.5" y2="412.162"/>
+            <line fill="none" x1="118.167" y1="518.162" x2="75.833" y2="468.828"/>
+            <line fill="none" x1="232" y1="384.326" x2="238.5" y2="302.5"/>
+            <line fill="none" x1="238.5" y1="302.5" x2="157.167" y2="329.493"/>
+            <line fill="none" x1="298.833" y1="107.5" x2="297.167" y2="170.833"/>
+            <line fill="none" x1="297.167" y1="170.833" x2="291.167" y2="185.5"/>
+            <line fill="none" x1="291.167" y1="185.5" x2="310.833" y2="188.166"/>
+            <line fill="none" x1="296.333" y1="170.833" x2="310.833" y2="188.166"/>
+            <line fill="none" x1="291.167" y1="185.5" x2="204.833" y2="196.167"/>
+            <line fill="none" x1="238.5" y1="302.5" x2="310.833" y2="188.166"/>
+            <line fill="none" x1="505.167" y1="133.832" x2="438.5" y2="26.167"/>
+            <line fill="none" x1="741.167" y1="1034.16" x2="684.833" y2="1044.827"/>
+</g>
+        <g id="stars">
+	<g id="dim" opacity="0.1">
+		<circle cx="709.664" cy="1084.663" r="0.997"/>
+        <circle cx="605.997" cy="1145.33" r="0.997"/>
+        <circle cx="440.33" cy="1024.74" r="0.997"/>
+        <circle cx="385.664" cy="1147.323" r="0.997"/>
+        <circle cx="639.997" cy="1076.99" r="0.997"/>
+        <circle cx="523.997" cy="1091.99" r="0.997"/>
+        <circle cx="464.664" cy="1102.663" r="0.997"/>
+        <circle cx="775.664" cy="1168.997" r="0.997"/>
+        <circle cx="755.33" cy="1143.33" r="0.997"/>
+        <circle cx="826.33" cy="1064.33" r="0.997"/>
+        <circle cx="816.997" cy="1052.663" r="0.997"/>
+        <circle cx="845.33" cy="1112.323" r="0.997"/>
+        <circle cx="929.663" cy="1092.33" r="0.997"/>
+        <circle cx="964.33" cy="994.665" r="0.997"/>
+        <circle cx="1098.663" cy="903.323" r="0.997"/>
+        <circle cx="1003.663" cy="905.316" r="0.997"/>
+        <circle cx="981.997" cy="874.323" r="0.997"/>
+        <circle cx="1058.33" cy="946.998" r="0.997"/>
+        <circle cx="1150.663" cy="784.659" r="0.997"/>
+        <circle cx="1000.997" cy="754.668" r="0.997"/>
+        <circle cx="1020.663" cy="785.656" r="0.997"/>
+        <circle cx="1118.997" cy="665.001" r="0.997"/>
+        <circle cx="1136.663" cy="485.334" r="0.997"/>
+        <circle cx="1115.913" cy="467.323" r="0.997"/>
+        <circle cx="1004.997" cy="400.239" r="0.997"/>
+        <circle cx="1114.33" cy="327.996" r="0.997"/>
+        <circle cx="1070.663" cy="310.668" r="0.997"/>
+        <circle cx="910.33" cy="328.992" r="0.997"/>
+        <circle cx="941.663" cy="286.335" r="0.997"/>
+        <circle cx="998.33" cy="226.335" r="0.997"/>
+        <circle cx="875.997" cy="262.003" r="0.997"/>
+        <circle cx="806.913" cy="132.33" r="0.997"/>
+        <circle cx="906.997" cy="133.327" r="0.997"/>
+        <circle cx="740.663" cy="68.663" r="0.997"/>
+        <circle cx="610.663" cy="183.673" r="0.997"/>
+        <circle cx="637.497" cy="45.673" r="0.997"/>
+        <circle cx="530.246" cy="57.414" r="0.997"/>
+        <circle cx="410.997" cy="101.329" r="0.997"/>
+        <circle cx="487.997" cy="179.83" r="0.997"/>
+        <circle cx="362.997" cy="154.34" r="0.997"/>
+        <circle cx="317.33" cy="231.006" r="0.997"/>
+        <circle cx="185.997" cy="236.006" r="0.997"/>
+        <circle cx="270.829" cy="295.234" r="0.997"/>
+        <circle cx="186.993" cy="351.673" r="0.997"/>
+        <circle cx="216.663" cy="429.673" r="0.997"/>
+        <circle cx="141.997" cy="433.006" r="0.997"/>
+        <circle cx="48.997" cy="418.673" r="0.997"/>
+        <circle cx="179.664" cy="541.673" r="0.997"/>
+        <circle cx="93.33" cy="592.34" r="0.997"/>
+        <circle cx="195.997" cy="667.006" r="0.997"/>
+        <circle cx="131.33" cy="747.34" r="0.997"/>
+        <circle cx="62.33" cy="701.673" r="0.997"/>
+        <circle cx="188.997" cy="786.323" r="0.997"/>
+        <circle cx="232.997" cy="843.34" r="0.997"/>
+        <circle cx="122.33" cy="922.673" r="0.997"/>
+        <circle cx="245.33" cy="879.323" r="0.997"/>
+        <circle cx="258.663" cy="904.006" r="0.997"/>
+        <circle cx="331.33" cy="918.656" r="0.997"/>
+        <circle cx="314.33" cy="1034.656" r="0.997"/>
+        <circle cx="376.997" cy="1069.673" r="0.997"/>
+        <circle cx="361.997" cy="1086.656" r="0.997"/>
+        <circle cx="476.997" cy="1003.673" r="0.997"/>
+        <circle cx="634.583" cy="1088" r="0.417"/>
+        <circle cx="575.084" cy="1095.75" r="0.417"/>
+        <circle cx="463.084" cy="1110.75" r="0.417"/>
+        <circle cx="575.75" cy="1164.083" r="0.417"/>
+        <circle cx="790.75" cy="1144.083" r="0.417"/>
+        <circle cx="763.417" cy="1077.417" r="0.417"/>
+        <circle cx="832.084" cy="1006.083" r="0.417"/>
+        <circle cx="905.75" cy="1062.417" r="0.417"/>
+        <circle cx="961.75" cy="995.75" r="0.417"/>
+        <circle cx="1005.75" cy="1035.75" r="0.417"/>
+        <circle cx="925.083" cy="864.083" r="0.417"/>
+        <circle cx="990.417" cy="854.417" r="0.417"/>
+        <circle cx="946.083" cy="905.083" r="0.417"/>
+        <circle cx="997.083" cy="790.75" r="0.417"/>
+        <circle cx="1057.083" cy="853.75" r="0.417"/>
+        <circle cx="1097.417" cy="795.417" r="0.417"/>
+        <circle cx="1016.75" cy="764.083" r="0.417"/>
+        <circle cx="1076.417" cy="695.75" r="0.417"/>
+        <circle cx="1045.417" cy="669.75" r="0.417"/>
+        <circle cx="1117.083" cy="749.083" r="0.417"/>
+        <circle cx="1124.084" cy="628.084" r="0.417"/>
+        <circle cx="1072.084" cy="588.417" r="0.417"/>
+        <circle cx="1030.75" cy="531.084" r="0.417"/>
+        <circle cx="1142.084" cy="568.084" r="0.417"/>
+        <circle cx="1102.084" cy="493.417" r="0.417"/>
+        <circle cx="992.084" cy="484.75" r="0.417"/>
+        <circle cx="1035.75" cy="384.417" r="0.417"/>
+        <circle cx="1102.75" cy="432.417" r="0.417"/>
+        <circle cx="1105.75" cy="352.75" r="0.417"/>
+        <circle cx="952.417" cy="309.75" r="0.417"/>
+        <circle cx="948.417" cy="356.417" r="0.417"/>
+        <circle cx="967.417" cy="247.75" r="0.417"/>
+        <circle cx="859.75" cy="257.75" r="0.417"/>
+        <circle cx="883.75" cy="293.75" r="0.417"/>
+        <circle cx="897.083" cy="162.417" r="0.417"/>
+        <circle cx="853.75" cy="201.084" r="0.417"/>
+        <circle cx="813.417" cy="131.417" r="0.417"/>
+        <circle cx="748.417" cy="206.75" r="0.417"/>
+        <circle cx="764.75" cy="92.084" r="0.417"/>
+        <circle cx="796.417" cy="108.417" r="0.417"/>
+        <circle cx="696.75" cy="124.417" r="0.417"/>
+        <circle cx="632.417" cy="163.417" r="0.417"/>
+        <circle cx="519.417" cy="79.084" r="0.417"/>
+        <circle cx="561.083" cy="136.75" r="0.417"/>
+        <circle cx="475.083" cy="188.417" r="0.417"/>
+        <circle cx="469.083" cy="80.417" r="0.417"/>
+        <circle cx="562.75" cy="61.417" r="0.417"/>
+        <circle cx="346.417" cy="99.75" r="0.417"/>
+        <circle cx="253.083" cy="158.417" r="0.417"/>
+        <circle cx="313.417" cy="238.417" r="0.417"/>
+        <circle cx="189.417" cy="240.75" r="0.417"/>
+        <circle cx="203.083" cy="282.75" r="0.417"/>
+        <circle cx="314.75" cy="254.083" r="0.417"/>
+        <circle cx="235.083" cy="324.417" r="0.417"/>
+        <circle cx="103.083" cy="302.75" r="0.417"/>
+        <circle cx="215.083" cy="367.084" r="0.417"/>
+        <circle cx="207.083" cy="422.75" r="0.417"/>
+        <circle cx="118.417" cy="423.75" r="0.417"/>
+        <circle cx="180.083" cy="507.417" r="0.417"/>
+        <circle cx="90.417" cy="439.084" r="0.417"/>
+        <circle cx="200.083" cy="522.75" r="0.417"/>
+        <circle cx="173.417" cy="570.084" r="0.417"/>
+        <circle cx="148.417" cy="648.417" r="0.417"/>
+        <circle cx="109.417" cy="588.417" r="0.417"/>
+        <circle cx="38.084" cy="614.75" r="0.417"/>
+        <circle cx="153.084" cy="690.417" r="0.417"/>
+        <circle cx="102.417" cy="722.084" r="0.417"/>
+        <circle cx="204.75" cy="778.75" r="0.417"/>
+        <circle cx="189.417" cy="832.417" r="0.417"/>
+        <circle cx="146.083" cy="795.417" r="0.417"/>
+        <circle cx="238.417" cy="857.417" r="0.417"/>
+        <circle cx="116.083" cy="886.084" r="0.417"/>
+        <circle cx="297.417" cy="925.75" r="0.417"/>
+        <circle cx="273.417" cy="959.75" r="0.417"/>
+        <circle cx="218.417" cy="936.084" r="0.417"/>
+        <circle cx="291.084" cy="1018.75" r="0.417"/>
+        <circle cx="236.75" cy="1052.417" r="0.417"/>
+        <circle cx="402.084" cy="1012.417" r="0.417"/>
+        <circle cx="441.75" cy="1072.084" r="0.417"/>
+        <circle cx="378.417" cy="1111.084" r="0.417"/>
+        <circle cx="393.417" cy="1041.084" r="0.417"/>
+        <circle cx="329.75" cy="1096.417" r="0.417"/>
+        <circle cx="486.417" cy="1142.417" r="0.417"/>
+        <circle cx="511.084" cy="1017.75" r="0.417"/>
+        <circle cx="535.75" cy="1001.417" r="0.417"/>
+        <circle cx="564.084" cy="1118.084" r="0.417"/>
+	</g>
+            <g id="medium" opacity="0.3">
+		<circle cx="704.167" cy="178.833" r="0.833"/>
+                <circle cx="799.167" cy="236.167" r="1.167"/>
+                <circle cx="596" cy="4.667" r="1"/>
+                <circle cx="695.833" cy="76.5" r="1.167"/>
+                <circle cx="567.833" cy="86.5" r="0.833"/>
+                <circle cx="223.5" cy="211.167" r="0.833"/>
+                <circle cx="415.833" cy="122.834" r="0.5"/>
+                <circle cx="422.833" cy="224.834" r="0.833"/>
+                <circle cx="166.667" cy="474.995" r="0.667"/>
+                <circle cx="155.5" cy="412.162" r="1.167"/>
+                <circle cx="75.833" cy="468.828" r="0.833"/>
+                <circle cx="118.167" cy="518.162" r="1.167"/>
+                <circle cx="60" cy="670.995" r="1.333"/>
+                <circle cx="80.167" cy="638.495" r="1.5"/>
+                <circle cx="6" cy="663.328" r="1.333"/>
+                <circle cx="182.333" cy="877.327" r="1"/>
+                <circle cx="70" cy="786.327" r="1"/>
+                <circle cx="117.833" cy="829.493" r="0.5"/>
+                <circle cx="256.833" cy="877.493" r="0.833"/>
+                <circle cx="97.5" cy="916.493" r="1.167"/>
+                <circle cx="72.167" cy="770.493" r="1.167"/>
+                <circle cx="363.5" cy="1021.826" r="0.833"/>
+                <circle cx="350.667" cy="954.993" r="0.667"/>
+                <circle cx="252.833" cy="1012.493" r="1.167"/>
+                <circle cx="449.333" cy="1174.326" r="0.667"/>
+                <circle cx="583.833" cy="1011.16" r="0.833"/>
+                <circle cx="610" cy="1151.993" r="0.333"/>
+                <circle cx="507.25" cy="1160.91" r="1.083"/>
+                <circle cx="675.167" cy="1151.493" r="0.833"/>
+                <circle cx="551.5" cy="1075.16" r="0.833"/>
+                <circle cx="1017.167" cy="982.493" r="0.833"/>
+                <circle cx="908.5" cy="1020.826" r="0.5"/>
+                <circle cx="1003.667" cy="913.66" r="1"/>
+                <circle cx="961.667" cy="789.993" r="1"/>
+                <circle cx="1092.833" cy="879.16" r="0.833"/>
+                <circle cx="1083.333" cy="872.327" r="1"/>
+                <circle cx="1019.667" cy="688.66" r="0.667"/>
+                <circle cx="1072" cy="627.993" r="0.667"/>
+                <circle cx="1169.833" cy="540.16" r="1.5"/>
+                <circle cx="1129" cy="588.993" r="1"/>
+                <circle cx="1124.167" cy="595.16" r="0.833"/>
+                <circle cx="1070.833" cy="461.493" r="1.167"/>
+                <circle cx="1077.5" cy="393.16" r="1.5"/>
+                <circle cx="969.333" cy="342.66" r="1"/>
+                <circle cx="928.833" cy="248.826" r="1.5"/>
+                <circle cx="1048.5" cy="253.493" r="0.833"/>
+                <circle cx="867.333" cy="212.66" r="0.667"/>
+                <circle cx="998.747" cy="177.58" r="1.253"/>
+                <circle cx="1116.666" cy="304.993" r="0.667"/>
+                <circle cx="365" cy="206.993" r="0.667"/>
+                <circle cx="285.501" cy="341.827" r="0.832"/>
+                <circle cx="119.333" cy="245.993" r="0.667"/>
+                <circle cx="67.167" cy="566.16" r="0.833"/>
+                <circle cx="143.333" cy="607.993" r="0.667"/>
+                <circle cx="234.333" cy="789.327" r="1"/>
+                <circle cx="175.833" cy="964.493" r="0.5"/>
+                <circle cx="199.833" cy="958.16" r="0.5"/>
+                <circle cx="451" cy="1058.326" r="0.667"/>
+                <circle cx="373.5" cy="942.16" r="0.833"/>
+                <circle cx="647.333" cy="1081.326" r="0.667"/>
+                <circle cx="646.167" cy="1060.826" r="0.5"/>
+                <circle cx="810.833" cy="1131.16" r="0.5"/>
+                <ellipse cx="800.667" cy="1111.327" rx="0.333" ry="0"/>
+                <circle cx="794.5" cy="1121.827" r="0.5"/>
+                <circle cx="827.5" cy="981.826" r="0.833"/>
+                <circle cx="746" cy="1013.326" r="0.667"/>
+                <circle cx="755.333" cy="1012.327" r="1"/>
+                <circle cx="741.167" cy="1034.16" r="0.833"/>
+                <circle cx="905.333" cy="972.993" r="0.667"/>
+                <circle cx="916.5" cy="950.16" r="0.5"/>
+                <circle cx="982" cy="834.993" r="1"/>
+                <circle cx="1072.167" cy="804.827" r="1.5"/>
+                <circle cx="1166.666" cy="735.326" r="0.667"/>
+                <circle cx="1020.167" cy="573.16" r="0.833"/>
+                <circle cx="1058.5" cy="471.16" r="0.833"/>
+                <circle cx="1030.833" cy="443.493" r="0.833"/>
+                <circle cx="939.833" cy="190.493" r="0.833"/>
+                <circle cx="733.5" cy="141.167" r="0.833"/>
+                <circle cx="640" cy="121" r="0.667"/>
+                <circle cx="636.5" cy="131.167" r="0.5"/>
+                <circle cx="612.5" cy="130.833" r="0.5"/>
+                <circle cx="827.5" cy="193.5" r="0.5"/>
+                <circle cx="916.333" cy="127.333" r="0.333"/>
+                <circle cx="804.333" cy="41.667" r="1.333"/>
+                <circle cx="794.167" cy="49.5" r="0.5"/>
+                <circle cx="807.5" cy="71.167" r="0.833"/>
+                <circle cx="287.167" cy="185.167" r="0.5"/>
+                <circle cx="291.167" cy="185.5" r="0.833"/>
+                <circle cx="297.167" cy="170.833" r="0.833"/>
+                <circle cx="308.333" cy="297.667" r="0.333"/>
+                <circle cx="313.333" cy="284.667" r="0.667"/>
+	</g>
+            <g id="bright" opacity="0.7">
+		<circle cx="743.5" cy="143.5" r="1.5"/>
+                <circle cx="435.5" cy="184.167" r="1.5"/>
+                <circle cx="554.833" cy="70.833" r="2.167"/>
+                <circle cx="540.667" cy="189" r="1.667"/>
+                <circle cx="438.5" cy="26.167" r="1.5"/>
+                <circle cx="833.167" cy="104.5" r="1.833"/>
+                <circle cx="238.5" cy="302.5" r="1.5"/>
+                <circle cx="204.833" cy="196.167" r="1.167"/>
+                <circle cx="298.833" cy="107.5" r="2.167"/>
+                <circle cx="101.333" cy="339.328" r="1.667"/>
+                <circle cx="175.5" cy="487.495" r="1.833"/>
+                <circle cx="13.5" cy="522.495" r="1.167"/>
+                <circle cx="162.167" cy="722.495" r="1.833"/>
+                <circle cx="28" cy="651.995" r="1.333"/>
+                <circle cx="85.667" cy="864.327" r="2"/>
+                <circle cx="274.167" cy="1054.827" r="2.5"/>
+                <circle cx="521.5" cy="1044.827" r="1.5"/>
+                <circle cx="170.667" cy="1006.326" r="2.333"/>
+                <circle cx="407" cy="1088.326" r="2.667"/>
+                <circle cx="478.167" cy="1159.826" r="2.167"/>
+                <circle cx="684.833" cy="1044.827" r="1.5"/>
+                <circle cx="774.667" cy="1119.66" r="1.667"/>
+                <circle cx="821.666" cy="958.326" r="1.667"/>
+                <circle cx="782.417" cy="1043.243" r="1.583"/>
+                <circle cx="953.333" cy="1053.66" r="2"/>
+                <circle cx="907.167" cy="1038.493" r="1.833"/>
+                <circle cx="910.667" cy="900.66" r="1.667"/>
+                <circle cx="1116.667" cy="830.326" r="1.333"/>
+                <circle cx="1059.333" cy="735.66" r="2"/>
+                <circle cx="1164.833" cy="652.827" r="1.5"/>
+                <circle cx="1067.5" cy="516.826" r="2.167"/>
+                <circle cx="1152.333" cy="405.326" r="2.333"/>
+                <circle cx="860.667" cy="189.66" r="1.667"/>
+                <circle cx="980.913" cy="141.747" r="1.753"/>
+                <circle cx="157.167" cy="329.493" r="1.5"/>
+                <circle cx="232" cy="384.326" r="1.667"/>
+                <circle cx="134.166" cy="617.826" r="1.167"/>
+                <circle cx="173.333" cy="620.326" r="1.333"/>
+                <circle cx="154.833" cy="837.827" r="2.5"/>
+                <circle cx="886.833" cy="970.16" r="2.5"/>
+                <circle cx="975.5" cy="847.827" r="1.5"/>
+                <circle cx="1008.667" cy="644.66" r="2"/>
+                <circle cx="1023.667" cy="349.66" r="2.333"/>
+                <circle cx="932.5" cy="200.16" r="1.5"/>
+                <circle cx="286.5" cy="953.167" r="1.833"/>
+                <circle cx="270.167" cy="954.5" r="1.167"/>
+                <circle cx="421.166" cy="1062.167" r="1.167"/>
+                <circle cx="498.333" cy="1143.333" r="1"/>
+                <circle cx="653.333" cy="1192" r="1.333"/>
+                <circle cx="1011.333" cy="968.666" r="1.667"/>
+                <circle cx="976.5" cy="939.499" r="1.167"/>
+                <circle cx="1075.833" cy="762.499" r="2.833"/>
+                <circle cx="1150.333" cy="547.999" r="1.333"/>
+                <circle cx="1035.333" cy="325.666" r="1.333"/>
+                <circle cx="959.167" cy="291.166" r="0.833"/>
+                <circle cx="750.5" cy="163.833" r="1.167"/>
+                <circle cx="669.5" cy="66.499" r="1.167"/>
+                <circle cx="505.167" cy="133.832" r="1.167"/>
+                <circle cx="517.833" cy="129.833" r="1.833"/>
+                <circle cx="310.833" cy="188.166" r="1.167"/>
+	</g>
+</g>
+</svg>
+</div>
+<div class="wp-site-blocks">
+    <header class="site-header wp-block-template-part">
+        <div class="wp-block-group is-layout-flow wp-block-group-is-layout-flow"
+             style="margin-bottom:0;padding-right:var(--wp--preset--spacing--30);padding-left:var(--wp--preset--spacing--30)">
+            <div class="wp-block-group site-header__content is-content-justification-space-between is-layout-flex wp-container-core-group-is-layout-1 wp-block-group-is-layout-flex"
+                 style="padding-top:var(--wp--preset--spacing--40);padding-right:0;padding-bottom:var(--wp--preset--spacing--40);padding-left:0">
+                <div class="is-style-rounded wp-block-site-logo"></a></div>
+                <div class="wp-block-boldlygo-pausemenu">
+                    <button class="wp-block-boldlygo-pausemenu__button" type="button" aria-haspopup="true"
+                            aria-controls="menu">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>Menu</title>
+                            <path fill="currentColor" d="M14,19H18V5H14M6,19H10V5H6V19Z"></path>
+                        </svg>
+                    </button>
+                    <div id="menu" class="wp-block-boldlygo-pausemenu__menu" aria-expanded="false">
+                        <button class="wp-block-boldlygo-pausemenu__close" type="button" aria-haspopup="true"
+                                aria-controls="menu" aria-expanded="false">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>Close Menu</title>
+                                <path fill="currentColor"
+                                      d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"></path>
+                            </svg>
+                        </button>
+                        <div class="wp-block-boldlygo-pausemenu__menu-content has-global-padding is-layout-flow wp-block-pausemenu-is-layout-flow">
+                            <h2 class="wp-block-heading has-text-align-center is-style-title">Menu</h2>
+                            <nav class="items-justified-center is-vertical no-wrap wp-block-navigation is-content-justification-center is-nowrap is-layout-flex wp-container-core-navigation-is-layout-1 wp-block-navigation-is-layout-flex"
+                                 aria-label="Header navigation">
+                                <ul class="wp-block-navigation__container items-justified-center is-vertical no-wrap wp-block-navigation">
+                                    <li class=" wp-block-navigation-item wp-block-navigation-link"><a
+                                            class="wp-block-navigation-item__content" href="https://cr0ybot.com/"><span
+                                            class="wp-block-navigation-item__label">Pizza</span>
+                                    <li class=" wp-block-navigation-item wp-block-navigation-link"><a
+                                            class="wp-block-navigation-item__content"
+                                            href="file:///C:/Users/Daria/Documents/%D0%BD%D0%BE%D0%B2%D1%8B%D0%B9%2025.html"><span
+                                            class="wp-block-navigation-item__label">Salads</span>
+                                    <li class=" wp-block-navigation-item wp-block-navigation-link"><a
+                                            class="wp-block-navigation-item__content"
+                                            href="file:///C:/Users/Daria/Documents/%D0%BD%D0%BE%D0%B2%D1%8B%D0%B9%2027.html"><span
+                                            class="wp-block-navigation-item__label">Paste</span>
+                                    <li class=" wp-block-navigation-item wp-block-navigation-link"><a
+                                            class="wp-block-navigation-item__content"
+                                            href="file:///C:/Users/Daria/Documents/%D0%BD%D0%BE%D0%B2%D1%8B%D0%B9%2028.html"><span
+                                            class="wp-block-navigation-item__label">Beverages</span>
+                                    <li class=" wp-block-navigation-item current-menu-item wp-block-navigation-link"><a
+                                            class="wp-block-navigation-item__content"
+                                            href="file:///C:/Users/Daria/Documents/новый%2024.html" aria-current="page"><span
+                                            class="wp-block-navigation-item__label">Desserts</span></a></li>
+                                </ul>
+                            </nav>
+                            <form action="#" method="POST" class="search" id="form">
+                                <input id="name" name="action" input checked=" ">
+                                <button type="submit" id="butt" style="margin-top:10px">
+                                    Find
+                                </button>
+                            </form>
+                            </heasd>
+                            <script>
+                                const paragraphs = document.getElementsByTagName("p");
+
+                                for (p of paragraphs) {
+                                    console.log(p.innerText);
+                                }
+                            </script>
+                            <main class="wp-block-group alignwide site-content is-layout-flow wp-block-group-is-layout-flow"
+                                  id="content">
+                                <div class="wp-block-group alignwide has-global-padding is-layout-constrained wp-block-group-is-layout-constrained">
+                                    <h1 class="has-text-align-center alignwide wp-block-post-title">Cream Soda</h1>
+                                </div>
+                                <div class="entry-content wp-block-post-content has-global-padding is-layout-constrained wp-block-post-content-is-layout-constrained">
+                                    <p class="has-text-align-center has-primary-color has-text-color has-title-font-family"
+                                       style="font-style:normal;font-weight:700;letter-spacing:0.1em;text-transform:uppercase">
+                                        Cafe near me</p>
+                                    <script src="https://coryhughart.com/wp-includes/js/dist/vendor/wp-polyfill-inert.min.js?ver=3.1.2"
+                                            id="wp-polyfill-inert-js"></script>
+                                    <script src="https://coryhughart.com/wp-includes/js/dist/vendor/regenerator-runtime.min.js?ver=0.14.0"
+                                            id="regenerator-runtime-js"></script>
+                                    <script src="https://coryhughart.com/wp-includes/js/dist/vendor/wp-polyfill.min.js?ver=3.15.0"
+                                            id="wp-polyfill-js"></script>
+                                    <script src="https://coryhughart.com/wp-includes/js/dist/dom-ready.min.js?ver=f77871ff7694fffea381"
+                                            id="wp-dom-ready-js"></script>
+                                    <script src="https://coryhughart.com/wp-content/themes/boldlygoblocks/dist/js/theme.js?ver=b729c7e596136d24d505"
+                                            id="boldlygo-theme-js"></script>
+</body>
+</html>
